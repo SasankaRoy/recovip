@@ -135,10 +135,10 @@ export const Herosection = () => {
                   <div className="flex flex-col gap-1"></div>
                 </div>
               </div>
-              <div className="w-full 2xl:h-[50%] xl:h-[50%] lg:h-[50%] md:portrait:h-[45%] md:landscape:h-[45%]  px-4 py-2 flex flex-col 2xl:justify-end xl:justify-end lg:justify-end md:portrait:justify-start md:landscape:justify-start items-center gap-5">
+              <div className="w-full 2xl:h-[50%] xl:h-[50%] lg:h-[50%] md:portrait:h-[45%] md:landscape:h-[45%]  px-4 py-2 flex flex-col 2xl:justify-end xl:justify-end lg:justify-end md:portrait:justify-start md:landscape:justify-start items-center gap-2">
                 <div className="flex flex-col justify-center items-center gap-[3%]  w-[95%] h-[35%]">
                   <img
-                    className="2xl:h-[10vw] 2xl:w-[45vw] xl:h-[10vw] xl:w-[45vw] lg:w-[45vw] lg:h-[10vw] md:portrait:h-[10vw] md:portrait:w-[95%]"
+                    className="h-[10vw] w-[90%] md:portrait:w-[95%]"
                     src="/RecovIPLightLogo.svg"
                     alt="personImg"
                   />
