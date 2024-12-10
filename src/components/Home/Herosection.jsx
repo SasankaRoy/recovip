@@ -135,20 +135,23 @@ export const Herosection = () => {
                   <div className="flex flex-col gap-1"></div>
                 </div>
               </div>
-              <div className="w-full 2xl:h-[50%] xl:h-[50%] lg:h-[50%] md:portrait:h-[45%] md:landscape:h-[45%]  px-4 py-2 flex flex-col 2xl:justify-end xl:justify-end lg:justify-end md:portrait:justify-start md:landscape:justify-start items-center gap-2">
-                <div className="flex flex-col justify-center items-center gap-[3%]  w-[95%] h-[35%]">
-                  <img
-                    className="h-[10vw] w-[90%] md:portrait:w-[95%]"
-                    src="/RecovIPLightLogo.svg"
-                    alt="personImg"
-                  />
-
-                  <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-[#2e0e4f] font-[300] text-left  font-[Montserrat]">
-                    Recovery Is Possible provides a supportive and nurturing
-                    environment where you can explore your challenges, develop
-                    coping strategies, and embark on a journey of healing and
-                    personal growth.
-                  </p>
+              <div className="w-full 2xl:h-[50%] xl:h-[50%] lg:h-[50%] md:portrait:h-[45%] md:landscape:h-[45%]  px-4 py-2 flex flex-col 2xl:justify-end xl:justify-end lg:justify-end md:portrait:justify-start md:landscape:justify-start items-center gap-2 ">
+                <div className="flex flex-col justify-center items-center gap-5  w-[95%] h-auto">
+                  <div className=" w-full">
+                    <img
+                      className=" w-[95%]"
+                      src="/RecovIPLightLogo.svg"
+                      alt="personImg"
+                    />
+                  </div>
+                  <div className="w-full">
+                    <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-[#2e0e4f] font-[300] text-left  font-[Montserrat]">
+                      Recovery Is Possible provides a supportive and nurturing
+                      environment where you can explore your challenges, develop
+                      coping strategies, and embark on a journey of healing and
+                      personal growth.
+                    </p>
+                  </div>
                 </div>
                 <div className=" mx-auto h-[40%] w-[95%]"></div>
 
