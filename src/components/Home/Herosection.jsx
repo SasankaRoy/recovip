@@ -158,8 +158,8 @@ export const Herosection = () => {
                     </h1> */}
                   </div>
                   <div className="w-[45vw] mx-auto">
-                    <p className="2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[1.8vw] text-[#2e0e4f] font-[300] text-left  font-[Montserrat]">
-                      We provide a supportive and nurturing environment where
+                    <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.3vw] text-[#2e0e4f] font-[300] text-left  font-[Montserrat]">
+                      Recovery Is Possible provides a supportive and nurturing environment where
                       you can explore your challenges, develop coping
                       strategies, and embark on a journey of healing and
                       personal growth.
