@@ -121,7 +121,7 @@ export const Herosection = () => {
                   <div className="w-[80%] h-[80%]">
                     <img
                       src="/personImg2.png"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                       alt="personImg"
                     />
                   </div>
