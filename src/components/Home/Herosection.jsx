@@ -133,40 +133,28 @@ export const Herosection = () => {
                     </h3>
                   </div>
                   <div className="flex flex-col gap-1">
-                    {/* <li className="text-start text-[#260039] 2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] font-[Montserrat] font-[300]">
-                      Personalized sessions tailored to your needs
-                    </li>
-                    <li className="text-start text-[#260039] 2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] font-[Montserrat] font-[300]">
-                      Supportive environment for shared healing
-                    </li>
-                    <li className="text-start text-[#260039] 2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] font-[Montserrat] font-[300]">
-                      Convenient therapy from the comfort of home
-                    </li> */}
+                   
                   </div>
                 </div>
               </div>
-              <div className="flex-1 h-[50%] px-4 py-2 flex flex-col justify-between items-center gap-5">
-                <div className="flex-1 flex flex-col justify-center items-center -gap-20">
-                  <div className="flex justify-center items-center">
-                    <img
-                      className="h-[10vw] w-[45vw] mix-blend-multiply"
-                      src="/RecovIPLightLogo.svg"
-                      alt="personImg"
-                    />
-                    {/* <h1 className="font-[Roboto] text-[#8100ff] font-[700] 2xl:text-[8vw] xl:text-[8vw] lg:text-[8vw] md:portrait:text-[13vw] ml-[-35px]">
-                      RECOVIP
-                    </h1> */}
-                  </div>
-                  <div className="w-[45vw] mx-auto">
-                    <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.3vw] text-[#2e0e4f] font-[300] text-left  font-[Montserrat]">
-                      Recovery Is Possible provides a supportive and nurturing environment where
-                      you can explore your challenges, develop coping
-                      strategies, and embark on a journey of healing and
-                      personal growth.
-                    </p>
-                  </div>
+              <div className="flex-1 w-full h-[50%]  px-4 py-2 flex flex-col justify-end items-center gap-5">
+                <div className="flex flex-col justify-center items-center gap-[3%]  w-[95%] h-[35%]">
+                  <img
+                    className="2xl:h-[10vw] 2xl:w-[45vw] xl:h-[10vw] xl:w-[45vw] lg:w-[45vw] lg:h-[10vw] md:portrait:h-[10vw] md:portrait:w-[95%]"
+                    src="/RecovIPLightLogo.svg"
+                    alt="personImg"
+                  />
+
+                  <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-[#2e0e4f] font-[300] text-left  font-[Montserrat]">
+                    Recovery Is Possible provides a supportive and nurturing
+                    environment where you can explore your challenges, develop
+                    coping strategies, and embark on a journey of healing and
+                    personal growth.
+                  </p>
                 </div>
-                <div className="border-t border-[#7122c1] flex justify-between items-center h-[10%] w-full mt-auto p-2">
+                <div className=" mx-auto h-[40%] w-[95%]"></div>
+
+                <div className="border-t border-[#7122c1] w-[95%]  flex justify-between items-center h-[10%] p-2">
                   <button className="2xl:text-[1vw] xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[600]">
                     Facebook
                   </button>
