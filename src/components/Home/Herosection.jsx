@@ -7,8 +7,8 @@ export const Herosection = () => {
     target: mainWrapperRef,
   });
 
-  const [currentWindowWidth, setCurrentWindowWidth] = useState(0);
-  const [currentWindowHeight, setCurrentWindowHeight] = useState(0);
+  // const [currentWindowWidth, setCurrentWindowWidth] = useState(0);
+  // const [currentWindowHeight, setCurrentWindowHeight] = useState(0);
   const [isDesktop, setIsDesktop] = useState({
     orientation: false,
   });
@@ -21,8 +21,8 @@ export const Herosection = () => {
     };
 
     const handleScreenChange = () => {
-      setCurrentWindowWidth(window.innerWidth);
-      setCurrentWindowHeight(window.innerHeight);
+      // setCurrentWindowWidth(window.innerWidth);
+      // setCurrentWindowHeight(window.innerHeight);
 
       handleScreenOrientation();
     };
