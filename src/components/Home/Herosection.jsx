@@ -115,8 +115,8 @@ export const Herosection = () => {
             }}
             className="flex w-full"
           >
-            <div className=" bg-[#fbf2ff] text-black h-[100dvh] 2xl:w-[50vw] xl:w-[50vw] lg:w-[50vw] md:portrait:w-[80vw] flex-shrink-0 flex flex-col justify-center items-center text-whit  ">
-              <div className="flex-1 h-[50%] w-full flex justify-center items-center ">
+            <div className=" bg-[#fbf2ff] text-black h-[100vh] 2xl:w-[50vw] xl:w-[50vw] lg:w-[50vw] md:portrait:w-[80vw] flex-shrink-0 flex flex-col justify-center items-center text-whit  ">
+              <div className=" h-[50%] w-full flex justify-center items-center ">
                 <div className=" h-full flex-1 flex justify-center items-center">
                   <div className="w-[80%] h-[80%]">
                     <img
@@ -132,12 +132,10 @@ export const Herosection = () => {
                       Your Journey to Recovery Starts Here
                     </h3>
                   </div>
-                  <div className="flex flex-col gap-1">
-                   
-                  </div>
+                  <div className="flex flex-col gap-1"></div>
                 </div>
               </div>
-              <div className="flex-1 w-full h-[50%]  px-4 py-2 flex flex-col justify-end items-center gap-5">
+              <div className="w-full 2xl:h-[50%] xl:h-[50%] lg:h-[50%] md:portrait:h-[45%]  px-4 py-2 flex flex-col 2xl:justify-end xl:justify-end lg:justify-end md:portrait:justify-start items-center gap-5">
                 <div className="flex flex-col justify-center items-center gap-[3%]  w-[95%] h-[35%]">
                   <img
                     className="2xl:h-[10vw] 2xl:w-[45vw] xl:h-[10vw] xl:w-[45vw] lg:w-[45vw] lg:h-[10vw] md:portrait:h-[10vw] md:portrait:w-[95%]"
@@ -154,7 +152,7 @@ export const Herosection = () => {
                 </div>
                 <div className=" mx-auto h-[40%] w-[95%]"></div>
 
-                <div className="border-t border-[#7122c1] w-[95%]  flex justify-between items-center h-[10%] p-2">
+                <div className="border-t border-[#7122c1] w-[95%]  flex justify-between items-center py-2  px-2 md:portrait:py-5">
                   <button className="2xl:text-[1vw] xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[600]">
                     Facebook
                   </button>
