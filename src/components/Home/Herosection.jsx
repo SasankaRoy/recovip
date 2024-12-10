@@ -108,14 +108,14 @@ export const Herosection = () => {
   return (
     <div>
       <div ref={mainWrapperRef} className=" h-[300dvh] relative mx-auto">
-        <div className="top-0 sticky h-screen w-full overflow-hidden">
+        <div className="top-0 sticky h-[100dvh] w-full overflow-hidden">
           <motion.div
             style={{
               x: scrollOnXAxis,
             }}
             className="flex w-full"
           >
-            <div className="  bg-[#fbf2ff] text-black h-screen 2xl:w-[50vw] xl:w-[50vw] lg:w-[50vw] md:portrait:w-[80vw] flex-shrink-0 flex flex-col justify-center items-center text-whit  ">
+            <div className=" bg-[#fbf2ff] text-black h-[100dvh] 2xl:w-[50vw] xl:w-[50vw] lg:w-[50vw] md:portrait:w-[80vw] flex-shrink-0 flex flex-col justify-center items-center text-whit  ">
               <div className="flex-1 h-[50%] w-full flex justify-center items-center ">
                 <div className=" h-full flex-1 flex justify-center items-center">
                   <div className="w-[80%] h-[80%]">
@@ -255,6 +255,7 @@ export const Herosection = () => {
                 </motion.div>
               </motion.div>
             </motion.div>
+
             <motion.div
               style={{
                 width: increaseWidthOnScroll3,
@@ -301,6 +302,7 @@ export const Herosection = () => {
                 </motion.div>
               </motion.div>
             </motion.div>
+
             <motion.div
               style={{
                 width: increaseWidthOnScroll3,
