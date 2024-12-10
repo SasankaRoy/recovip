@@ -134,11 +134,11 @@ export const Footer = () => {
 
           <div className="flex justify-between items-center">
             <div className="flex justify-center items-center flex-shrink-0">
-                <img className="h-44 w-48 rounded-xl" src="/RIPLogo3.png" />
+                <img className="h-44 w-48 rounded-xl" src="/RIPLogo3.png" alt="personImg" />
                 <h3 className="text-[8vw] text-white font-[600] ml-[-6%] font-[Roboto]">RECOVIP</h3>
             </div>
             <div className="min-w-[30%] rounded-xl overflow-hidden h-80">
-                <img src="/footerGraphics.gif" className="object-cover w-full h-full" />
+                <img src="/footerGraphics.gif" alt="personImg" className="object-cover w-full h-full" />
             </div>
           </div>
 

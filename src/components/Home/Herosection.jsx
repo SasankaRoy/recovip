@@ -121,6 +121,7 @@ export const Herosection = () => {
                   <img
                     src="/personImg.webp"
                     className="w-full h-full object-cover object-top "
+                    alt="personImg"
                   />
                 </div>
                 <div className=" h-full flex-col gap-5 py-10  flex-1 flex justify-start items-start px-5">
@@ -146,6 +147,7 @@ export const Herosection = () => {
                     <img
                       className="h-[8vw] w-[10vw] mix-blend-multiply"
                       src="/RIPLogo3.png"
+                      alt="personImg"
                     />
                     <h1 className="font-[Roboto] text-[#8100ff] font-[700] 2xl:text-[8vw] xl:text-[8vw] lg:text-[8vw] md:portrait:text-[13vw] ml-[-35px]">
                       RECOVIP
@@ -190,6 +192,7 @@ export const Herosection = () => {
                 <img
                   src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8="
                   className="w-full h-full object-cover"
+                  alt="personImg"
                 />
               </motion.div>
               <motion.div
@@ -230,7 +233,7 @@ export const Herosection = () => {
               >
                 <img
                   src="https://media.istockphoto.com/id/483585627/photo/white-dove-isolated.jpg?s=612x612&w=0&k=20&c=qZb-CEMXnLdomi-cC2coezJSH7nI_XnNTEdG6SqTIwc="
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover" alt="personImg"
                 />
               </motion.div>
               <motion.div
@@ -273,7 +276,7 @@ export const Herosection = () => {
               >
                 <img
                   src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover" alt="personImg"
                 />
               </motion.div>
               <motion.div
