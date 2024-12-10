@@ -116,20 +116,24 @@ export const Herosection = () => {
             className="flex w-full"
           >
             <div className="  bg-[#fbf2ff] text-black h-screen 2xl:w-[50vw] xl:w-[50vw] lg:w-[50vw] md:portrait:w-[80vw] flex-shrink-0 flex flex-col justify-center items-center text-whit  ">
-              <div className="flex-1 h-[50%] w-full flex justify-center items-center">
-                <div className=" h-full flex-1">
-                  <img
-                    src="/personImg.webp"
-                    className="w-full h-full object-cover object-top "
-                    alt="personImg"
-                  />
+              <div className="flex-1 h-[50%] w-full flex justify-center items-center ">
+                <div className=" h-full flex-1 flex justify-center items-center">
+                  <div className="w-[80%] h-[80%]">
+                    <img
+                      src="/personImg2.png"
+                      className="w-full h-full object-cover"
+                      alt="personImg"
+                    />
+                  </div>
                 </div>
-                <div className=" h-full flex-col gap-5 py-10  flex-1 flex justify-start items-start px-5">
-                  <h3 className="2xl:text-[3.5vw] xl:text-[3.5vw] lg:text-[3.5vw] md:portrait:text-[5.5vw] font-[700] customLine__heights 2xl:leading-[3.5vw] xl:leading-[3.5vw] lg:leading-[3.5vw] md:portrait:leading-[6vw] text-[#4d0072]">
-                    Your Journey to Recovery Starts Here
-                  </h3>
+                <div className=" h-full flex-col gap-5   flex-1 flex justify-center items-start px-[1%]">
+                  <div className="w-[90%] mx-auto">
+                    <h3 className="2xl:text-[3vw] xl:text-[3vw] lg:text-[3vw] md:portrait:text-[5.5vw] font-[700] customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-[#4d0072]">
+                      Your Journey to Recovery Starts Here
+                    </h3>
+                  </div>
                   <div className="flex flex-col gap-1">
-                    <li className="text-start text-[#260039] 2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] font-[Montserrat] font-[300]">
+                    {/* <li className="text-start text-[#260039] 2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] font-[Montserrat] font-[300]">
                       Personalized sessions tailored to your needs
                     </li>
                     <li className="text-start text-[#260039] 2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] font-[Montserrat] font-[300]">
@@ -137,7 +141,7 @@ export const Herosection = () => {
                     </li>
                     <li className="text-start text-[#260039] 2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] font-[Montserrat] font-[300]">
                       Convenient therapy from the comfort of home
-                    </li>
+                    </li> */}
                   </div>
                 </div>
               </div>
@@ -145,22 +149,22 @@ export const Herosection = () => {
                 <div className="flex-1 flex flex-col justify-center items-center -gap-20">
                   <div className="flex justify-center items-center">
                     <img
-                      className="h-[8vw] w-[10vw] mix-blend-multiply"
-                      src="/RIPLogo3.png"
+                      className="h-[10vw] w-[45vw] mix-blend-multiply"
+                      src="/RecovIPLightLogo.svg"
                       alt="personImg"
                     />
-                    <h1 className="font-[Roboto] text-[#8100ff] font-[700] 2xl:text-[8vw] xl:text-[8vw] lg:text-[8vw] md:portrait:text-[13vw] ml-[-35px]">
+                    {/* <h1 className="font-[Roboto] text-[#8100ff] font-[700] 2xl:text-[8vw] xl:text-[8vw] lg:text-[8vw] md:portrait:text-[13vw] ml-[-35px]">
                       RECOVIP
-                    </h1>
+                    </h1> */}
                   </div>
-                  <p className="2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[1.8vw] text-[#2e0e4f] font-[300] text-left  font-[Montserrat]">
-                    At Recovery is Possible, we believe that everyone has the
-                    potential to overcome their struggles and lead fulfilling
-                    lives. We provide a supportive and nurturing environment
-                    where you can explore your challenges, develop coping
-                    strategies, and embark on a journey of healing and personal
-                    growth.
-                  </p>
+                  <div className="w-[45vw] mx-auto">
+                    <p className="2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[1.8vw] text-[#2e0e4f] font-[300] text-left  font-[Montserrat]">
+                      We provide a supportive and nurturing environment where
+                      you can explore your challenges, develop coping
+                      strategies, and embark on a journey of healing and
+                      personal growth.
+                    </p>
+                  </div>
                 </div>
                 <div className="border-t border-[#7122c1] flex justify-between items-center h-[10%] w-full mt-auto p-2">
                   <button className="2xl:text-[1vw] xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[600]">
@@ -233,7 +237,8 @@ export const Herosection = () => {
               >
                 <img
                   src="https://media.istockphoto.com/id/483585627/photo/white-dove-isolated.jpg?s=612x612&w=0&k=20&c=qZb-CEMXnLdomi-cC2coezJSH7nI_XnNTEdG6SqTIwc="
-                  className="w-full h-full object-cover" alt="personImg"
+                  className="w-full h-full object-cover"
+                  alt="personImg"
                 />
               </motion.div>
               <motion.div
@@ -276,7 +281,8 @@ export const Herosection = () => {
               >
                 <img
                   src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg"
-                  className="w-full h-full object-cover" alt="personImg"
+                  className="w-full h-full object-cover"
+                  alt="personImg"
                 />
               </motion.div>
               <motion.div
