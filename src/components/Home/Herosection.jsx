@@ -106,7 +106,7 @@ export const Herosection = () => {
   );
 
   return (
-    <div>
+    <div className="relative">
       <div ref={mainWrapperRef} className=" h-[300dvh] relative mx-auto">
         <div className="top-0 sticky h-[100dvh] w-full overflow-hidden">
           <motion.div
@@ -115,13 +115,30 @@ export const Herosection = () => {
             }}
             className="flex w-full"
           >
-            <div className=" bg-[#fbf2ff] text-black h-[100vh] 2xl:w-[50vw] xl:w-[50vw] lg:w-[50vw] md:portrait:w-[80vw] flex-shrink-0 flex flex-col justify-center items-center text-whit  ">
+            <motion.div  initial={{
+                scale: 2,
+                x: "100%",
+                zIndex: 10,
+              }}
+              whileInView={{
+                scale: 1,
+                x: "0%",
+                zIndex: 1,
+              }}
+              transition={{
+                duration: 1,
+                ease: "circInOut",
+                // delay: 0.2,
+              }}
+              viewport={{
+                once: true,
+              }} className=" bg-[#fbf2ff] text-black h-[100vh] 2xl:w-[50vw] xl:w-[50vw] lg:w-[50vw] md:portrait:w-[80vw] flex-shrink-0 flex flex-col justify-center items-center text-whit  ">
               <div className="h-[50%] w-full flex justify-center items-center ">
                 <div className=" h-full flex-1 flex justify-center items-center">
-                  <div className="w-[80%] h-[80%]">
+                  <div className="w-[80%] h-[80%] pOneImgWrapper">
                     <img
                       src="/personImg2.png"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain pOneImg"
                       alt="personImg"
                     />
                   </div>
@@ -168,9 +185,27 @@ export const Herosection = () => {
                   {/* <button className="text-[1vw]">Linkedin</button> */}
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             <motion.div
+              initial={{
+                scale: 2,
+                x: "100%",
+                zIndex: 10,
+              }}
+              whileInView={{
+                scale: 1,
+                x: "0%",
+                zIndex: 1,
+              }}
+              transition={{
+                duration: 1,
+                ease: "circInOut",
+                // delay: 0.2,
+              }}
+              viewport={{
+                once: true,
+              }}
               style={{
                 width: increaseWidthOnScroll1,
               }}
@@ -213,6 +248,24 @@ export const Herosection = () => {
             </motion.div>
 
             <motion.div
+              initial={{
+                scale: 2,
+                x: "80%",
+                zIndex: 9,
+              }}
+              whileInView={{
+                scale: 1,
+                x: "0%",
+                zIndex: 1,
+              }}
+              transition={{
+                duration: 1,
+                ease: "circInOut",
+                // delay: 0.2,
+              }}
+              viewport={{
+                once: true,
+              }}
               style={{
                 width: increaseWidthOnScroll2,
               }}
@@ -258,6 +311,24 @@ export const Herosection = () => {
             </motion.div>
 
             <motion.div
+              initial={{
+                scale: 2.5,
+                x: "80%",
+                zIndex: 8,
+              }}
+              whileInView={{
+                scale: 1,
+                x: "0%",
+                zIndex: 1,
+              }}
+              transition={{
+                duration: 1,
+                ease: "circInOut",
+                // delay: 0.2,
+              }}
+              viewport={{
+                once: true,
+              }}
               style={{
                 width: increaseWidthOnScroll3,
               }}
@@ -315,6 +386,23 @@ export const Herosection = () => {
           </motion.div>
         </div>
       </div>
+      <motion.div
+        initial={{
+          width: "100%",
+        }}
+        whileInView={{
+          width: ["100%", "0%"],
+        }}
+        transition={{
+          duration: 1.5,
+          ease: "easeInOut",
+        }}
+        className="fixed z-50 w-full h-screen bg-[#121212] top-0 left-0 flex justify-center items-center"
+      >
+        <div className="flex justify-center items-center h-32 w-32">
+          <img src="FavIconDark.svg" className="w-full h-full object-contain" />
+        </div>
+      </motion.div>
     </div>
   );
 };

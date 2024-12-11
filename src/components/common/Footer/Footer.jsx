@@ -200,60 +200,57 @@ export const Footer = () => {
                   className="object-contain w-full h-full"
                 /> */}
                 <div className="w-full flex justify-center items-center ">
-                <div
-                //   ref={scope}
-                //   onMouseEnter={handleAnimation}
-                //   onMouseLeave={handleAnimationOut}
-                  className="flex justify-center items-center bg-[#E413F6] backdrop-blur-md h-[200px] w-[200px] lg:h-[180px] lg:w-[180px]  2xl:w-[200px]  2xl:h-[200px] xl:w-[200px] xl:h-[200px]  rounded-full homeFooterBTNShadow transition-all duration-500 ease-linear"
-                >
                   <div
-                    id="rotatingDiv"
-                    className="absolute top-0 right-0 bg-[f161fe] w-[100%] h-[100%] transition-all duration-500 ease-linear"
-                  />
-                  <p href="/contact">
-                    <button
-                      id="BTNAnimate"
-                      className="font-[Open Sans] flex flex-col justify-center items-center bg-[#121212] opacity-100 text-[#FFF] w-[185px] h-[185px] lg:h-[165px] lg:w-[165px] 2xl:w-[185px] 2xl:h-[185px] xl:w-[185px] xl:h-[185px] rounded-full font-[800] overflow-hidden relative z-10"
-                    >
-                      <span
-                        id="innerText"
-                        className=" text-[2.5vw]  mt-7"
+                    //   ref={scope}
+                    //   onMouseEnter={handleAnimation}
+                    //   onMouseLeave={handleAnimationOut}
+                    className="flex justify-center items-center bg-[#E413F6] backdrop-blur-md h-[200px] w-[200px] lg:h-[180px] lg:w-[180px]  2xl:w-[200px]  2xl:h-[200px] xl:w-[200px] xl:h-[200px]  rounded-full homeFooterBTNShadow transition-all duration-500 ease-linear"
+                  >
+                    <div
+                      id="rotatingDiv"
+                      className="absolute top-0 right-0 bg-[f161fe] w-[100%] h-[100%] transition-all duration-500 ease-linear"
+                    />
+                    <p href="/contact">
+                      <button
+                        id="BTNAnimate"
+                        className="font-[Open Sans] flex flex-col justify-center items-center bg-[#121212] opacity-100 text-[#FFF] w-[185px] h-[185px] lg:h-[165px] lg:w-[165px] 2xl:w-[185px] 2xl:h-[185px] xl:w-[185px] xl:h-[185px] rounded-full font-[800] overflow-hidden relative z-10"
                       >
-                        Schedule
-                      </span>
-                      <span
-                        id="innerText-2"
-                        className="2xl:text-4xl xl:text-3xl lg:text-2xl translate-y-28"
-                      >
-                        Here
-                      </span>
-                      <span
-                        id="innerText-3"
-                        className="2xl:text-4xl xl:text-3xl lg:text-2xl translate-y-28 hidden  flex-col justify-center items-center gap-3.5"
-                      >
-                        Today{" "}
+                        <span id="innerText" className=" text-3xl  mt-7">
+                          Schedule
+                        </span>
                         <span
-                          id="BTNbg"
-                          className="-translate-x-60 translate-y-52"
+                          id="innerText-2"
+                          className="2xl:text-4xl xl:text-3xl lg:text-2xl translate-y-28"
                         >
-                          <span className="relative h-7 w-7">
-                            <img fill src='' alt="" />
+                          Here
+                        </span>
+                        <span
+                          id="innerText-3"
+                          className="2xl:text-4xl xl:text-3xl lg:text-2xl translate-y-28 hidden  flex-col justify-center items-center gap-3.5"
+                        >
+                          Today{" "}
+                          <span
+                            id="BTNbg"
+                            className="-translate-x-60 translate-y-52"
+                          >
+                            <span className="relative h-7 w-7">
+                              <img fill src="" alt="" />
+                            </span>
                           </span>
                         </span>
-                      </span>
-                      <div
-                        id="BTNbg"
-                        className="absolute top-0 left-0 w-full h-full bg-white -z-10 -translate-x-60 translate-y-52 rounded-full"
-                      />
-                    </button>
-                  </p>
+                        <div
+                          id="BTNbg"
+                          className="absolute top-0 left-0 w-full h-full bg-white -z-10 -translate-x-60 translate-y-52 rounded-full"
+                        />
+                      </button>
+                    </p>
+                  </div>
                 </div>
-              </div>
               </div>
             </div>
           </div>
 
-          <div className="px-4 py-7 flex justify-between items-center border-t border-[#2C2C2C] mt-[2%]">
+          <div className="px-4 py-7 flex justify-between items-center  mt-[2%]">
             <div className="2xl:w-[20%] w-[25%] xl:w-[40%]">
               <p className="font-[Roboto] lg:text-sm text-base 2xl:text-base font-[300] text-[#FFF]">
                 © 2024 | Alrights reserved.
