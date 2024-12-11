@@ -400,7 +400,7 @@ export const Herosection = () => {
         className="fixed z-50 w-full h-screen bg-[#121212] top-0 left-0 flex justify-center items-center"
       >
         <div className="flex justify-center items-center h-32 w-32">
-          <img src="FavIconDark.svg" className="w-full h-full object-contain" />
+          <img src="FavIconDark.svg" className="w-full h-full object-contain" alt="logo" />
         </div>
       </motion.div>
     </div>
