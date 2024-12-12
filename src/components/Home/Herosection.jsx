@@ -1,5 +1,6 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+// import { Navbar } from "../common/Navbar/Navbar";
 
 export const Herosection = () => {
   const mainWrapperRef = useRef(null);
@@ -105,8 +106,47 @@ export const Herosection = () => {
     [0, 1]
   );
 
+  // view Menu btn
+
+  const menuOpacity = useTransform(scrollYProgress, [0.25, 0.3], [0, 1]);
+  const scaleUpMenuBtn = useTransform(scrollYProgress, [0.25, 0.3], [0.8, 1]);
+  const menuTextTransition = useTransform(
+    scrollYProgress,
+    [0.3, 0.35],
+    ["105%", "0%"]
+  );
+  const menuTextDisplayTransition = useTransform(
+    scrollYProgress,
+    [0.3, 0.35],
+    ["none", "flex"]
+  );
   return (
     <div className="relative">
+      <motion.div style={{
+        opacity: menuOpacity,
+      }} className="fixed top-0 left-0 w-full bg-transparent z-50 py-2 flex justify-center items-center">
+        <div className="flex justify-between items-center w-[95%]">
+          <div className="h-auto w-14">
+            <img src="FavIconDark.svg" alt="logo" className="object-contain" />
+          </div>
+          <motion.button
+            style={{
+              opacity: menuOpacity,
+              scale: scaleUpMenuBtn,
+            }}
+            className=" min-h-10 min-w-16 overflow-hidden right-[2%] text-white bg-black px-6  rounded-full border-none outline-none"
+          >
+            <motion.p
+              style={{
+                x: menuTextTransition,
+                display: menuTextDisplayTransition,
+              }}
+            >
+              Menu
+            </motion.p>
+          </motion.button>
+        </div>
+      </motion.div>
       <div ref={mainWrapperRef} className=" h-[300dvh] relative mx-auto">
         <div className="top-0 sticky h-[100dvh] w-full overflow-hidden">
           <motion.div
@@ -115,7 +155,8 @@ export const Herosection = () => {
             }}
             className="flex w-full"
           >
-            <motion.div  initial={{
+            <motion.div
+              initial={{
                 scale: 2,
                 x: "100%",
                 zIndex: 10,
@@ -132,7 +173,9 @@ export const Herosection = () => {
               }}
               viewport={{
                 once: true,
-              }} className=" bg-[#fbf2ff] text-black h-[100vh] 2xl:w-[50vw] xl:w-[50vw] lg:w-[50vw] md:portrait:w-[80vw] flex-shrink-0 flex flex-col justify-center items-center text-whit  ">
+              }}
+              className=" bg-[#fbf2ff] text-black h-[100vh] 2xl:w-[50vw] xl:w-[50vw] lg:w-[50vw] md:portrait:w-[80vw] flex-shrink-0 flex flex-col justify-center items-center text-whit  "
+            >
               <div className="h-[50%] w-full flex justify-center items-center ">
                 <div className=" h-full flex-1 flex justify-center items-center">
                   <div className="w-[80%] h-[80%] pOneImgWrapper">
@@ -386,6 +429,7 @@ export const Herosection = () => {
           </motion.div>
         </div>
       </div>
+
       <motion.div
         initial={{
           width: "100%",
@@ -400,9 +444,14 @@ export const Herosection = () => {
         className="fixed z-50 w-full h-screen bg-[#121212] top-0 left-0 flex justify-center items-center"
       >
         <div className="flex justify-center items-center h-32 w-32">
-          <img src="FavIconDark.svg" className="w-full h-full object-contain" alt="logo" />
+          <img
+            src="FavIconDark.svg"
+            className="w-full h-full object-contain"
+            alt="logo"
+          />
         </div>
       </motion.div>
+      {/* <Navbar /> */}
     </div>
   );
 };
