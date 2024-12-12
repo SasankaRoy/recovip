@@ -6,7 +6,7 @@ export const Footer = () => {
     <>
       <footer
         // ref={sectionRef}
-        className="bg-[#121212] py-8 hidden justify-center items-center md:hidden xl:flex 2xl:flex lg:landscape:flex lg:portrait:hidden "
+        className="bg-[#100018] py-8 hidden justify-center items-center md:hidden xl:flex 2xl:flex lg:landscape:flex lg:portrait:hidden "
       >
         <div className="w-[95%]">
           {/* <div className="flex justify-between items-center gap-3 border-b-2 border-[#2C2C2C] p-0">
@@ -132,8 +132,8 @@ export const Footer = () => {
             </div>
           </div> */}
 
-          <div className="flex  justify-between items-centers bg-[#000]/20 rounded-lg p-2 gap-2">
-            <div className=" w-[20%]">
+          <div className="flex  justify-between items-centers bg-[#210030]/35  rounded-lg p-2 gap-2">
+            <div className=" w-[20%] bg-[#100018]  rounded-lg">
               <div className="w-full h-full flex  flex-col justify-between items-center gap-1">
                 {[
                   {
@@ -183,7 +183,7 @@ export const Footer = () => {
               </div>
             </div>
 
-            <div className="flex  flex-col  bg-[#121212]  rounded-lg gap-3 justify-center items-center flex-shrink-0 w-[60%] ">
+            <div className="flex  flex-col  bg-[#100018]   rounded-lg gap-3 justify-center items-center flex-shrink-0 w-[60%] ">
               <div className="w-[70%] ">
                 <img
                   className="w-full rounded-xl"
@@ -199,7 +199,7 @@ export const Footer = () => {
               {/* <h3 className="text-[8vw] text-white font-[600] ml-[-6%] font-[Roboto]">RECOVIP</h3> */}
             </div>
 
-            <div className="min-w-[20%]  bg-[#121212]  rounded-lg overflow-hidden flex justify-center items-center">
+            <div className="min-w-[20%] bg-[#100018]   rounded-lg overflow-hidden flex justify-center items-center">
               <div className="w-full ">
                 {/* <img
                   src="/footerGraphics.gif"
