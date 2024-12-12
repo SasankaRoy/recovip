@@ -41,35 +41,35 @@ export const Contact = () => {
                 transition={{ duration: 0.8, ease: "circInOut", delay: 0.6 }}
                 className="w-[25%]"
               >
-                <h4 className="AllianceFont text-2xl lg:landscape:text-lg tracking-wider font-[400] text-[#4d0072]">
+                <h4 className="AllianceFont text-[1.5vw]  tracking-wider font-[400] text-[#4d0072]">
                   let's start the
                 </h4>
-                <h4 className="AllianceFont text-2xl lg:landscape:text-lg tracking-wider font-[400] text-[#4d0072]">
+                <h4 className="AllianceFont text-[1.5vw] tracking-wider font-[400] text-[#4d0072]">
                   conversation!
                 </h4>
                 <div className="flex flex-col justify-start items-start gap-2 mt-[20%] w-[65%]">
                   <Link
-                    className="AllianceFont text-lg lg:landscape:text-base font-[700] text-[#4d0072]"
+                    className="AllianceFont text-[1.1vw] font-[700] text-[#4d0072]"
                     href="tel:+1(931)-266-6101"
                   >
                     +1(931)-266-6424
                   </Link>
                   <Link
-                    className="AllianceFont text-lg lg:landscape:text-base font-[700] text-[#4d0072] "
+                    className="AllianceFont text-[1.1vw]  font-[700] text-[#4d0072] "
                     href="mailto:hello@kaltechconsultancy.tech"
                   >
                     info@recovip.com
                   </Link>
                   <div className="flex flex-col justify-start items-start">
                     <Link
-                      className="text-[#4d0072] text-lg lg:landscape:text-base font-[700]"
+                      className="text-[#4d0072] text-[1.1vw]  font-[700]"
                       href="https://maps.app.goo.gl/C1uULXRQ95gTG7bP8"
                       target="_blank"
                     >
                       Tennessee
                     </Link>
                     <Link
-                      className="text-[#4d0072] text-lg lg:landscape:text-base font-[700]"
+                      className="text-[#4d0072] text-[1.1vw]  font-[700]"
                       href="https://maps.app.goo.gl/C1uULXRQ95gTG7bP8"
                       target="_blank"
                     >
@@ -88,7 +88,7 @@ export const Contact = () => {
                   <div className="w-[50%]">
                     <input
                       type="text"
-                      className="w-full AllianceFont font-[400] text-lg text-[#2e0e4f] placeholder:text-[#2e0e4f]  py-2 px-3 outline-none border-b-2 border-[#C2C2C2] bg-transparent"
+                      className="w-full AllianceFont font-[400] text-[1.3vw] text-[#2e0e4f] placeholder:text-[#2e0e4f]  py-2 px-3 outline-none border-b-2 border-[#C2C2C2] bg-transparent"
                       placeholder="Name *"
                       //   onChange={handleChange}
                       name="fullName"
@@ -98,7 +98,7 @@ export const Contact = () => {
                   <div className="w-[50%]">
                     <input
                       type="text"
-                      className="w-full AllianceFont font-[400] text-lg text-[#2e0e4f] placeholder:text-[#2e0e4f]  py-2 px-3 outline-none border-b-2 border-[#C2C2C2] bg-transparent"
+                      className="w-full AllianceFont font-[400] text-[1.3vw] text-[#2e0e4f] placeholder:text-[#2e0e4f]  py-2 px-3 outline-none border-b-2 border-[#C2C2C2] bg-transparent"
                       placeholder="Email *"
                       //   onChange={handleChange}
                       name="email"
@@ -111,7 +111,7 @@ export const Contact = () => {
                   <div className="w-[50%]">
                     <input
                       type="text"
-                      className="w-full AllianceFont font-[400] text-lg text-[#2e0e4f] placeholder:text-[#2e0e4f]  py-2 px-3 outline-none border-b-2 border-[#C2C2C2] bg-transparent"
+                      className="w-full AllianceFont font-[400] text-[1.3vw] text-[#2e0e4f] placeholder:text-[#2e0e4f]  py-2 px-3 outline-none border-b-2 border-[#C2C2C2] bg-transparent"
                       placeholder="Phone"
                       //   onChange={handleChange}
                       name="phonenumber"
@@ -121,7 +121,7 @@ export const Contact = () => {
                   <div className="w-[50%]">
                     <input
                       type="text"
-                      className="w-full AllianceFont font-[400] text-lg text-[#2e0e4f] placeholder:text-[#2e0e4f]  py-2 px-3 outline-none border-b-2 border-[#C2C2C2] bg-transparent"
+                      className="w-full AllianceFont font-[400] text-[1.3vw] text-[#2e0e4f] placeholder:text-[#2e0e4f]  py-2 px-3 outline-none border-b-2 border-[#C2C2C2] bg-transparent"
                       placeholder="Subject *"
                       //   onChange={handleChange}
                       name="subject"
@@ -133,7 +133,7 @@ export const Contact = () => {
                 <div className="flex justify-between items-center gap-10 w-full">
                   <div className="w-full">
                     <textarea
-                      className="w-full AllianceFont font-[400] text-lg text-[#2e0e4f] placeholder:text-[#2e0e4f]  py-2 px-3 outline-none border-b-2 border-[#C2C2C2] bg-transparent"
+                      className="w-full AllianceFont font-[400] text-[1.3vw] text-[#2e0e4f] placeholder:text-[#2e0e4f]  py-2 px-3 outline-none border-b-2 border-[#C2C2C2] bg-transparent"
                       placeholder="Message *"
                       //   onChange={handleChange}
                       name="message"
@@ -158,7 +158,7 @@ export const Contact = () => {
                   //       setContactDeltails
                   //     )
                   //   }
-                  className={`text-[#2e0e4f]  flex justify-center items-center gap-2 AllianceFont font-[400] text-base w-32 h-32 border border-[#210030]  rounded-full relative hoverAnimationContactBTN overflow-hidden z-10 transition-colors duration-200 ease-in-out delay-100 self-start p-3  disabled:opacity-55 disabled:cursor-not-allowed`}
+                  className={`text-[#2e0e4f]  flex justify-center items-center gap-2 AllianceFont font-[400] text-[1.2vw] w-32 h-32 border border-[#2e0e4f]  rounded-full relative hoverAnimationContactBTN overflow-hidden z-10 transition-colors duration-200 ease-in-out delay-100 self-start p-3  disabled:opacity-55 disabled:cursor-not-allowed`}
                   //   disabled={isLoading}
                 >
                   {/* {isLoading ? "Sending..." : "Send Message"} */}
