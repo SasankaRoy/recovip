@@ -158,7 +158,7 @@ export const Contact = () => {
                   //       setContactDeltails
                   //     )
                   //   }
-                  className={`text-[#2e0e4f]  flex justify-center items-center gap-2 AllianceFont font-[400] text-[1.2vw] w-32 h-32 border border-[#2e0e4f]  rounded-full relative hoverAnimationContactBTN overflow-hidden z-10 transition-colors duration-200 ease-in-out delay-100 self-start p-3  disabled:opacity-55 disabled:cursor-not-allowed`}
+                  className={`text-[#2e0e4f]  flex justify-center items-center gap-1 AllianceFont font-[400] text-[1.2vw] w-[8.5vw] h-[8.5vw] border border-[#2e0e4f]  rounded-full relative hoverAnimationContactBTN overflow-hidden z-10 transition-colors duration-200 ease-in-out delay-100 self-start p-3  disabled:opacity-55 disabled:cursor-not-allowed`}
                   //   disabled={isLoading}
                 >
                   {/* {isLoading ? "Sending..." : "Send Message"} */}
