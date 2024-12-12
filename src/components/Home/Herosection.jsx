@@ -128,7 +128,7 @@ export const Herosection = () => {
   const scrollOnXAxis = useTransform(
     scrollYProgress,
     [0, 1],
-    ["0vw", `${!isDesktop.orientation ? "-190vw" : "-320vw"}`]
+    ["0vw", `${!isDesktop.orientation ? "-220vw" : "-320vw"}`]
   );
 
   const increaseWidthOnScroll1 = useTransform(
@@ -437,7 +437,7 @@ export const Herosection = () => {
                     opacity: increaseOpacityBox2Div2,
                   }}
                 >
-                  Box 3
+                  Service 1
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -502,7 +502,7 @@ export const Herosection = () => {
                     opacity: increaseOpacityBox3Div2,
                   }}
                 >
-                  Box 2
+                  Service 2
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -511,9 +511,17 @@ export const Herosection = () => {
               style={{
                 width: increaseWidthOnScroll3,
               }}
-              className="bg-neutral-600 protfolioShadow h-screen w-[5vw] flex-shrink-0 flex justify-center items-center text-[1vw] text-white capitalize"
+              className="bg-neutral-600 protfolioShadow h-screen w-[5vw] flex-shrink-0 flex justify-center items-center text-[5vw] text-white capitalize"
             >
-              Box 5
+              Service 3
+            </motion.div>
+            <motion.div
+              style={{
+                width: increaseWidthOnScroll3,
+              }}
+              className="bg-teal-600 protfolioShadow h-screen w-[5vw] flex-shrink-0 flex justify-center items-center text-[5vw] text-white capitalize"
+            >
+              Why choose Us
             </motion.div>
           </motion.div>
         </div>

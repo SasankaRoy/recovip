@@ -7,7 +7,10 @@ export const Homepage = () => {
     <>
       <Herosection />
       <div className="min-h-screen bg-slate-500 flex justify-center items-center text-[4vw] capitalize text-white">
-        the contact section 
+       Testimonial
+      </div>
+      <div className="min-h-screen bg-cyan-500 flex justify-center items-center text-[4vw] capitalize text-white">
+       Blog
       </div>
       <Footer />
     </>

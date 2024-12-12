@@ -14,7 +14,7 @@ export const Contact = () => {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.8, ease: "circInOut", delay: 0.2 }}
-                  className="AllianceFont font-[Quattrocento font-[500] text-[#4d0072] 2xl:landscape:text-8xl  lg:landscape:text-7xl  "
+                  className="AllianceFont font-[Quattrocento font-[500] text-[#4d0072] text-[9vw]  leading-[normal]"
                 >
                   Let&apos;s get in touch
                 </motion.h1>
@@ -34,7 +34,7 @@ export const Contact = () => {
               </div>
             </div>
 
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center my-[1%]">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
