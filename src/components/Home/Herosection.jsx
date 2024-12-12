@@ -1,12 +1,99 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 // import { Navbar } from "../common/Navbar/Navbar";
+import SplitType from "split-type";
+import { gsap } from "gsap/dist/gsap";
 
 export const Herosection = () => {
   const mainWrapperRef = useRef(null);
+  const journeyTextRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: mainWrapperRef,
   });
+
+    /* This `useEffect` hook is responsible for creating a GSAP timeline animation that involves various
+  elements on the Hero section of your React component. Here's a breakdown of what it does: */
+  useEffect(() => {
+    const gsapTimeLine = gsap.timeline();
+    const sliptConsul =
+    journeyTextRef.current &&
+      new SplitType(journeyTextRef.current, {
+        types: "chars",
+      });
+    // const sliptTancy =
+    //   tancyRef.current && new SplitType(tancyRef.current, { types: "chars" });
+
+    if (sliptConsul?.chars) {
+      gsapTimeLine
+        // .fromTo(
+        //   journeyTextRef.current,
+        //   {
+        //     opacity: 0,
+        //     y: "-100%",
+        //     ease: "power2.out",
+        //   },
+        //   {
+        //     opacity: 1,
+        //     y: "0%",
+        //     ease: "power2.out",
+        //     duration: 0.45,
+        //     delay: 0.3,
+        //     scrub: 2,
+        //   }
+        // )
+        // @ts-ignore
+        .from(sliptConsul?.chars, {
+          duration: 0.8,
+          opacity: 0,
+          scale: 3.5,
+          stagger: 0.45,
+          ease: "power2.out",
+          scrub: 2,
+        })
+        // @ts-ignore
+        // .from(sliptTancy?.chars, {
+        //   duration: 0.8,
+        //   opacity: 0,
+        //   scale: 3.5,
+        //   stagger: 0.45,
+        //   ease: "power2.out",
+        //   scrub: 2,
+        // })
+        // .fromTo(
+        //   videoWrapperRef.current,
+        //   {
+        //     opacity: 0,
+        //     x: "100%",
+        //     ease: "power2.out",
+        //   },
+        //   {
+        //     opacity: 1,
+        //     x: "0%",
+        //     ease: "power2.out",
+        //     duration: 0.8,
+        //     scrub: 2,
+        //   }
+        // )
+        // .fromTo(
+        //   paraRef.current,
+        //   {
+        //     opacity: 0,
+        //     y: "50%",
+        //     ease: "power2.out",
+        //   },
+        //   {
+        //     duration: 0.8,
+        //     opacity: 1,
+        //     y: "0%",
+        //     ease: "power2.out",
+        //   }
+        // );
+    }
+
+    return () => {
+      gsapTimeLine?.reverse();
+    };
+  }, []);
 
   // const [currentWindowWidth, setCurrentWindowWidth] = useState(0);
   // const [currentWindowHeight, setCurrentWindowHeight] = useState(0);
@@ -188,7 +275,9 @@ export const Herosection = () => {
                 </div>
                 <div className=" h-full flex-col gap-5   flex-1 flex justify-center items-start px-[1%]">
                   <div className="w-[90%] mx-auto">
-                    <h3 className="2xl:text-[3vw] xl:text-[3vw] lg:text-[3vw] md:portrait:text-[5.5vw] font-[700] customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-[#4d0072]">
+                    <h3 
+                    // ref={journeyTextRef}
+                     className="2xl:text-[3vw] xl:text-[3vw] tracking-wider lg:text-[3vw] md:portrait:text-[5.5vw] font-[400] AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-[#4d0072]">
                       Your Journey to Recovery Starts Here
                     </h3>
                   </div>
@@ -216,13 +305,13 @@ export const Herosection = () => {
                 <div className=" mx-auto 2xl:h-[40%] xl:h-[40%] lg:h-[40%] md:portrait:h-[40%] md:landscape:h-[30%] w-[95%]"></div>
 
                 <div className="border-t border-[#7122c1] w-[95%]  flex justify-between items-center py-2  px-2 md:portrait:py-5 ">
-                  <button className="2xl:text-[1vw] xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[600]">
+                  <button className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[600]">
                     Facebook
                   </button>
-                  <button className="2xl:text-[1vw] xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[600]">
+                  <button className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[600]">
                     Instagram
                   </button>
-                  <button className="2xl:text-[1vw] xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[600]">
+                  <button className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[600]">
                     Twitter
                   </button>
                   {/* <button className="text-[1vw]">Linkedin</button> */}

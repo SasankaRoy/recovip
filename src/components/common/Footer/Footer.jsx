@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 export const Footer = () => {
   return (
     <>
@@ -132,8 +133,8 @@ export const Footer = () => {
           </div> */}
 
           <div className="flex  justify-between items-centers bg-[#000]/20 rounded-lg p-2 gap-2">
-            <div className=" w-[20%] h-[90%] bg-transparent">
-              <div className="w-full  flex flex-col justify-center items-center gap-1">
+            <div className=" w-[20%]">
+              <div className="w-full h-full flex  flex-col justify-between items-center gap-1">
                 {[
                   {
                     socialText: "Facebook",
@@ -152,12 +153,16 @@ export const Footer = () => {
                     link: "https://www.instagram.com/kaltechconsultancy/",
                   },
                 ].map((cur, id) => (
-                  <p
+                  <>
+                    {/* <div
                     key={id}
-                    // href={cur.link}
+                    href={cur.link}
                     target="_blank"
-                    className="font-[Roboto] lg:text-sm text-md text-[#FFF] font-[400] w-[95%]  flex justify-center items-center h-20 2xl:h-[4.2rem] border border-[#2C2C2C] rounded-lg"
+                    className="AllianceFont  py-3 lg:text-sm text-md text-[#FFF] font-[400] w-[95%]  flex justify-center items-center flex-1 border border-[#2C2C2C] rounded-lg"
                   >
+                    
+                  </div> */}
+
                     <motion.button
                       initial={{
                         background: "transparent",
@@ -169,15 +174,16 @@ export const Footer = () => {
                         opacity: [0.5, 1],
                       }}
                       transition={{ duration: 0.3, ease: "linear" }}
-                      className=" w-full h-full font-[Oxanium] lg:text-sm text-md text-[#FFF] font-[400]"
+                      className=" w-full h-full rounded-lg border border-[#2C2C2C] flex-1 AllianceFont text-[1.2vw] text-[#FFF] font-[400] py-4"
                     >
                       {cur.socialText}
                     </motion.button>
-                  </p>
+                  </>
                 ))}
               </div>
             </div>
-            <div className="flex  flex-col  bg-[#121212] rounded-lg gap-3 justify-center items-center flex-shrink-0 w-[60%] ">
+
+            <div className="flex  flex-col  bg-[#121212]  rounded-lg gap-3 justify-center items-center flex-shrink-0 w-[60%] ">
               <div className="w-[70%] ">
                 <img
                   className="w-full rounded-xl"
@@ -186,13 +192,14 @@ export const Footer = () => {
                 />
               </div>
               <div className=" w-full flex justify-center items-center">
-                <h2 className="text-[7vw] text-white font-[600] font-[Roboto] uppercase">
-                  Lets Talk
+                <h2 className="text-[7vw] text-white font-[300] AllianceFont">
+                  Let's Talk
                 </h2>
               </div>
               {/* <h3 className="text-[8vw] text-white font-[600] ml-[-6%] font-[Roboto]">RECOVIP</h3> */}
             </div>
-            <div className="min-w-[20%]  bg-[#121212] rounded-lg overflow-hidden flex justify-center items-center">
+
+            <div className="min-w-[20%]  bg-[#121212]  rounded-lg overflow-hidden flex justify-center items-center">
               <div className="w-full ">
                 {/* <img
                   src="/footerGraphics.gif"
@@ -279,12 +286,12 @@ export const Footer = () => {
                     whileHover={{ scale: 1.2, y: "-20%" }}
                     transition={{ duration: 0.1, ease: "linear" }}
                   >
-                    <p
+                    <Link
                       className="font-[Roboto] text-[#FFF] uppercase lg:text-[12px] xl:text-sm text-base 2xl:text-base font-[300] no-underline"
-                      href={cur.path}
+                      to={cur.path}
                     >
                       {cur.title}
-                    </p>
+                    </Link>
                   </motion.div>
                 ))}
               </ul>
