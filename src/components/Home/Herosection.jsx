@@ -6,17 +6,17 @@ import { gsap } from "gsap/dist/gsap";
 
 export const Herosection = () => {
   const mainWrapperRef = useRef(null);
-  const journeyTextRef = useRef(null)
+  const journeyTextRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: mainWrapperRef,
   });
 
-    /* This `useEffect` hook is responsible for creating a GSAP timeline animation that involves various
+  /* This `useEffect` hook is responsible for creating a GSAP timeline animation that involves various
   elements on the Hero section of your React component. Here's a breakdown of what it does: */
   useEffect(() => {
     const gsapTimeLine = gsap.timeline();
     const sliptConsul =
-    journeyTextRef.current &&
+      journeyTextRef.current &&
       new SplitType(journeyTextRef.current, {
         types: "chars",
       });
@@ -49,45 +49,45 @@ export const Herosection = () => {
           stagger: 0.45,
           ease: "power2.out",
           scrub: 2,
-        })
-        // @ts-ignore
-        // .from(sliptTancy?.chars, {
-        //   duration: 0.8,
-        //   opacity: 0,
-        //   scale: 3.5,
-        //   stagger: 0.45,
-        //   ease: "power2.out",
-        //   scrub: 2,
-        // })
-        // .fromTo(
-        //   videoWrapperRef.current,
-        //   {
-        //     opacity: 0,
-        //     x: "100%",
-        //     ease: "power2.out",
-        //   },
-        //   {
-        //     opacity: 1,
-        //     x: "0%",
-        //     ease: "power2.out",
-        //     duration: 0.8,
-        //     scrub: 2,
-        //   }
-        // )
-        // .fromTo(
-        //   paraRef.current,
-        //   {
-        //     opacity: 0,
-        //     y: "50%",
-        //     ease: "power2.out",
-        //   },
-        //   {
-        //     duration: 0.8,
-        //     opacity: 1,
-        //     y: "0%",
-        //     ease: "power2.out",
-        //   }
-        // );
+        });
+      // @ts-ignore
+      // .from(sliptTancy?.chars, {
+      //   duration: 0.8,
+      //   opacity: 0,
+      //   scale: 3.5,
+      //   stagger: 0.45,
+      //   ease: "power2.out",
+      //   scrub: 2,
+      // })
+      // .fromTo(
+      //   videoWrapperRef.current,
+      //   {
+      //     opacity: 0,
+      //     x: "100%",
+      //     ease: "power2.out",
+      //   },
+      //   {
+      //     opacity: 1,
+      //     x: "0%",
+      //     ease: "power2.out",
+      //     duration: 0.8,
+      //     scrub: 2,
+      //   }
+      // )
+      // .fromTo(
+      //   paraRef.current,
+      //   {
+      //     opacity: 0,
+      //     y: "50%",
+      //     ease: "power2.out",
+      //   },
+      //   {
+      //     duration: 0.8,
+      //     opacity: 1,
+      //     y: "0%",
+      //     ease: "power2.out",
+      //   }
+      // );
     }
 
     return () => {
@@ -209,9 +209,12 @@ export const Herosection = () => {
   );
   return (
     <div className="relative">
-      <motion.div style={{
-        opacity: menuOpacity,
-      }} className="fixed top-0 left-0 w-full bg-transparent z-50 py-2 flex justify-center items-center">
+      <motion.div
+        style={{
+          opacity: menuOpacity,
+        }}
+        className="fixed top-0 left-0 w-full bg-transparent z-50 py-2 flex justify-center items-center"
+      >
         <div className="flex justify-between items-center w-[95%]">
           <div className="h-auto w-14">
             <img src="FavIconDark.svg" alt="logo" className="object-contain" />
@@ -234,13 +237,16 @@ export const Herosection = () => {
           </motion.button>
         </div>
       </motion.div>
-      <div ref={mainWrapperRef} className=" h-[300dvh] relative mx-auto">
+      <div
+        ref={mainWrapperRef}
+        className="2xl:h-[300dvh] xl:h-[300dvh] lg:h-[300dvh] md:portrait:h-[300dvh] md:landscape:h-[300dvh] h-[600dvh] relative mx-auto"
+      >
         <div className="top-0 sticky h-[100dvh] w-full overflow-hidden">
           <motion.div
             style={{
               x: scrollOnXAxis,
             }}
-            className="flex w-full"
+            className="2xl:flex xl:flex lg:flex md:portrait:flex md:landscape:flex hidden w-full"
           >
             <motion.div
               initial={{
@@ -261,7 +267,7 @@ export const Herosection = () => {
               viewport={{
                 once: true,
               }}
-              className=" bg-[#fbf2ff] text-black h-[100vh] 2xl:w-[50vw] xl:w-[50vw] lg:w-[50vw] md:portrait:w-[80vw] flex-shrink-0 flex flex-col justify-center items-center text-whit  "
+              className=" bg-[#fbf2ff] text-black h-[100vh] 2xl:w-[50vw] xl:w-[50vw] lg:w-[50vw] md:portrait:w-[80vw] w-screen flex-shrink-0 flex flex-col justify-center items-center text-whit  "
             >
               <div className="h-[50%] w-full flex justify-center items-center ">
                 <div className=" h-full flex-1 flex justify-center items-center">
@@ -275,9 +281,10 @@ export const Herosection = () => {
                 </div>
                 <div className=" h-full flex-col gap-5   flex-1 flex justify-center items-start px-[1%]">
                   <div className="w-[90%] mx-auto">
-                    <h3 
-                    // ref={journeyTextRef}
-                     className="2xl:text-[3vw] xl:text-[3vw] tracking-wider lg:text-[3vw] md:portrait:text-[5.5vw] font-[400] AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-[#4d0072]">
+                    <h3
+                      // ref={journeyTextRef}
+                      className="2xl:text-[3vw] xl:text-[3vw] tracking-wider lg:text-[3vw] md:portrait:text-[5.5vw] font-[400] AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-[#4d0072]"
+                    >
                       Your Journey to Recovery Starts Here
                     </h3>
                   </div>
@@ -289,7 +296,7 @@ export const Herosection = () => {
                   <div className=" w-full">
                     <img
                       className=" w-[95%]"
-                      src="/RecovIPLightLogo.svg"
+                      src="/RecovIpLightLogo.svg"
                       alt="personImg"
                     />
                   </div>
@@ -515,6 +522,7 @@ export const Herosection = () => {
             >
               Service 3
             </motion.div>
+
             <motion.div
               style={{
                 width: increaseWidthOnScroll3,
@@ -524,7 +532,107 @@ export const Herosection = () => {
               Why choose Us
             </motion.div>
           </motion.div>
+
+          {/* mobile start */}
+          <motion.div
+            initial={{
+              scale: 2,
+              x: "100%",
+              zIndex: 10,
+            }}
+            whileInView={{
+              scale: 1,
+              x: "0%",
+              zIndex: 1,
+            }}
+            transition={{
+              duration: 1,
+              ease: "circInOut",
+              // delay: 0.2,
+            }}
+            viewport={{
+              once: true,
+            }}
+            className=" bg-[#fbf2ff] text-black h-[100vh] 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden  w-screen flex-shrink-0 flex flex-col justify-center items-center text-whit  "
+          >
+            <div className="h-[50%] w-full flex justify-center items-center ">
+              <div className=" h-full flex-1 flex justify-center items-center">
+                <div className="w-[80%] h-[80%] pOneImgWrapper">
+                  <img
+                    src="/personImg2.png"
+                    className="w-full h-full object-contain pOneImg"
+                    alt="personImg"
+                  />
+                </div>
+              </div>
+              <div className=" h-full flex-col gap-5   flex-1 flex justify-center items-start px-[1%]">
+                <div className="w-[90%] mx-auto">
+                  <h3
+                    // ref={journeyTextRef}
+                    className="2xl:text-[3vw] xl:text-[3vw] tracking-wider lg:text-[3vw] md:portrait:text-[5.5vw] text-[6vw] font-[400] AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-[#4d0072]"
+                  >
+                    Your Journey to Recovery Starts Here
+                  </h3>
+                </div>
+                <div className="flex flex-col gap-1"></div>
+              </div>
+            </div>
+            <div className="w-full 2xl:h-[50%] xl:h-[50%] lg:h-[50%] md:portrait:h-[45%] md:landscape:h-[45%]  px-4 py-2 flex flex-col 2xl:justify-end xl:justify-end lg:justify-end md:portrait:justify-start md:landscape:justify-start items-center gap-2 ">
+              <div className="flex flex-col justify-center items-center gap-5  w-[95%] h-auto">
+                <div className=" w-full">
+                  <img
+                    className=" w-[95%]"
+                    src="/RecovIpLightLogo.svg"
+                    alt="personImg"
+                  />
+                </div>
+                <div className="w-full">
+                  <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-[#2e0e4f] font-[300] text-left  font-[Montserrat]">
+                    Recovery Is Possible provides a supportive and nurturing
+                    environment where you can explore your challenges, develop
+                    coping strategies, and embark on a journey of healing and
+                    personal growth.
+                  </p>
+                </div>
+              </div>
+              <div className=" mx-auto 2xl:h-[40%] xl:h-[40%] lg:h-[40%] md:portrait:h-[40%] md:landscape:h-[30%] w-[95%]"></div>
+
+              <div className="border-t border-[#7122c1] w-[95%]  flex justify-between items-center py-2  px-2 md:portrait:py-5 ">
+                <button className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[600]">
+                  Facebook
+                </button>
+                <button className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[600]">
+                  Instagram
+                </button>
+                <button className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[600]">
+                  Twitter
+                </button>
+                {/* <button className="text-[1vw]">Linkedin</button> */}
+              </div>
+            </div>
+          </motion.div>
         </div>
+        <div className="h-screen bg-green-500  sticky w-screen top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex justify-center items-center text-white text-[8vw]">
+          About section
+        </div>
+
+        <div className="h-screen bg-teal-500 sticky w-screen top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex justify-center items-center text-white text-[8vw]">
+          Service
+        </div>
+
+        <div className="h-screen bg-pink-500 sticky w-screen top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex justify-center items-center text-white text-[8vw]">
+          Service 2
+        </div>
+
+        <div className="h-screen bg-blue-500 sticky w-screen top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex justify-center items-center text-white text-[8vw]">
+          Service 3
+        </div>
+
+        <div className="h-screen bg-orange-500 sticky w-screen top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex justify-center items-center text-white text-[8vw]">
+          Why choose us
+        </div>
+
+        {/* mobile end */}
       </div>
 
       <motion.div
