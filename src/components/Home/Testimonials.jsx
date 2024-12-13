@@ -61,20 +61,27 @@ export const Testimonials = () => {
   };
   return (
     <>
-      <div className="min-h-screen costomBgLogo flex justify-center items-center">
+      <div className="min-h-screen relative costomBgLogo flex justify-center items-center">
+        <div className="absolute top-0 left-0 w-full h-full">
+          <img src="/sampleBg1.webp" className="w-full h-full" />
+        </div>
         <div className="relative w-full h-full top-0 left-0 flex flex-col justify-center items-center gap-8 z-10 overflow-hidden">
           <div className="w-[95%]">
             <div className="flex justify-between items-center w-full gap-5 py-2 ">
-              <div className="h-[2px] bg-[#4d0072] flex-1" />
+              <div style={{
+                  backgroundColor:'gold'
+                }} className="h-[2px] bg-[#4d0072] flex-1" />
               <div>
-                <h3 className="AllianceFont customLine__heights 2xl:text-[4.5vw] xl:text-[4.5vw] lg:text-[4.5vw] md:portrait:text-[7vw] md:landscape:text-[4.5vw] text-[8vw] flex-shrink-0 font-[400] AzonixFont text-[#4d0072]">
+                <h3 style={{
+                  color:'gold'
+                }} className="AllianceFont customLine__heights 2xl:text-[4.5vw] xl:text-[4.5vw] lg:text-[4.5vw] md:portrait:text-[7vw] md:landscape:text-[4.5vw] text-[8vw] flex-shrink-0 font-[400] AzonixFont text-[#4d0072">
                   Testimonials
                 </h3>
               </div>
             </div>
           </div>
           <div className="w-full flex 2xl:flex-row xl:flex-row lg:flex-row md:portrait:flex-col md:landscape:flex-row flex-col justify-center items-center">
-            <div className="relative border border-[#FFF] testimonialShadow rounded-md bg-[#ffffff33] w-[95%] flex 2xl:flex-row xl:flex-row lg:flex-row md:portrait:flex-col md:landscape:flex-row flex-col  justify-center items-center gap-3 px-7 py-7">
+            <div className="relative border border-[#FFF] testimonialShadow rounded-md costomBgLogos bg-[#f8eaff]/95 bg-[#ffffff33 w-[95%] flex 2xl:flex-row xl:flex-row lg:flex-row md:portrait:flex-col md:landscape:flex-row flex-col  justify-center items-center gap-3 px-7 py-7">
               <div className="absolute -top-12 left-5 z-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -83,10 +90,10 @@ export const Testimonials = () => {
                   viewBox="0 0 120 120"
                   fill="none"
                 >
-                  <circle cx="60" cy="60" r="60" fill="black" />
+                  <circle cx="60" cy="60" r="60" fill="#28176A" />
                   <path
                     d="M27 82.2L45 35L57 38L45.2 85H28.8L27 82.2ZM63 82.2L81 35L93 38L81.2 85H64.8L63 82.2Z"
-                    fill="white"
+                    fill="gold"
                   />
                 </svg>
               </div>

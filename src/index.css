@@ -38,7 +38,7 @@ code {
   );
 }
 .costomBgLogo{
-  background: rgb(248,234,255);
+  background: #f8eaff;
 background: linear-gradient(360deg, rgba(248,234,255,1) 0%, rgba(243,243,243,1) 100%);
 }
 .customLine__height {
