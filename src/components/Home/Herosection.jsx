@@ -241,12 +241,12 @@ export const Herosection = () => {
         ref={mainWrapperRef}
         className="2xl:h-[300dvh] xl:h-[300dvh] lg:h-[300dvh] md:portrait:h-[300dvh] md:landscape:h-[300dvh] h-[600dvh] relative mx-auto"
       >
-        <div className="top-0 sticky h-[100dvh] w-full overflow-hidden">
+        <div className="top-0 sticky h-[100dvh] w-full overflow-hidden 2xl:flex xl:flex lg:flex md:portrait:flex md:landscape:flex hidden">
           <motion.div
             style={{
               x: scrollOnXAxis,
             }}
-            className="2xl:flex xl:flex lg:flex md:portrait:flex md:landscape:flex hidden w-full"
+            className="flex w-full"
           >
             <motion.div
               initial={{
@@ -362,6 +362,7 @@ export const Herosection = () => {
                   alt="personImg"
                 />
               </motion.div>
+
               <motion.div
                 style={{
                   height: increaseHeightOnScroll1,
@@ -422,6 +423,7 @@ export const Herosection = () => {
                   alt="personImg"
                 />
               </motion.div>
+
               <motion.div
                 style={{
                   height: increaseHeightOnScroll2,
@@ -532,29 +534,12 @@ export const Herosection = () => {
               Why choose Us
             </motion.div>
           </motion.div>
+        </div>
 
-          {/* mobile start */}
-          <motion.div
-            initial={{
-              scale: 2,
-              x: "100%",
-              zIndex: 10,
-            }}
-            whileInView={{
-              scale: 1,
-              x: "0%",
-              zIndex: 1,
-            }}
-            transition={{
-              duration: 1,
-              ease: "circInOut",
-              // delay: 0.2,
-            }}
-            viewport={{
-              once: true,
-            }}
-            className=" bg-[#fbf2ff] text-black h-[100vh] 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden  w-screen flex-shrink-0 flex flex-col justify-center items-center text-whit  "
-          >
+        {/* mobile start */}
+        {/* box one start */}
+        <div className="top-0 sticky h-[100dvh] w-full overflow-x-hidden 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex">
+          <motion.div className=" bg-[#fbf2ff] text-black h-[100vh] 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden  w-screen flex-shrink-0 flex flex-col justify-center items-center text-whit  ">
             <div className="h-[50%] w-full flex justify-center items-center ">
               <div className=" h-full flex-1 flex justify-center items-center">
                 <div className="w-[80%] h-[80%] pOneImgWrapper">
@@ -569,7 +554,7 @@ export const Herosection = () => {
                 <div className="w-[90%] mx-auto">
                   <h3
                     // ref={journeyTextRef}
-                    className="2xl:text-[3vw] xl:text-[3vw] tracking-wider lg:text-[3vw] md:portrait:text-[5.5vw] text-[6vw] font-[400] AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-[#4d0072]"
+                    className="text-[7vw] font-[400] AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-[#4d0072]"
                   >
                     Your Journey to Recovery Starts Here
                   </h3>
@@ -577,9 +562,9 @@ export const Herosection = () => {
                 <div className="flex flex-col gap-1"></div>
               </div>
             </div>
-            <div className="w-full 2xl:h-[50%] xl:h-[50%] lg:h-[50%] md:portrait:h-[45%] md:landscape:h-[45%]  px-4 py-2 flex flex-col 2xl:justify-end xl:justify-end lg:justify-end md:portrait:justify-start md:landscape:justify-start items-center gap-2 ">
+            <div className="w-full 2xl:h-[50%] xl:h-[50%] lg:h-[50%] md:portrait:h-[45%] md:landscape:h-[45%] h-[50%]  px-4 py-2 flex flex-col 2xl:justify-end xl:justify-end lg:justify-end md:portrait:justify-start md:landscape:justify-start items-center gap-2 ">
               <div className="flex flex-col justify-center items-center gap-5  w-[95%] h-auto">
-                <div className=" w-full">
+                <div className="w-full">
                   <img
                     className=" w-[95%]"
                     src="/RecovIpLightLogo.svg"
@@ -587,7 +572,7 @@ export const Herosection = () => {
                   />
                 </div>
                 <div className="w-full">
-                  <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-[#2e0e4f] font-[300] text-left  font-[Montserrat]">
+                  <p className="text-[3.5vw] text-[#2e0e4f] font-[300] text-left font-[Montserrat]">
                     Recovery Is Possible provides a supportive and nurturing
                     environment where you can explore your challenges, develop
                     coping strategies, and embark on a journey of healing and
@@ -595,9 +580,10 @@ export const Herosection = () => {
                   </p>
                 </div>
               </div>
-              <div className=" mx-auto 2xl:h-[40%] xl:h-[40%] lg:h-[40%] md:portrait:h-[40%] md:landscape:h-[30%] w-[95%]"></div>
 
-              <div className="border-t border-[#7122c1] w-[95%]  flex justify-between items-center py-2  px-2 md:portrait:py-5 ">
+              <div className=" mx-auto  h-[35%]  w-[95%]"></div>
+
+              <div className="border-t border-[#7122c1] w-[95%] flex justify-between items-center py-2  px-2 md:portrait:py-5 ">
                 <button className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[600]">
                   Facebook
                 </button>
@@ -612,23 +598,129 @@ export const Herosection = () => {
             </div>
           </motion.div>
         </div>
-        <div className="h-screen bg-green-500  sticky w-screen top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex justify-center items-center text-white text-[8vw]">
-          About section
+        {/* box one end */}
+
+        {/* box two start */}
+        <div className="h-screen customBGLogo  sticky w-full top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex flex-col justify-center items-center text-white">
+          <motion.div
+            style={{
+              height: increaseHeightOnScroll1,
+            }}
+            className="h-[50%] w-full bg-blue-500"
+          >
+            <img
+              src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8="
+              className="w-full h-full object-cover"
+              alt="personImg"
+            />
+          </motion.div>
+
+          <motion.div
+            style={{
+              height: increaseHeightOnScroll1,
+            }}
+            className="h-[50%] w-full flex flex-col justify-start items-center gap-5"
+          >
+            <div className="flex justify-between items-center w-full p-2">
+              <div className="text-[3.4vw]">Some content</div>
+              <div className="text-[3.4vw]">some content</div>
+            </div>
+            <motion.div
+              style={{
+                opacity: increaseOpacityBox1Div2,
+              }}
+              className="text-[8vw]"
+            >
+              Box 2
+            </motion.div>
+          </motion.div>
+        </div>
+        {/* box two end */}
+
+        {/* box three start */}
+        <div className="h-screen costomBgLogo sticky w-full top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex flex-col justify-center items-center text-[8vw]">
+          <motion.div
+            style={{
+              height: increaseHeightOnScroll2,
+            }}
+            className="h-[15%] w-full bg-blue-950"
+          >
+            <img
+              src="https://media.istockphoto.com/id/483585627/photo/white-dove-isolated.jpg?s=612x612&w=0&k=20&c=qZb-CEMXnLdomi-cC2coezJSH7nI_XnNTEdG6SqTIwc="
+              className="w-full h-full object-cover"
+              alt="personImg"
+            />
+          </motion.div>
+
+          <motion.div
+            style={{
+              height: increaseHeightOnScroll2,
+            }}
+            className="h-[15%] w-full flex flex-col justify-start items-center gap-5"
+          >
+            <motion.div
+              style={{ opacity: increaseOpacityBox2Div1 }}
+              className="flex justify-between items-center w-full p-2"
+            >
+              <div className="text-[3.4vw]">Some content</div>
+              <div className="text-[3.4vw]">some content</div>
+            </motion.div>
+            <motion.div
+              style={{
+                opacity: increaseOpacityBox2Div2,
+              }}
+              className="text-[8vw]"
+            >
+              Service 1
+            </motion.div>
+          </motion.div>
+        </div>
+        {/* box three end */}
+
+        <div className="h-screen bg-[#370051] sticky w-full top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex flex-col justify-center items-center text-white text-[8vw]">
+          <motion.div
+            style={{
+              height: increaseHeightOnScroll3,
+            }}
+            className="h-[10%] w-full bg-green-200"
+          >
+            <img
+              src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg"
+              className="w-full h-full object-cover"
+              alt="personImg"
+            />
+          </motion.div>
+          <motion.div
+            style={{
+              height: increaseHeightOnScroll3,
+            }}
+            className="h-[10%] w-full flex flex-col justify-start items-center gap-5"
+          >
+            <motion.div
+              style={{
+                opacity: increaseOpacityBox3Div1,
+              }}
+              className="flex justify-between items-center w-full p-2"
+            >
+              <div className="text-[3.4vw]">Some content</div>
+              <div className="text-[3.4vw]">some content</div>
+            </motion.div>
+            <motion.div
+              style={{
+                opacity: increaseOpacityBox3Div2,
+              }}
+              className="text-[8vw]"
+            >
+              Service 2
+            </motion.div>
+          </motion.div>
         </div>
 
-        <div className="h-screen bg-teal-500 sticky w-screen top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex justify-center items-center text-white text-[8vw]">
-          Service
-        </div>
-
-        <div className="h-screen bg-pink-500 sticky w-screen top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex justify-center items-center text-white text-[8vw]">
-          Service 2
-        </div>
-
-        <div className="h-screen bg-blue-500 sticky w-screen top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex justify-center items-center text-white text-[8vw]">
+        <div className="h-screen bg-blue-500 sticky w-full top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex justify-center items-center text-white text-[8vw]">
           Service 3
         </div>
 
-        <div className="h-screen bg-orange-500 sticky w-screen top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex justify-center items-center text-white text-[8vw]">
+        <div className="h-screen bg-orange-500 sticky w-full top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex justify-center items-center text-white text-[8vw]">
           Why choose us
         </div>
 

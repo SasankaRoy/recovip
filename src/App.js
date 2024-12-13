@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import React from "react";
 import "./App.css";
 import { Contact } from "./Pages/Contact";
 import { Homepage } from "./Pages/Homepage";
