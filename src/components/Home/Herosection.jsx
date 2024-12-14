@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 // import { Navbar } from "../common/Navbar/Navbar";
 import SplitType from "split-type";
 import { gsap } from "gsap/dist/gsap";
+import { Navbar } from "../common/Navbar/Navbar";
 
 export const Herosection = () => {
   const mainWrapperRef = useRef(null);
@@ -209,7 +210,7 @@ export const Herosection = () => {
   );
   return (
     <div className="relative">
-      <motion.div
+      {/* <motion.div
         style={{
           opacity: menuOpacity,
         }}
@@ -236,7 +237,7 @@ export const Herosection = () => {
             </motion.p>
           </motion.button>
         </div>
-      </motion.div>
+      </motion.div> */}
       <div
         ref={mainWrapperRef}
         className="2xl:h-[300dvh] xl:h-[300dvh] lg:h-[300dvh] md:portrait:h-[300dvh] md:landscape:h-[300dvh] h-[600dvh] relative mx-auto"
@@ -269,7 +270,8 @@ export const Herosection = () => {
               }}
               className=" bg-[#fbf2ff] text-black h-[100vh] 2xl:w-[50vw] xl:w-[50vw] lg:w-[50vw] md:portrait:w-[80vw] w-screen flex-shrink-0 flex flex-col justify-center items-center text-whit  "
             >
-              <div className="h-[50%] w-full flex justify-center items-center ">
+              <div className="h-[50%] w-full flex justify-center items-center relative">
+              <Navbar />
                 <div className=" h-full flex-1 flex justify-center items-center">
                   <div className="w-[80%] h-[80%] pOneImgWrapper">
                     <img
@@ -538,8 +540,9 @@ export const Herosection = () => {
 
         {/* mobile start */}
         {/* box one start */}
-        <div className="top-0 sticky h-[100dvh] w-full overflow-x-hidden 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex">
-          <motion.div className=" bg-[#fbf2ff] text-black h-[100vh] 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden  w-screen flex-shrink-0 flex flex-col justify-center items-center text-whit  ">
+        <div className="top-0 sticky h-[80dvh] w-full overflow-x-hidden 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex">
+          <motion.div className=" bg-[#fbf2ff] text-black  h-full 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden  w-full flex-shrink-0 flex flex-col justify-center items-center realtive">
+          <Navbar />
             <div className="h-[50%] w-full flex justify-center items-center ">
               <div className=" h-full flex-1 flex justify-center items-center">
                 <div className="w-[80%] h-[80%] pOneImgWrapper">

@@ -101,7 +101,7 @@ export const Testimonials = () => {
                 <h4 className="AllianceFont customLine__heights font-[700] 2xl:text-[4.5vw] xl:text-[4.5vw] lg:text-[4.5vw] md:portrait:text-[8vw] md:landscape:text-[4.5vw] text-[7.3vw] leading-[normal] text-[#4d0072]">
                   What our clients say about us?
                 </h4>
-                <p className="font-[Montserrat] font-[300] 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[2vw] md:landscape:text-[1vw] text-[3vw] text-[#2e0e4f]">
+                <p className="font-[Montserrat] font-[300] 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[2vw] md:landscape:text-[1vw] text-[3.5vw] text-[#2e0e4f]">
                   Our customer testimonials are more than just kind
                   words—they’re a testament to our commitment to excellence.
                   When our clients share their experiences, they provide
@@ -137,7 +137,7 @@ export const Testimonials = () => {
                           </p>
                         </div>
                       </div>
-                      <p className="font-[Montserrat] font-[400] 2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.9vw] md:landscape:text-[.9vw] text-[2.9vw]  text-[#2e0e4f] line-clamp-[9]">
+                      <p className="font-[Montserrat] font-[400] 2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.9vw] md:landscape:text-[.9vw] text-[3.3vw]  text-[#2e0e4f] line-clamp-[9]">
                         {cur.description}
                       </p>
                     </div>
