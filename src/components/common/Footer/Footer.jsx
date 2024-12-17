@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import XIcon from '@mui/icons-material/X';
 export const Footer = () => {
   return (
     <>
@@ -141,12 +142,8 @@ export const Footer = () => {
                     link: "https://www.facebook.com/profile.php?id=100089610044002",
                   },
                   {
-                    socialText: "Twitter",
+                    socialText: <XIcon />,
                     link: "https://x.com/KaltechServices",
-                  },
-                  {
-                    socialText: "Linkedin",
-                    link: "https://www.linkedin.com/company/kaltech-designs/",
                   },
                   {
                     socialText: "Instagram",

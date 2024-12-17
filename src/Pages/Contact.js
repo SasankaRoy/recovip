@@ -22,7 +22,7 @@ export const Contact = () => {
                   Let&apos;s get in touch
                 </motion.h1>
               </div>
-              <div className="2xl:w-[30%] xl:w-[30%] lg:w-[30%] md:portrait:w-full md:landscape:w-[30%] w-full">
+              <div className="2xl:w-[30%] xl:w-[30%] lg:w-[30%] md:portrait:w-full md:landscape:w-[30%] w-full hidden 2xl:flex xl:flex lg:flex md:portrait:flex md:landscape:flex ">
                 <motion.p
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -44,7 +44,7 @@ export const Contact = () => {
                 transition={{ duration: 0.8, ease: "circInOut", delay: 0.6 }}
                 className="2xl:w-[25%] xl:w-[25%] lg:w-[25%] md:landscape:w-[25%] md:portrait:w-full w-full my-[3%] 2xl:my-0 xl:my-0 lg:my-0 md:portrait:my-[3%] md:landscape:my-0 "
               >
-                <div>
+                <div className="hidden 2xl:flex xl:flex lg:flex md:portrait:flex md:landscape:flex flex-col">
                   <h4 className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:portrait:text-[2.5vw] md:landscape:text-[1.5vw] text-[4vw]  tracking-wider font-[400] text-[#4d0072]">
                     let's start the
                   </h4>
@@ -52,6 +52,7 @@ export const Contact = () => {
                     conversation!
                   </h4>
                 </div>
+
                 <div className="flex 2xl:flex-col xl:flex-col lg:flex-col md:portrait:flex-row md:landscape:flex-col 2xl:justify-start xl:justify-start lg:justify-start md:portrait:justify-between md:landscape:justify-start justify-between 2xl:items-start xl:items-start lg:items-start md:landscape:items-start md:portrait:items-center items-center gap-2 2xl:mt-[20%] xl:mt-[20%] lg:mt-[20%] md:portrait:mt-[1%] md:landscape:mt-[20%] mt-[2%] 2xl:w-[65%] xl:w-[65%] lg:w-[65%] md:landscape:w-[65%] md:portrait:w-full w-full">
                   <Link
                     className="AllianceFont 2xl:text-[1.1vw] xl:text-[1.1vw] lg:text-[1.1vw] md:landscape:text-[1.1vw] md:portrait:text-[2.3vw] text-[2.8vw]  font-[700] text-[#4d0072]"
