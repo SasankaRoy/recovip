@@ -594,7 +594,7 @@ export const Herosection = () => {
                   className="h-[50%] w-full bg-blue-500 relative"
                 >
                   <img
-                    src="/About-sectionBg.webp"
+                    src="/About-sectionBG.webp"
                     className="w-full h-full object-cover"
                     alt="personImg"
                   />
@@ -879,7 +879,7 @@ export const Herosection = () => {
               className="h-[50%] w-full bg-blue-500 relative"
             >
               <img
-                src="/About-sectionBg.webp"
+                src="/About-sectionBG.webp"
                 className="w-full h-full object-cover"
                 alt="personImg"
               />
