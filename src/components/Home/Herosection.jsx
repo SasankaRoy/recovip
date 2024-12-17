@@ -540,19 +540,19 @@ export const Herosection = () => {
 
                   <div className="border-t border-[#7122c1] w-[95%]  flex justify-between items-center py-2  px-2 md:portrait:py-5 ">
                     <Link
-                      to="https://kaltechconsultancy.vercel.app/"
+                      to="https://kaltechconsultancy.vercel.app/" target="_blank"
                       className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[500]"
                     >
                       Facebook
                     </Link>
                     <Link
-                      to="https://kaltechconsultancy.vercel.app/"
+                      to="https://kaltechconsultancy.vercel.app/" target="_blank"
                       className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[500]"
                     >
                       Instagram
                     </Link>
                     <Link
-                      to="https://kaltechconsultancy.vercel.app/"
+                      to="https://kaltechconsultancy.vercel.app/" target="_blank"
                       className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[500]"
                     >
                       Twitter
