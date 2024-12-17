@@ -539,15 +539,24 @@ export const Herosection = () => {
                   <div className=" mx-auto 2xl:h-[40%] xl:h-[40%] lg:h-[40%] md:portrait:h-[40%] md:landscape:h-[30%] w-[95%]"></div>
 
                   <div className="border-t border-[#7122c1] w-[95%]  flex justify-between items-center py-2  px-2 md:portrait:py-5 ">
-                    <button className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[500]">
+                    <Link
+                      to="https://kaltechconsultancy.vercel.app/"
+                      className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[500]"
+                    >
                       Facebook
-                    </button>
-                    <button className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[500]">
+                    </Link>
+                    <Link
+                      to="https://kaltechconsultancy.vercel.app/"
+                      className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[500]"
+                    >
                       Instagram
-                    </button>
-                    <button className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[500]">
+                    </Link>
+                    <Link
+                      to="https://kaltechconsultancy.vercel.app/"
+                      className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[500]"
+                    >
                       Twitter
-                    </button>
+                    </Link>
                     {/* <button className="text-[1vw]">Linkedin</button> */}
                   </div>
                 </div>
