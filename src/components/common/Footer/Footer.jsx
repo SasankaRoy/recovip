@@ -142,7 +142,7 @@ export const Footer = () => {
                     link: "https://www.facebook.com/profile.php?id=100089610044002",
                   },
                   {
-                    socialText: <XIcon />,
+                    socialText: <XIcon sx={{fontSize: 20 }} />,
                     link: "https://x.com/KaltechServices",
                   },
                   {
@@ -171,7 +171,7 @@ export const Footer = () => {
                         opacity: [0.5, 1],
                       }}
                       transition={{ duration: 0.3, ease: "linear" }}
-                      className=" w-full h-full rounded-lg border border-[#2C2C2C] flex-1 AllianceFont 2xl:text-[1.2vw] xl:text-[1.2vw] lg:text-[1.2vw] md:portrait:text-[1.7vw] md:landscape:text-[1.3vw] text-[3.3vw] text-[#FFF] font-[400] py-4"
+                      className=" w-full h-full rounded-lg border border-[#2C2C2C] flex-1 AllianceFont 2xl:text-[1.2vw] xl:text-[1.2vw] lg:text-[1.2vw] md:portrait:text-[1.7vw] md:landscape:text-[1.3vw] text-[5vw] text-[#FFF] font-[400] py-4"
                     >
                       {cur.socialText}
                     </motion.button>
@@ -256,10 +256,10 @@ export const Footer = () => {
 
           <div className="px-4 py-7 flex flex-col-reverse 2xl:flex-row xl:flex-row lg:flex-row md:portrait:flex-row md:landscape:flex-row justify-between items-center mt-[2%] gap-3 2xl:gap-0 xl:gap-0 lg:gap-0 md:portrait:gap-0 md:landscape:gap-0">
             <div className="2xl:w-[20%] xl:w-[40%] lg:w-[40%] md:portrait:w-[40%] md:landscape:w-[40%] w-full flex flex-col justify-start items-center 2xl:items-start xl:items-start lg:items-start md:portrait:items-start md:landscape:items-start">
-              <p className="font-[Roboto]  2xl:text-[.85vw] xl:text-[.85vw] lg:text-[.9vw] md:portrait:text-[1.5vw] md:landscape:text-[.9vw] text-[2.2vw] font-[300] text-[#FFF]">
+              <p className="AllianceFont  2xl:text-[.85vw] xl:text-[.85vw] lg:text-[.9vw] md:portrait:text-[1.5vw] md:landscape:text-[.9vw] text-[2.2vw] font-[300] text-[#FFF]">
                 © 2024 | Alrights reserved.
               </p>
-              <p className="font-[Roboto] 2xl:text-[.85vw] xl:text-[.85vw] lg:text-[.9vw] md:portrait:text-[1.5vw] md:landscape:text-[.9vw] text-[2.2vw] font-[300] text-[#FFF]">
+              <p className="AllianceFont 2xl:text-[.85vw] xl:text-[.85vw] lg:text-[.9vw] md:portrait:text-[1.5vw] md:landscape:text-[.9vw] text-[2.2vw] font-[300] text-[#FFF]">
                 Designed by Kaltech
               </p>
             </div>
@@ -278,7 +278,7 @@ export const Footer = () => {
                     transition={{ duration: 0.1, ease: "linear" }}
                   >
                     <Link
-                      className="font-[Roboto] text-[#FFF] uppercase 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[2vw] md:landscape:text-[1.3vw] text-[3vw] font-[300] no-underline"
+                      className="AllianceFont text-[#FFF] uppercase 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[2vw] md:landscape:text-[1.3vw] text-[3vw] font-[300] no-underline"
                       to={cur.path}
                     >
                       {cur.title}

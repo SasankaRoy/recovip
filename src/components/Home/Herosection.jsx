@@ -11,7 +11,7 @@ import SplitType from "split-type";
 import { gsap } from "gsap/dist/gsap";
 import { Navbar } from "../common/Navbar/Navbar";
 // import zIndex from "@mui/material/styles/zIndex";
-import { X } from "lucide-react";
+import { ArrowUpRight, X } from "lucide-react";
 
 import { duration } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -175,7 +175,7 @@ export const Herosection = () => {
   const increaseHeightOnScroll2 = useTransform(
     scrollYProgress,
     [0, 0.5],
-    ["15%", "50%"]
+    ["15%", "60%"]
   );
   const increaseHeightOnScroll3 = useTransform(
     scrollYProgress,
@@ -212,13 +212,13 @@ export const Herosection = () => {
 
   // view Menu btn
 
-  const menuOpacity = useTransform(scrollYProgress, [0.05, 0.15], [0, 1]);
+  const menuOpacity = useTransform(scrollYProgress, [0, 0.05], [0, 1]);
   const displayTranistion = useTransform(
     scrollYProgress,
     [0.25, 0.3],
     ["none", "flex"]
   );
-  const scaleUpMenuBtn = useTransform(scrollYProgress, [0.25, 0.3], [0.8, 1]);
+  const scaleUpMenuBtn = useTransform(scrollYProgress, [0, 0.05], [0.8, 1]);
   const menuTextTransition = useTransform(
     scrollYProgress,
     [0.3, 0.35],
@@ -321,13 +321,14 @@ export const Herosection = () => {
                 scale: scaleUpMenuBtn,
               }}
               onClick={handleMenuAnimationIn}
-              className=" min-h-10 cursor-pointer min-w-16 overflow-hidden right-[2%] text-white bg-black px-6  rounded-full border-none outline-none"
+              className=" min-h-10 cursor-pointer min-w-16 overflow-hidden right-[2%] text-white bg-[#4d0072] px-6  rounded-full border-none outline-none AllianceFont customLine__heights"
             >
               <motion.p
                 style={{
                   x: menuTextTransition,
                   display: menuTextDisplayTransition,
                 }}
+                className="text-[1.2rem] font-[500]"
               >
                 Menu
               </motion.p>
@@ -451,7 +452,9 @@ export const Herosection = () => {
           </div>
 
           <div className="flex justify-between w-[95%] mx-auto h-[45%]">
-            <div className="w-[40%] bg-teal-400 hidden 2xl:flex xl:flex lg:flex md:portrait:flex md:landscape:flex ">graphic div</div>
+            <div className="w-[40%] bg-teal-400 hidden 2xl:flex xl:flex lg:flex md:portrait:flex md:landscape:flex ">
+              graphic div
+            </div>
             <div className="2xl:w-full xl:w-full lg:w-full md:portrait:w-full md:landscape:w-full w-[60%] flex justify-center items-center">
               <div className="w-[90%] mx-auto">
                 <img src="/RecovIPLogoDark.svg" alt="logo" />
@@ -503,7 +506,7 @@ export const Herosection = () => {
                       />
                     </div>
                   </div>
-                  <div className=" h-full flex-col gap-5   flex-1 flex justify-center items-start px-[1%]">
+                  {/* <div className=" h-full flex-col gap-5   flex-1 flex justify-center items-start px-[1%]">
                     <div className="w-[90%] mx-auto">
                       <h3
                         // ref={journeyTextRef}
@@ -513,7 +516,7 @@ export const Herosection = () => {
                       </h3>
                     </div>
                     <div className="flex flex-col gap-1"></div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="w-full 2xl:h-[50%] xl:h-[50%] lg:h-[50%] md:portrait:h-[45%] md:landscape:h-[45%]  px-4 py-2 flex flex-col 2xl:justify-end xl:justify-end lg:justify-end md:portrait:justify-start md:landscape:justify-start items-center gap-2 ">
                   <div className="flex flex-col justify-center items-center gap-5  w-[95%] h-auto">
@@ -524,25 +527,25 @@ export const Herosection = () => {
                         alt="personImg"
                       />
                     </div>
-                    <div className="w-full">
+                    {/* <div className="w-full">
                       <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-[#2e0e4f] font-[300] text-left  font-[Montserrat]">
                         Recovery Is Possible provides a supportive and nurturing
                         environment where you can explore your challenges,
                         develop coping strategies, and embark on a journey of
                         healing and personal growth.
                       </p>
-                    </div>
+                    </div> */}
                   </div>
                   <div className=" mx-auto 2xl:h-[40%] xl:h-[40%] lg:h-[40%] md:portrait:h-[40%] md:landscape:h-[30%] w-[95%]"></div>
 
                   <div className="border-t border-[#7122c1] w-[95%]  flex justify-between items-center py-2  px-2 md:portrait:py-5 ">
-                    <button className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[600]">
+                    <button className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[500]">
                       Facebook
                     </button>
-                    <button className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[600]">
+                    <button className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[500]">
                       Instagram
                     </button>
-                    <button className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[600]">
+                    <button className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[500]">
                       Twitter
                     </button>
                     {/* <button className="text-[1vw]">Linkedin</button> */}
@@ -572,19 +575,30 @@ export const Herosection = () => {
                 style={{
                   width: increaseWidthOnScroll1,
                 }}
-                className="customBGLogo protfolioShadow h-screen w-[30vw] flex-shrink-0 flex flex-col justify-end items-center text-[4vw] text-white capitalize"
+                className="customBGLogo protfolioShadow h-screen w-[30vw] flex-shrink-0 flex flex-col justify-end items-center text-[4vw] text-white "
               >
+                {/* <img className="" src="/About-sectionBg.webp" /> */}
                 <motion.div
                   style={{
                     height: increaseHeightOnScroll1,
                   }}
-                  className="h-[50%] w-full bg-blue-500"
+                  className="h-[50%] w-full bg-blue-500 relative"
                 >
                   <img
-                    src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8="
+                    src="/About-sectionBg.webp"
                     className="w-full h-full object-cover"
                     alt="personImg"
                   />
+                  <div className="absolute w-full h-full top-0 flex justify-center items-center">
+                    <div className="w-[90%] ">
+                      <h3
+                        // ref={journeyTextRef}
+                        className=" text-center 2xl:text-[3vw] xl:text-[3vw] tracking-wider lg:text-[3vw] md:portrait:text-[5.5vw] font-[400] AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-[#4d0072]"
+                      >
+                        Your Journey to Recovery Starts Here
+                      </h3>
+                    </div>
+                  </div>
                 </motion.div>
 
                 <motion.div
@@ -593,20 +607,27 @@ export const Herosection = () => {
                   }}
                   className="h-[50%] w-full flex flex-col justify-start items-center gap-5"
                 >
-                  <div className="flex justify-between items-center w-full p-2">
+                  {/* <div className="flex justify-between items-center w-full p-2">
                     <div className="2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[1.8vw]">
                       Some content
                     </div>
                     <div className="2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[1.8vw]">
                       some content
                     </div>
-                  </div>
+                  </div> */}
                   <motion.div
                     style={{
                       opacity: increaseOpacityBox1Div2,
                     }}
                   >
-                    Box 2
+                    <div className="w-[90%] mx-auto pl-4 mt-[5%]">
+                      <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-white font-[300] text-left  font-[Montserrat]">
+                        Recovery Is Possible provides a supportive and nurturing
+                        environment where you can explore your challenges,
+                        develop coping strategies, and embark on a journey of
+                        healing and personal growth.
+                      </p>
+                    </div>
                   </motion.div>
                 </motion.div>
               </motion.div>
@@ -633,7 +654,7 @@ export const Herosection = () => {
                 style={{
                   width: increaseWidthOnScroll2,
                 }}
-                className=" costomBgLogo protfolioShadow h-screen w-[15vw] flex-shrink-0 flex flex-col justify-end items-center text-[3vw] text-black capitalize"
+                className=" costomBgLogo protfolioShadow h-screen w-[15vw] flex-shrink-0 flex flex-col justify-end items-center text-[3vw] text-black "
               >
                 <motion.div
                   style={{
@@ -642,7 +663,7 @@ export const Herosection = () => {
                   className="h-[15%] w-full bg-blue-950"
                 >
                   <img
-                    src="https://media.istockphoto.com/id/483585627/photo/white-dove-isolated.jpg?s=612x612&w=0&k=20&c=qZb-CEMXnLdomi-cC2coezJSH7nI_XnNTEdG6SqTIwc="
+                    src="/counseling.webp"
                     className="w-full h-full object-cover"
                     alt="personImg"
                   />
@@ -658,19 +679,34 @@ export const Herosection = () => {
                     style={{ opacity: increaseOpacityBox2Div1 }}
                     className="flex justify-between items-center w-full p-2"
                   >
-                    <div className="2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[1.8vw]">
+                    {/* <div className="2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[1.8vw]">
                       Some content
                     </div>
                     <div className="2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[1.8vw]">
                       some content
-                    </div>
+                    </div> */}
                   </motion.div>
                   <motion.div
                     style={{
                       opacity: increaseOpacityBox2Div2,
                     }}
                   >
-                    Service 1
+                    <h3 className=" text-center 2xl:text-[3vw] xl:text-[3vw] tracking-wider lg:text-[3vw] md:portrait:text-[5.5vw] font-[400] AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-[#370051]">
+                      Private Therarapy
+                    </h3>
+                  </motion.div>
+                  <motion.div
+                    style={{
+                      opacity: increaseOpacityBox1Div2,
+                    }}
+                  >
+                    <div className="w-[90%] mx-auto pl-4 mt-[5%]">
+                      <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-[#] font-[300] text-left  font-[Montserrat] text-[#100018]">
+                        Our Individual Therapy services are designed to provide
+                        a safe, confidential space where you can explore your
+                        thoughts, emotions, and behaviors.
+                      </p>
+                    </div>
                   </motion.div>
                 </motion.div>
               </motion.div>
@@ -765,7 +801,7 @@ export const Herosection = () => {
           <div className="top-0 sticky h-[80dvh] w-full overflow-x-hidden 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex">
             <motion.div className=" bg-[#fbf2ff] text-black  h-full 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden  w-full flex-shrink-0 flex flex-col justify-center items-center realtive">
               <Navbar />
-              <div className="h-[50%] w-full flex justify-center items-center ">
+              <div className="h-[60%] w-full flex justify-center items-center">
                 <div className=" h-full flex-1 flex justify-center items-center">
                   <div className="w-[80%] h-[80%] pOneImgWrapper">
                     <img
@@ -775,7 +811,7 @@ export const Herosection = () => {
                     />
                   </div>
                 </div>
-                <div className=" h-full flex-col gap-5   flex-1 flex justify-center items-start px-[1%]">
+                {/* <div className=" h-full flex-col gap-5   flex-1 flex justify-center items-start px-[1%]">
                   <div className="w-[90%] mx-auto">
                     <h3
                       // ref={journeyTextRef}
@@ -785,28 +821,28 @@ export const Herosection = () => {
                     </h3>
                   </div>
                   <div className="flex flex-col gap-1"></div>
-                </div>
+                </div> */}
               </div>
               <div className="w-full 2xl:h-[50%] xl:h-[50%] lg:h-[50%] md:portrait:h-[45%] md:landscape:h-[45%] h-[50%]  px-4 py-2 flex flex-col 2xl:justify-end xl:justify-end lg:justify-end md:portrait:justify-start md:landscape:justify-start items-center gap-2 ">
-                <div className="flex flex-col justify-center items-center gap-5  w-[95%] h-auto">
-                  <div className="w-full">
+                <div className="flex flex-col justify-center items-center gap-5  w-[95%] h-auto ">
+                  <div className="w-full flex justify-center items-center">
                     <img
-                      className=" w-[95%]"
+                      className=" w-[20rem]"
                       src="/RecovIpLightLogo.svg"
                       alt="logo"
                     />
                   </div>
-                  <div className="w-full">
+                  {/* <div className="w-full">
                     <p className="text-[3.5vw] text-[#2e0e4f] font-[300] text-left font-[Montserrat]">
                       Recovery Is Possible provides a supportive and nurturing
                       environment where you can explore your challenges, develop
                       coping strategies, and embark on a journey of healing and
                       personal growth.
                     </p>
-                  </div>
+                  </div> */}
                 </div>
 
-                <div className=" mx-auto  h-[35%]  w-[95%]"></div>
+                <div className=" mx-auto  h-[50%]  w-[95%] "></div>
 
                 <div className="border-t border-[#7122c1] w-[95%] flex justify-between items-center py-2  px-2 md:portrait:py-5 ">
                   <button className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[600]">
@@ -831,13 +867,23 @@ export const Herosection = () => {
               style={{
                 height: increaseHeightOnScroll1,
               }}
-              className="h-[50%] w-full bg-blue-500"
+              className="h-[50%] w-full bg-blue-500 relative"
             >
               <img
-                src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8="
+                src="/About-sectionBg.webp"
                 className="w-full h-full object-cover"
                 alt="personImg"
               />
+              <div className="absolute w-full h-full top-0 flex justify-center items-center">
+                <div className="w-[90%] ">
+                  <h3
+                    // ref={journeyTextRef}
+                    className=" text-center 2xl:text-[3vw] xl:text-[3vw] tracking-wider lg:text-[3vw] md:portrait:text-[5.5vw] text-[2.5rem] font-[400] AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw]  leading-normal text-[#4d0072]"
+                  >
+                    Your Journey to Recovery Starts Here
+                  </h3>
+                </div>
+              </div>
             </motion.div>
 
             <motion.div
@@ -846,17 +892,23 @@ export const Herosection = () => {
               }}
               className="h-[50%] w-full flex flex-col justify-start items-center gap-5"
             >
-              <div className="flex justify-between items-center w-full p-2">
+              {/* <div className="flex justify-between items-center w-full p-2">
                 <div className="text-[3.4vw]">Some content</div>
                 <div className="text-[3.4vw]">some content</div>
-              </div>
+              </div> */}
               <motion.div
                 style={{
                   opacity: increaseOpacityBox1Div2,
                 }}
-                className="text-[8vw]"
               >
-                Box 2
+                <div className="w-[90%] mx-auto pl-4 mt-[5%]">
+                  <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-white font-[300] text-left  font-[Montserrat]">
+                    Recovery Is Possible provides a supportive and nurturing
+                    environment where you can explore your challenges, develop
+                    coping strategies, and embark on a journey of healing and
+                    personal growth.
+                  </p>
+                </div>
               </motion.div>
             </motion.div>
           </div>
@@ -871,8 +923,8 @@ export const Herosection = () => {
               className="h-[15%] w-full bg-blue-950"
             >
               <img
-                src="https://media.istockphoto.com/id/483585627/photo/white-dove-isolated.jpg?s=612x612&w=0&k=20&c=qZb-CEMXnLdomi-cC2coezJSH7nI_XnNTEdG6SqTIwc="
-                className="w-full h-full object-cover"
+                src="/counseling.webp"
+                className="w-full h-full object-cover object-top"
                 alt="personImg"
               />
             </motion.div>
@@ -883,20 +935,37 @@ export const Herosection = () => {
               }}
               className="h-[15%] w-full flex flex-col justify-start items-center gap-5"
             >
-              <motion.div
+              {/* <motion.div
                 style={{ opacity: increaseOpacityBox2Div1 }}
                 className="flex justify-between items-center w-full p-2"
               >
                 <div className="text-[3.4vw]">Some content</div>
                 <div className="text-[3.4vw]">some content</div>
-              </motion.div>
+              </motion.div> */}
               <motion.div
-                style={{
-                  opacity: increaseOpacityBox2Div2,
-                }}
-                className="text-[8vw]"
+                style={
+                  {
+                    // opacity: increaseOpacityBox2Div2,
+                  }
+                }
+                className="my-[5%] flex flex-col justify-center items-center"
               >
-                Service 1
+                <h3 className=" text-center  font-[400] text-3xl AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-[#370051]">
+                  Private Therarapy
+                </h3>
+                <div className="w-[95%] mx-auto">
+                  <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-base font-[300] text-left  font-[Montserrat] text-[#100018]">
+                    Our Individual Therapy services are designed to provide a
+                    safe, confidential space where you can explore your
+                    thoughts, emotions, and behaviors.
+                  </p>
+                </div>
+                <button className="bg-[#370051] text-white text-base mt-2 px-5 py-2 rounded-full flex justify-center items-center gap-1">
+                  More Details{" "}
+                  <span>
+                    <ArrowUpRight />
+                  </span>
+                </button>
               </motion.div>
             </motion.div>
           </div>
