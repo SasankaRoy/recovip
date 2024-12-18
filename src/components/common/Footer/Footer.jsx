@@ -222,7 +222,7 @@ export const Footer = () => {
                         >
                           Schedule
                         </span>
-                        <span
+                        {/* <span
                           id="innerText-2"
                           className="2xl:text-4xl xl:text-3xl lg:text-2xl translate-y-28"
                         >
@@ -241,7 +241,7 @@ export const Footer = () => {
                               <img fill src="" alt="" />
                             </span>
                           </span>
-                        </span>
+                        </span> */}
                         <div
                           id="BTNbg"
                           className="absolute top-0 left-0 w-full h-full bg-white -z-10 -translate-x-60 translate-y-52 rounded-full"

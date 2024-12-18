@@ -4,6 +4,7 @@ import {
   motion,
   useAnimate,
   AnimatePresence,
+  backInOut,
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 // import { Navbar } from "../common/Navbar/Navbar";
@@ -175,7 +176,7 @@ export const Herosection = () => {
   const increaseHeightOnScroll2 = useTransform(
     scrollYProgress,
     [0, 0.5],
-    ["15%", "60%"]
+    ["15%", "50%"]
   );
   const increaseHeightOnScroll3 = useTransform(
     scrollYProgress,
@@ -210,25 +211,27 @@ export const Herosection = () => {
     [0, 1]
   );
 
-  // view Menu btn
+  // view Menu btn start
 
   const menuOpacity = useTransform(scrollYProgress, [0, 0.05], [0, 1]);
   const displayTranistion = useTransform(
     scrollYProgress,
-    [0.25, 0.3],
+    [0.2, 0.23],
     ["none", "flex"]
   );
   const scaleUpMenuBtn = useTransform(scrollYProgress, [0, 0.05], [0.8, 1]);
   const menuTextTransition = useTransform(
     scrollYProgress,
-    [0.3, 0.35],
+    [0.2, 0.23],
     ["105%", "0%"]
   );
   const menuTextDisplayTransition = useTransform(
     scrollYProgress,
-    [0.3, 0.35],
+    [0.2, 0.23],
     ["none", "flex"]
   );
+  // view Menu btn end
+
   const variants = {
     initial: {
       width: "0%",
@@ -246,7 +249,7 @@ export const Herosection = () => {
       },
     },
     leave: {
-      width: ["100%", "0%"],
+      // width: ["100%", "0%"],
       x: ["0%", "-150%"],
       zIndex: 999,
       left: 0,
@@ -394,43 +397,88 @@ export const Herosection = () => {
                         title: "Contact",
                       },
                     ].map((cur, id) => (
-                      <Link
-                        key={id}
-                        to={cur.path}
-                        className="font-[Roboto] text-white 2xl:text-[2.1vw] xl:text-[2.1vw] lg:text-[2.1vw] md:portrait:text-[2.3vw] md:landscape:text-[2.1vw] text-[3.5vw] font-[500]"
+                      <motion.div
+                        initial={{ opacity: 0, y: "20%" }}
+                        whileInView={{ opacity: 1, y: "0%" }}
+                        transition={{
+                          duration: 0.8,
+                          delay: 1.5,
+                          ease: backInOut,
+                        }}
                       >
-                        {cur.title}
-                      </Link>
+                        <Link
+                          key={id}
+                          to={cur.path}
+                          className="AllianceFont text-white 2xl:text-[2.1vw] xl:text-[2.1vw] lg:text-[2.1vw] md:portrait:text-[2.3vw] md:landscape:text-[2.1vw] text-[3.5vw] font-[500]"
+                        >
+                          {cur.title}
+                        </Link>
+                      </motion.div>
                     ))}
                   </ul>
                 </div>
               </div>
               <div className="w-1/2 flex justify-between">
                 <div className="flex flex-col justify-center gap-5">
-                  <Link>
-                    <FacebookIcon className="text-5xl" />
-                  </Link>
-                  <Link>
-                    <XIcon className="text-[3vw]" />
-                  </Link>
-                  <Link>
-                    <InstagramIcon className="text-[3vw]" />
-                  </Link>
+                  <motion.div
+                    initial={{ opacity: 0, y: "20%" }}
+                    whileInView={{ opacity: 1, y: "0%" }}
+                    transition={{ duration: 0.8, delay: 1.5, ease: backInOut }}
+                  >
+                    <Link>
+                      <FacebookIcon className="text-5xl" />
+                    </Link>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: "20%" }}
+                    whileInView={{ opacity: 1, y: "0%" }}
+                    transition={{ duration: 0.8, delay: 1.5, ease: backInOut }}
+                  >
+                    <Link>
+                      <XIcon className="text-[3vw]" />
+                    </Link>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: "20%" }}
+                    whileInView={{ opacity: 1, y: "0%" }}
+                    transition={{ duration: 0.8, delay: 1.5, ease: backInOut }}
+                  >
+                    <Link>
+                      <InstagramIcon className="text-[3vw]" />
+                    </Link>
+                  </motion.div>
                 </div>
                 <div className="flex flex-col justify-center gap-5">
-                  <Link
-                    className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[1.5vw] md:portrait:text-[2.3vw] text-[2.8vw]  font-[700] text-white"
-                    href="tel:+1(931)-266-6101"
+                  <motion.div
+                    initial={{ opacity: 0, y: "20%" }}
+                    whileInView={{ opacity: 1, y: "0%" }}
+                    transition={{ duration: 0.8, delay: 1.5, ease: backInOut }}
                   >
-                    +1(931)-266-6424
-                  </Link>
-                  <Link
-                    className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[1.5vw] md:portrait:text-[2.3vw] text-[2.8vw]  font-[700] text-white "
-                    href="mailto:hello@kaltechconsultancy.tech"
+                    <Link
+                      className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[1.5vw] md:portrait:text-[2.3vw] text-[2.8vw]  font-[700] text-white"
+                      href="tel:+1(931)-266-6101"
+                    >
+                      +1(931)-266-6424
+                    </Link>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: "20%" }}
+                    whileInView={{ opacity: 1, y: "0%" }}
+                    transition={{ duration: 0.8, delay: 1.5, ease: backInOut }}
                   >
-                    info@recovip.com
-                  </Link>
-                  <div className="flex 2xl:flex-col xl:flex-col lg:flex-col md:portrait:flex-row md:landscape:flex-col flex-row justify-start items-start">
+                    <Link
+                      className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[1.5vw] md:portrait:text-[2.3vw] text-[2.8vw]  font-[700] text-white "
+                      href="mailto:hello@kaltechconsultancy.tech"
+                    >
+                      info@recovip.com
+                    </Link>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: "20%" }}
+                    whileInView={{ opacity: 1, y: "0%" }}
+                    transition={{ duration: 0.8, delay: 1.5, ease: backInOut }}
+                    className="flex 2xl:flex-col xl:flex-col lg:flex-col md:portrait:flex-row md:landscape:flex-col flex-row justify-start items-start"
+                  >
                     <Link
                       className="text-white 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[1.5vw] md:portrait:text-[2.3vw] text-[2.8vw]  font-[700]"
                       href="https://maps.app.goo.gl/C1uULXRQ95gTG7bP8"
@@ -445,21 +493,26 @@ export const Herosection = () => {
                     >
                       TN 3704
                     </Link>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="flex justify-between w-[95%] mx-auto h-[45%]">
-            <div className="w-[40%] bg-teal-400 hidden 2xl:flex xl:flex lg:flex md:portrait:flex md:landscape:flex ">
+            <div className="w-[40%] bg-teal-00 hidden 2xl:flex xl:flex lg:flex md:portrait:flex md:landscape:flex ">
               graphic div
             </div>
-            <div className="2xl:w-full xl:w-full lg:w-full md:portrait:w-full md:landscape:w-full w-[60%] flex justify-center items-center">
+            <motion.div
+              initial={{ opacity: 0, y: "20%" }}
+              whileInView={{ opacity: 1, y: "0%" }}
+              transition={{ duration: 0.8, delay: 1.5, ease: backInOut }}
+              className="2xl:w-full bg-red-00 xl:w-full lg:w-full md:portrait:w-full md:landscape:w-[100%] w-[60%] flex justify-center items-center"
+            >
               <div className="w-[90%] mx-auto">
                 <img src="/RecovIPLogoDark.svg" alt="logo" />
               </div>
-            </div>
+            </motion.div>
           </div>
         </motion.div>
 
@@ -540,19 +593,22 @@ export const Herosection = () => {
 
                   <div className="border-t border-[#7122c1] w-[95%]  flex justify-between items-center py-2  px-2 md:portrait:py-5 ">
                     <Link
-                      to="https://kaltechconsultancy.vercel.app/" target="_blank"
+                      to="https://kaltechconsultancy.vercel.app/"
+                      target="_blank"
                       className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[500]"
                     >
                       Facebook
                     </Link>
                     <Link
-                      to="https://kaltechconsultancy.vercel.app/" target="_blank"
+                      to="https://kaltechconsultancy.vercel.app/"
+                      target="_blank"
                       className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[500]"
                     >
                       Instagram
                     </Link>
                     <Link
-                      to="https://kaltechconsultancy.vercel.app/" target="_blank"
+                      to="https://kaltechconsultancy.vercel.app/"
+                      target="_blank"
                       className="2xl:text-[1.1vw] tracking-wider AllianceFont xl:text-[1vw]lg:text-[1vw] md:portrait:text-[1.8vw] text-[#4d0072] font-[Roboto] font-[500]"
                     >
                       Twitter
@@ -674,7 +730,7 @@ export const Herosection = () => {
                   <img
                     src="/counseling.webp"
                     className="w-full h-full object-cover"
-                    alt="personImg"
+                    alt="private"
                   />
                 </motion.div>
 
@@ -709,13 +765,18 @@ export const Herosection = () => {
                       opacity: increaseOpacityBox1Div2,
                     }}
                   >
-                    <div className="w-[90%] mx-auto pl-4 mt-[5%]">
+                    <motion.div
+                      style={{
+                        opacity: increaseOpacityBox2Div2,
+                      }}
+                      className="w-[90%] mx-auto pl-4 mt-[5%]"
+                    >
                       <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-[#] font-[300] text-left  font-[Montserrat] text-[#100018]">
                         Our Individual Therapy services are designed to provide
                         a safe, confidential space where you can explore your
                         thoughts, emotions, and behaviors.
                       </p>
-                    </div>
+                    </motion.div>
                   </motion.div>
                 </motion.div>
               </motion.div>
