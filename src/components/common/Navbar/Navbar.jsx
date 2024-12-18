@@ -22,7 +22,7 @@ export const Navbar = () => {
               title: "Virtual Therarapy",
             },
             {
-              path: "/contact",
+              path: "/schedule-appointment",
               title: "Schedule Appointment",
             },
           ].map((cur, id) => (
