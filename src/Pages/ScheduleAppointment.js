@@ -257,7 +257,7 @@ const ScheduleAppointment = () => {
             </div>
 
             <div className="flex flex-col 2xl:flex-row xl:flex-row lg:flex-row md:portrait:flex-col md:landscape:flex-row justify-between items-center my-[1%] gap-3 2xl:gap-0 xl:gap-0 lg:gap-0 md:landscape:gap-0 md:portrait:gap-3">
-              {/* <motion.div
+              <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8, ease: "circInOut", delay: 0.6 }}
@@ -302,7 +302,7 @@ const ScheduleAppointment = () => {
                     </Link>
                   </div>
                 </div>
-              </motion.div> */}
+              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0 }}
