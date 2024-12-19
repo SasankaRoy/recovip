@@ -14,7 +14,6 @@ import { Navbar } from "../common/Navbar/Navbar";
 // import zIndex from "@mui/material/styles/zIndex";
 import { ArrowUpRight, X } from "lucide-react";
 
-import { duration } from "@mui/material";
 import { Link } from "react-router-dom";
 import XIcon from "@mui/icons-material/X";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -23,11 +22,17 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 export const Herosection = () => {
   const mainWrapperRef = useRef(null);
-  const [scope, animate] = useAnimate();
+  // const [scope, animate] = useAnimate();
   const journeyTextRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: mainWrapperRef,
   });
+  const [currentMousePosition, setCurrentMousePosition] = useState({
+    id: 0,
+    x: 0,
+    y: 0,
+  });
+  const [isHovered, setIsHovered] = useState(false);
 
   /* This `useEffect` hook is responsible for creating a GSAP timeline animation that involves various
   elements on the Hero section of your React component. Here's a breakdown of what it does: */
@@ -211,8 +216,7 @@ export const Herosection = () => {
     [0, 1]
   );
 
-  // view Menu btn start
-
+  // onScroll view top Menu bar start
   const menuOpacity = useTransform(scrollYProgress, [0, 0.05], [0, 1]);
   const displayTranistion = useTransform(
     scrollYProgress,
@@ -230,8 +234,9 @@ export const Herosection = () => {
     [0.2, 0.23],
     ["none", "flex"]
   );
-  // view Menu btn end
+  // onScroll view top Menu bar start end
 
+  // animation for offcanvas menu start...
   const variants = {
     initial: {
       width: "0%",
@@ -298,6 +303,28 @@ export const Herosection = () => {
     //   { duration: 0.2, ease: "linear" }
     // );
   };
+  // animation for offcanvas menu end...
+
+  // mouse hover/follow start
+  const handleMouseMove = (mousePosition, id) => {
+    const container = mousePosition.currentTarget.getBoundingClientRect();
+    const buttonWidth = 100; // Width of the button
+    const buttonHeight = 40; // Height of the button
+
+    // Calculate position while keeping button within bounds
+    const x = Math.min(
+      Math.max(0, mousePosition.clientX - container.left - buttonWidth / 2),
+      container.width - buttonWidth
+    );
+
+    const y = Math.min(
+      Math.max(0, mousePosition.clientY - container.top - buttonHeight / 2),
+      container.height - buttonHeight
+    );
+
+    setCurrentMousePosition({ x, y, id: id });
+  };
+  // mouse hover/follow end
 
   return (
     <AnimatePresence mode="wait">
@@ -375,8 +402,8 @@ export const Herosection = () => {
             </motion.button>
           </div>
           <div className="h-[50%] flex justify-center">
-            <div className="w-[95%] mx-auto flex justify-between">
-              <div className="w-1/2 flex justify-center items-center">
+            <div className="w-[95%] mx-auto flex flex-col 2xl:flex-row xl:flex-row lg:flex-row md:landscape:flex-row md:portrait:flex-col justify-between">
+              <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:landscape:w-1/2 md:portrait:w-full w-full flex justify-center items-center">
                 <div className="w-[80%] mx-auto">
                   <ul className="flex flex-col gap-5 justify-center  items-start">
                     {[
@@ -391,6 +418,10 @@ export const Herosection = () => {
                       {
                         path: "/service",
                         title: "Virtual Therarapy",
+                      },
+                      {
+                        path: "/schedule-appointment",
+                        title: "Schedule Appointment",
                       },
                       {
                         path: "/contact",
@@ -409,7 +440,7 @@ export const Herosection = () => {
                         <Link
                           key={id}
                           to={cur.path}
-                          className="AllianceFont text-white 2xl:text-[2.1vw] xl:text-[2.1vw] lg:text-[2.1vw] md:portrait:text-[2.3vw] md:landscape:text-[2.1vw] text-[3.5vw] font-[500]"
+                          className="AllianceFont text-white 2xl:text-[2.1vw] xl:text-[2.1vw] lg:text-[2.1vw] md:portrait:text-[2.3vw] md:landscape:text-[2.1vw] text-[4vw] font-[500]"
                         >
                           {cur.title}
                         </Link>
@@ -418,7 +449,7 @@ export const Herosection = () => {
                   </ul>
                 </div>
               </div>
-              <div className="w-1/2 flex justify-between">
+              <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:landscape:w-1/2 md:portrait:w-full w-[80%] mx-auto flex justify-between">
                 <div className="flex flex-col justify-center gap-5">
                   <motion.div
                     initial={{ opacity: 0, y: "20%" }}
@@ -455,7 +486,7 @@ export const Herosection = () => {
                     transition={{ duration: 0.8, delay: 1.5, ease: backInOut }}
                   >
                     <Link
-                      className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[1.5vw] md:portrait:text-[2.3vw] text-[2.8vw]  font-[700] text-white"
+                      className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[1.5vw] md:portrait:text-[2.3vw] text-[3.5vw]  font-[700] text-white"
                       href="tel:+1(931)-266-6101"
                     >
                       +1(931)-266-6424
@@ -467,7 +498,7 @@ export const Herosection = () => {
                     transition={{ duration: 0.8, delay: 1.5, ease: backInOut }}
                   >
                     <Link
-                      className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[1.5vw] md:portrait:text-[2.3vw] text-[2.8vw]  font-[700] text-white "
+                      className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[1.5vw] md:portrait:text-[2.3vw] text-[3.5vw]  font-[700] text-white "
                       href="mailto:hello@kaltechconsultancy.tech"
                     >
                       info@recovip.com
@@ -480,14 +511,14 @@ export const Herosection = () => {
                     className="flex 2xl:flex-col xl:flex-col lg:flex-col md:portrait:flex-row md:landscape:flex-col flex-row justify-start items-start"
                   >
                     <Link
-                      className="text-white 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[1.5vw] md:portrait:text-[2.3vw] text-[2.8vw]  font-[700]"
+                      className="text-white 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[1.5vw] md:portrait:text-[2.3vw] text-[3.5vw]  font-[700]"
                       href="https://maps.app.goo.gl/C1uULXRQ95gTG7bP8"
                       target="_blank"
                     >
                       Tennessee
                     </Link>
                     <Link
-                      className="text-white 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[1.5vw] md:portrait:text-[2.3vw] text-[2.8vw]  font-[700]"
+                      className="text-white 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[1.5vw] md:portrait:text-[2.3vw] text-[3.5vw]  font-[700]"
                       href="https://maps.app.goo.gl/C1uULXRQ95gTG7bP8"
                       target="_blank"
                     >
@@ -507,7 +538,7 @@ export const Herosection = () => {
               initial={{ opacity: 0, y: "20%" }}
               whileInView={{ opacity: 1, y: "0%" }}
               transition={{ duration: 0.8, delay: 1.5, ease: backInOut }}
-              className="2xl:w-full bg-red-00 xl:w-full lg:w-full md:portrait:w-full md:landscape:w-[100%] w-[60%] flex justify-center items-center"
+              className="2xl:w-[60%] bg-red-00 xl:w-[60%] lg:w-[60%] md:portrait:w-full md:landscape:w-[60%] w-full flex justify-center items-center"
             >
               <div className="w-[90%] mx-auto">
                 <img src="/RecovIPLogoDark.svg" alt="logo" />
@@ -527,6 +558,7 @@ export const Herosection = () => {
               }}
               className="flex w-full"
             >
+              {/* box one start */}
               <motion.div
                 initial={{
                   scale: 2,
@@ -559,17 +591,6 @@ export const Herosection = () => {
                       />
                     </div>
                   </div>
-                  {/* <div className=" h-full flex-col gap-5   flex-1 flex justify-center items-start px-[1%]">
-                    <div className="w-[90%] mx-auto">
-                      <h3
-                        // ref={journeyTextRef}
-                        className="2xl:text-[3vw] xl:text-[3vw] tracking-wider lg:text-[3vw] md:portrait:text-[5.5vw] font-[400] AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-[#4d0072]"
-                      >
-                        Your Journey to Recovery Starts Here
-                      </h3>
-                    </div>
-                    <div className="flex flex-col gap-1"></div>
-                  </div> */}
                 </div>
                 <div className="w-full 2xl:h-[50%] xl:h-[50%] lg:h-[50%] md:portrait:h-[45%] md:landscape:h-[45%]  px-4 py-2 flex flex-col 2xl:justify-end xl:justify-end lg:justify-end md:portrait:justify-start md:landscape:justify-start items-center gap-2 ">
                   <div className="flex flex-col justify-center items-center gap-5  w-[95%] h-auto">
@@ -580,14 +601,6 @@ export const Herosection = () => {
                         alt="personImg"
                       />
                     </div>
-                    {/* <div className="w-full">
-                      <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-[#2e0e4f] font-[300] text-left  font-[Montserrat]">
-                        Recovery Is Possible provides a supportive and nurturing
-                        environment where you can explore your challenges,
-                        develop coping strategies, and embark on a journey of
-                        healing and personal growth.
-                      </p>
-                    </div> */}
                   </div>
                   <div className=" mx-auto 2xl:h-[40%] xl:h-[40%] lg:h-[40%] md:portrait:h-[40%] md:landscape:h-[30%] w-[95%]"></div>
 
@@ -613,11 +626,12 @@ export const Herosection = () => {
                     >
                       Twitter
                     </Link>
-                    {/* <button className="text-[1vw]">Linkedin</button> */}
                   </div>
                 </div>
               </motion.div>
+              {/* box one end */}
 
+              {/* box two start */}
               <motion.div
                 initial={{
                   scale: 2,
@@ -642,12 +656,14 @@ export const Herosection = () => {
                 }}
                 className="customBGLogo protfolioShadow h-screen w-[30vw] flex-shrink-0 flex flex-col justify-end items-center text-[4vw] text-white "
               >
-                {/* <img className="" src="/About-sectionBg.webp" /> */}
                 <motion.div
                   style={{
                     height: increaseHeightOnScroll1,
                   }}
-                  className="h-[50%] w-full bg-blue-500 relative"
+                  className="h-[50%] w-full relative overflow-hidden cursor-pointer"
+                  onMouseMove={(e) => handleMouseMove(e, 1)}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
                 >
                   <img
                     src="/About-sectionBG.webp"
@@ -664,6 +680,23 @@ export const Herosection = () => {
                       </h3>
                     </div>
                   </div>
+
+                  {currentMousePosition.id === 1 &&
+                    currentMousePosition.x &&
+                    currentMousePosition.y &&
+                    isHovered && (
+                      <motion.div
+                        animate={{
+                          x: currentMousePosition.x,
+                          y: currentMousePosition.y,
+                          scale: isHovered ? 1.2 : 1,
+                        }}
+                        transition={{ duration: 0.3, ease: "linear" }}
+                        className="absolute h-[4vw] w-[4vw] rounded-full border-none outline-none bg-[#100018]  flex justify-center items-center z-50 top-0 left-0"
+                      >
+                        <ArrowUpRight />
+                      </motion.div>
+                    )}
                 </motion.div>
 
                 <motion.div
@@ -696,7 +729,8 @@ export const Herosection = () => {
                   </motion.div>
                 </motion.div>
               </motion.div>
-
+              {/* box two end */}
+              {/* box three start */}
               <motion.div
                 initial={{
                   scale: 2,
@@ -725,13 +759,32 @@ export const Herosection = () => {
                   style={{
                     height: increaseHeightOnScroll2,
                   }}
-                  className="h-[15%] w-full bg-blue-950"
+                  className="h-[15%] w-full relative overflow-hidden cursor-pointer"
+                  onMouseMove={(e) => handleMouseMove(e, 2)}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
                 >
                   <img
                     src="/counseling.webp"
                     className="w-full h-full object-cover"
                     alt="private"
                   />
+                  {currentMousePosition.id === 2 &&
+                    currentMousePosition.x &&
+                    currentMousePosition.y &&
+                    isHovered && (
+                      <motion.div
+                        animate={{
+                          x: currentMousePosition.x,
+                          y: currentMousePosition.y,
+                          scale: isHovered ? 1.2 : 1,
+                        }}
+                        transition={{ duration: 0.3, ease: "linear" }}
+                        className="absolute h-[4vw] w-[4vw] rounded-full border-none outline-none bg-[#100018]  flex justify-center items-center z-50 top-0 left-0 text-white"
+                      >
+                        <ArrowUpRight />
+                      </motion.div>
+                    )}
                 </motion.div>
 
                 <motion.div
@@ -780,7 +833,8 @@ export const Herosection = () => {
                   </motion.div>
                 </motion.div>
               </motion.div>
-
+              {/* box three end */}
+              {/* box four start */}
               <motion.div
                 initial={{
                   scale: 2.5,
@@ -809,13 +863,32 @@ export const Herosection = () => {
                   style={{
                     height: increaseHeightOnScroll3,
                   }}
-                  className="h-[10%] w-full bg-green-200"
+                  className="h-[10%] w-full relative overflow-hidden cursor-pointer"
+                  onMouseMove={(e) => handleMouseMove(e, 3)}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
                 >
                   <img
                     src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg"
                     className="w-full h-full object-cover"
                     alt="personImg"
                   />
+                  {currentMousePosition.id === 3 &&
+                    currentMousePosition.x &&
+                    currentMousePosition.y &&
+                    isHovered && (
+                      <motion.div
+                        animate={{
+                          x: currentMousePosition.x,
+                          y: currentMousePosition.y,
+                          scale: isHovered ? 1.2 : 1,
+                        }}
+                        transition={{ duration: 0.3, ease: "linear" }}
+                        className="absolute h-[4vw] w-[4vw] rounded-full border-none outline-none bg-[#100018]  flex justify-center items-center z-50 top-0 left-0 text-white"
+                      >
+                        <ArrowUpRight />
+                      </motion.div>
+                    )}
                 </motion.div>
                 <motion.div
                   style={{
@@ -845,6 +918,7 @@ export const Herosection = () => {
                   </motion.div>
                 </motion.div>
               </motion.div>
+              {/* box four end */}
 
               <motion.div
                 style={{

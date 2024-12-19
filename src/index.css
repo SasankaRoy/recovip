@@ -2,7 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quattrocento:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quattrocento:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 body {
   margin: 0;
@@ -19,7 +19,7 @@ code {
 }
 @font-face {
   font-family: "Edenmeadowdemo";
-  src: url('./assets/fonts/Edenmeadowdemo.ttf');
+  src: url("./assets/fonts/Edenmeadowdemo.ttf");
 }
 
 .AllianceFont {
@@ -31,46 +31,42 @@ code {
 }
 .customBGLogo {
   background: rgb(77, 0, 110);
+  background: linear-gradient(360deg, rgba(77, 0, 110, 1) 0%, #783be0 100%);
+}
+.costomBgLogo {
+  background: #f8eaff;
   background: linear-gradient(
     360deg,
-    rgba(77, 0, 110, 1) 0%,
-    rgba(120, 59, 224, 1) 100%
+    rgba(248, 234, 255, 1) 0%,
+    rgba(243, 243, 243, 1) 100%
   );
-}
-.costomBgLogo{
-  background: #f8eaff;
-background: linear-gradient(360deg, rgba(248,234,255,1) 0%, rgba(243,243,243,1) 100%);
 }
 .customLine__height {
   line-height: 3.5vw;
 }
 
-
-
 /*  */
-.pOneImgWrapper{
+.pOneImgWrapper {
   /* animation: animBorder 5s linear infinite; */
   /* background-color: red; */
   overflow: hidden;
 }
-.pOneImg{
+.pOneImg {
   animation: animBorder 4s linear infinite;
 }
-@keyframes animBorder{
-  0%,100%{
-    
-      /* border-radius: 10% 10% 0% 10%/20% 100% 80% 10%; */
-      border-radius: 80% 60% 50% 90%/80% 50% 90% 60%;
-      transform: scale(1) skew(0deg);
+@keyframes animBorder {
+  0%,
+  100% {
+    /* border-radius: 10% 10% 0% 10%/20% 100% 80% 10%; */
+    border-radius: 80% 60% 50% 90%/80% 50% 90% 60%;
+    transform: scale(1) skew(0deg);
   }
-  50%{
-   
-      /* border-radius: 100% 100% 90% 100%/60% 20% 50% 100%; */
-      border-radius: 50% 80% 90% 60%/70% 80% 50% 80%;
-      transform: scale(1.03) skew(1deg);
+  50% {
+    /* border-radius: 100% 100% 90% 100%/60% 20% 50% 100%; */
+    border-radius: 50% 80% 90% 60%/70% 80% 50% 80%;
+    transform: scale(1.03) skew(1deg);
   }
 }
-
 
 .hoverAnimationContactBTN span {
   transition: transform 0.6s ease-in-out;
@@ -107,6 +103,25 @@ background: linear-gradient(360deg, rgba(248,234,255,1) 0%, rgba(243,243,243,1) 
   top: 0%;
   left: 0%;
   opacity: 1;
-
   background-color: #210030;
+}
+.hoverEffect span {
+  height: 10px;
+  width: 10px;
+  overflow: hidden;
+  transition: 0.5 linear;
+}
+.hoverEffect span svg {
+  opacity: 0;
+  transition: 0.5 linear;
+}
+
+.hoverEffect:hover span {
+  height: 30px;
+  width: 30px;
+  transition: 0.5 linear;
+}
+.hoverEffect:hover span svg {
+  opacity: 1;
+  transition: 0.5 linear;
 }

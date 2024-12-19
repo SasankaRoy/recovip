@@ -1,4 +1,3 @@
-import { height, width } from "@mui/system";
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -12,29 +11,38 @@ export const Navbar = () => {
             {
               path: "/service",
               title: "Private Therarapy",
+              bg: "#100018",
             },
             {
               path: "/service",
               title: "Group Therarapy",
+              bg: "#783be0",
             },
             {
               path: "/service",
               title: "Virtual Therarapy",
+              bg: "#370051",
             },
             {
               path: "/schedule-appointment",
               title: "Schedule Appointment",
+              bg: "",
             },
           ].map((cur, id) => (
             <Link
               key={id}
               to={cur.path}
-              className="AllianceFont customLine__heights text-[#4d0072] 2xl:text-[1.1vw] xl:text-[1.1vw] lg:text-[1.1vw] md:portrait:text-[2.3vw] md:landscape:text-[1.1vw] text-[3.5vw] font-[500] flex justify-center items-center gap-1"
+              className="AllianceFont customLine__heights  hoverEffect text-[#4d0072] 2xl:text-[1.1vw] xl:text-[1.1vw] lg:text-[1.1vw] md:portrait:text-[2.3vw] md:landscape:text-[1.1vw] text-[3.5vw] font-[500] flex justify-center items-center gap-2"
             >
-              <span>
-                <ArrowUpRight className=""/>
+              <span
+                style={{
+                  background: cur?.bg || "#100018",
+                }}
+                className=" text-white transition-all duration-500 ease-linear flex justify-center items-center rounded-full"
+              >
+                <ArrowUpRight size={15} />
               </span>
-              {cur.title}
+              <p>{cur.title}</p>
             </Link>
           ))}
         </ul>

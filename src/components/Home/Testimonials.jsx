@@ -2,46 +2,46 @@ import React, { useState } from "react";
 
 const testimonialData = [
   {
-    image: `https://res.cloudinary.com/dsd0vzyaw/image/upload/v1732643829/TABB_yqiosc.jpg`,
+    image: `https://kaltechassets.s3.us-east-2.amazonaws.com/Kaltech/TABB.jpg`,
     name: "Eleanor Jator",
     position: " Ph.D, MT(ASCP)CM.",
     description: ` “The TABB” website built by Kaltech Consultancy is highly functional and easy to navigate. Each requested component was skillfully placed to enhance effectiveness and professionalism. The website was completed promptly within the stipulated deadline, and the customer service addressed inquiries swiftly.
-      `,
+    `,
   },
   {
-    image: `https://res.cloudinary.com/dsd0vzyaw/image/upload/v1732643692/BlizServices_dsw2hz.png`,
+    image: `https://kaltechassets.s3.us-east-2.amazonaws.com/Kaltech/BlizServices.png`,
     name: "Dr.David Etabasi",
     position: "CEO Bliz Services",
     description: `
-      I couldn’t be happier with the website design services provided by Kaltech. From the initial consultation to the final launch, the team was professional, creative, and attentive to our needs. They took the time to understand our brand and vision, and the result was a stunning, user-friendly website that exceeded our expectations. The feedback from our customers has been overwhelmingly positive, and we’ve seen a significant increase in traffic and engagement. I highly recommend Kaltech Consultancy to anyone looking for top-notch web design services.`,
+    I couldn’t be happier with the website design services provided by Kaltech. From the initial consultation to the final launch, the team was professional, creative, and attentive to our needs. They took the time to understand our brand and vision, and the result was a stunning, user-friendly website that exceeded our expectations. The feedback from our customers has been overwhelmingly positive, and we’ve seen a significant increase in traffic and engagement. I highly recommend Kaltech Consultancy to anyone looking for top-notch web design services.`,
   },
   {
-    image: `https://res.cloudinary.com/dsd0vzyaw/image/upload/v1732643819/EltaHealthcare_opxs9n.png`,
+    image: `https://kaltechassets.s3.us-east-2.amazonaws.com/Kaltech/EltaHealthcare.png`,
     name: "E Voilet",
     position: "CEO Elta Healthcare",
     description: `We are absolutely thrilled with the website designed by Kaltech Consultancy. Their team took the time to understand our brand and goals, and the result is a site that perfectly reflects our identity. The design is clean, modern, and highly engaging. The entire process was smooth and stress-free, thanks to their professionalism and expertise. Our new website has already made a significant impact on our business, and we couldn’t be happier.`,
   },
   {
-    image: `https://res.cloudinary.com/dsd0vzyaw/image/upload/v1732643829/SaveAViilage_fpwzy3.jpg`,
+    image: `https://kaltechassets.s3.us-east-2.amazonaws.com/Kaltech/SaveAViilage.jpg`,
     name: "A. CONSTANCE",
     position: "CEO Save A Village",
     description: `
-      Kaltech Consultancy exceeded all our expectations with their web design services. From the initial consultation to the final launch, they were attentive, creative, and incredibly skilled. Our new website is not only beautiful but also highly functional and user-friendly. We have received positive feedback from our clients. I highly recommend Kaltech Consultancy to anyone in need of a custom designed website.`,
+    Kaltech Consultancy exceeded all our expectations with their web design services. From the initial consultation to the final launch, they were attentive, creative, and incredibly skilled. Our new website is not only beautiful but also highly functional and user-friendly. We have received positive feedback from our clients. I highly recommend Kaltech Consultancy to anyone in need of a custom designed website.`,
   },
   {
-    image: `https://res.cloudinary.com/dsd0vzyaw/image/upload/v1732643832/UpWealthMagazine_nuu1e3.png`,
+    image: `https://kaltechassets.s3.us-east-2.amazonaws.com/Kaltech/UpWealthMagazine.png`,
     name: " J. SAKWE",
     position: "CEO UpWealth Magazine",
     description: `
-      I am thoroughly impressed with the web design services provided by Kaltech Consultancy. They took our vision and turned it into a reality, creating a website that is both visually stunning and easy to navigate. The team was responsive, professional, and always willing to go the extra mile to ensure our satisfaction. We’ve received countless compliments on our new site.`,
+    I am thoroughly impressed with the web design services provided by Kaltech Consultancy. They took our vision and turned it into a reality, creating a website that is both visually stunning and easy to navigate. The team was responsive, professional, and always willing to go the extra mile to ensure our satisfaction. We’ve received countless compliments on our new site.`,
   },
   {
-    image: `https://res.cloudinary.com/dsd0vzyaw/image/upload/v1732643822/KikiVictory_ncaosk.jpg`,
+    image: `https://kaltechassets.s3.us-east-2.amazonaws.com/Kaltech/KikiVictory.jpg`,
     name: "Christelle",
     position: "CEO Kiki Victory Designs",
     description: `
-      Working with Kaltech Consultancy was a game-changer for our business. Their team transformed our outdated website into a modern, sleek, and highly functional platform. The entire process was seamless, and their attention to detail was impeccable. Our new site has not only improved our online presence but also boosted our sales significantly. We couldn’t be more pleased with the results
-      `,
+    Working with Kaltech Consultancy was a game-changer for our business. Their team transformed our outdated website into a modern, sleek, and highly functional platform. The entire process was seamless, and their attention to detail was impeccable. Our new site has not only improved our online presence but also boosted our sales significantly. We couldn’t be more pleased with the results
+    `,
   },
 ];
 
@@ -68,13 +68,19 @@ export const Testimonials = () => {
         <div className="relative w-full h-full top-0 left-0 flex flex-col justify-center items-center gap-8 z-10 overflow-hidden">
           <div className="w-[95%]">
             <div className="flex justify-between items-center w-full gap-5 py-2 ">
-              <div style={{
-                  backgroundColor:'gold'
-                }} className="h-[2px] bg-[#4d0072] flex-1" />
+              <div
+                style={{
+                  backgroundColor: "gold",
+                }}
+                className="h-[2px] bg-[#4d0072] flex-1"
+              />
               <div>
-                <h3 style={{
-                  color:'gold'
-                }} className="AllianceFont customLine__heights 2xl:text-[4.5vw] xl:text-[4.5vw] lg:text-[4.5vw] md:portrait:text-[7vw] md:landscape:text-[4.5vw] text-[8vw] flex-shrink-0 font-[400] AzonixFont text-[#4d0072">
+                <h3
+                  style={{
+                    color: "gold",
+                  }}
+                  className="AllianceFont customLine__heights 2xl:text-[4.5vw] xl:text-[4.5vw] lg:text-[4.5vw] md:portrait:text-[7vw] md:landscape:text-[4.5vw] text-[8vw] flex-shrink-0 font-[400] AzonixFont text-[#4d0072"
+                >
                   Testimonials
                 </h3>
               </div>
