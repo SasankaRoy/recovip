@@ -271,7 +271,7 @@ export const Herosection = () => {
                 scale: scaleUpMenuBtn,
               }}
               onClick={handleMenuAnimationIn}
-              className=" min-h-10 cursor-pointer min-w-16 overflow-hidden right-[2%] text-white bg-[#4d0072] px-6  rounded-full border-none outline-none AllianceFont customLine__heights"
+              className=" min-h-10 customMenu__shadow cursor-pointer min-w-16 overflow-hidden right-[2%] text-white bg-[#3E2680] px-6  rounded-full border-none outline-none AllianceFont customLine__heights"
             >
               <motion.p
                 style={{
@@ -309,7 +309,7 @@ export const Herosection = () => {
               //   scale: scaleUpMenuBtn,
               // }}
               onClick={handleMenuHideAnimationIn}
-              className=" min-h-10 cursor-pointer min-w-16 overflow-hidden right-[2%] text-white bg-black px-6  rounded-full border-none outline-none"
+              className=" min-h-12 cursor-pointer  min-w-12 overflow-hidden right-[2%] text-black bg-[#F5CA5E] px-1 flex justify-center items-center  rounded-full outline-none hover:text-[#F5CA5E] hover:bg-black border hover:border-[#F5CA5E] transition-all duration-200 ease-linear"
             >
               <motion.p
               // style={{
@@ -692,7 +692,7 @@ export const Herosection = () => {
                   onMouseLeave={() => setIsHovered(false)}
                 >
                   <img
-                    src="/counseling.webp"
+                    src="/PrivateTherapy.webp"
                     className="w-full h-full object-cover"
                     alt="private"
                   />
@@ -766,6 +766,7 @@ export const Herosection = () => {
                 </motion.div>
               </motion.div>
               {/* box three end */}
+
               {/* box four start */}
               <motion.div
                 initial={{
@@ -795,15 +796,15 @@ export const Herosection = () => {
                   style={{
                     height: increaseHeightOnScroll3,
                   }}
-                  className="h-[10%] w-full relative overflow-hidden cursor-pointer"
+                  className="h-[15%] w-full relative overflow-hidden cursor-pointer"
                   onMouseMove={(e) => handleMouseMove(e, 3)}
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                 >
                   <img
-                    src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg"
+                    src="/counseling.webp"
                     className="w-full h-full object-cover"
-                    alt="personImg"
+                    alt="private"
                   />
                   {currentMousePosition.id === 3 &&
                     currentMousePosition.x &&
@@ -827,31 +828,43 @@ export const Herosection = () => {
                       </motion.div>
                     )}
                 </motion.div>
+
                 <motion.div
                   style={{
                     height: increaseHeightOnScroll3,
                   }}
-                  className="h-[10%] w-full flex flex-col justify-start items-center gap-5"
+                  className="h-[15%] w-full flex flex-col justify-start items-center gap-5"
                 >
                   <motion.div
-                    style={{
-                      opacity: increaseOpacityBox3Div1,
-                    }}
+                    style={{ opacity: increaseOpacityBox2Div1 }}
                     className="flex justify-between items-center w-full p-2"
+                  ></motion.div>
+                  <motion.div
+                    style={{
+                      opacity: increaseOpacityBox2Div2,
+                    }}
                   >
-                    <div className="2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[1.8vw]">
-                      Some content
-                    </div>
-                    <div className="2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[1.8vw]">
-                      some content
-                    </div>
+                    <h3 className=" text-center 2xl:text-[3vw] xl:text-[3vw] tracking-wider lg:text-[3vw] md:portrait:text-[5.5vw] font-[400] AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-white">
+                      Groupe Therapy
+                    </h3>
                   </motion.div>
                   <motion.div
                     style={{
-                      opacity: increaseOpacityBox3Div2,
+                      opacity: increaseOpacityBox1Div2,
                     }}
                   >
-                    Service 2
+                    <motion.div
+                      style={{
+                        opacity: increaseOpacityBox2Div2,
+                      }}
+                      className="w-[90%] mx-auto pl-4 mt-[5%]"
+                    >
+                      <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-[#] font-[300] text-left  font-[Montserrat] text-white">
+                        Our Individual Therapy services are designed to provide
+                        a safe, confidential space where you can explore your
+                        thoughts, emotions, and behaviors.
+                      </p>
+                    </motion.div>
                   </motion.div>
                 </motion.div>
               </motion.div>
@@ -861,9 +874,83 @@ export const Herosection = () => {
                 style={{
                   width: increaseWidthOnScroll3,
                 }}
-                className="bg-neutral-600 protfolioShadow h-screen w-[5vw] flex-shrink-0 flex justify-center items-center text-[5vw] text-white capitalize"
+                className="bg-neutral-800 protfolioShadow h-screen w-[5vw] flex-shrink-0 flex justify-center items-center text-[5vw] text-white capitalize flex-col"
               >
-                Service 3
+                <motion.div
+                  style={{
+                    height: increaseHeightOnScroll3,
+                  }}
+                  className="h-[15%] w-full relative overflow-hidden cursor-pointer"
+                  onMouseMove={(e) => handleMouseMove(e, 4)}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  <img
+                    src="/couplesTherapy.webp"
+                    className="w-full h-full object-cover"
+                    alt="private"
+                  />
+                  {currentMousePosition.id === 4 &&
+                    currentMousePosition.x &&
+                    currentMousePosition.y &&
+                    isHovered && (
+                      <motion.div
+                        animate={{
+                          x: currentMousePosition.x,
+                          y: currentMousePosition.y,
+                          scale: isHovered ? 1.2 : 1,
+                        }}
+                        transition={{ duration: 0.3, ease: "linear" }}
+                        className="absolute h-[3vw] w-[3vw] rounded-full border-none outline-none bg-[#100018]/20  flex justify-center items-center z-50 top-0 left-0 text-white"
+                      >
+                        <ArrowUpRight
+                          style={{
+                            color: "gold",
+                          }}
+                          size={15}
+                        />
+                      </motion.div>
+                    )}
+                </motion.div>
+
+                <motion.div
+                  style={{
+                    height: increaseHeightOnScroll3,
+                  }}
+                  className="h-[15%] w-full flex flex-col justify-start items-center gap-5"
+                >
+                  <motion.div
+                    style={{ opacity: increaseOpacityBox2Div1 }}
+                    className="flex justify-between items-center w-full p-2"
+                  ></motion.div>
+                  <motion.div
+                    style={{
+                      opacity: increaseOpacityBox2Div2,
+                    }}
+                  >
+                    <h3 className=" text-center 2xl:text-[3vw] xl:text-[3vw] tracking-wider lg:text-[3vw] md:portrait:text-[5.5vw] font-[400] AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-white">
+                      Couples Therapy
+                    </h3>
+                  </motion.div>
+                  <motion.div
+                    style={{
+                      opacity: increaseOpacityBox1Div2,
+                    }}
+                  >
+                    <motion.div
+                      style={{
+                        opacity: increaseOpacityBox2Div2,
+                      }}
+                      className="w-[90%] mx-auto pl-4 mt-[5%]"
+                    >
+                      <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-[#] font-[300] text-left  font-[Montserrat] text-white">
+                        Our Individual Therapy services are designed to provide
+                        a safe, confidential space where you can explore your
+                        thoughts, emotions, and behaviors.
+                      </p>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
               </motion.div>
 
               <motion.div
@@ -992,8 +1079,8 @@ export const Herosection = () => {
               className="h-[15%] w-full bg-blue-950"
             >
               <img
-                src="/counseling.webp"
-                className="w-full h-full object-cover object-top"
+                src="/PrivateTherapy2.webp"
+                className="w-full h-full object-cover object-center"
                 alt="personImg"
               />
             </motion.div>
@@ -1004,13 +1091,6 @@ export const Herosection = () => {
               }}
               className="h-[15%] w-full flex flex-col justify-start items-center gap-5"
             >
-              {/* <motion.div
-                style={{ opacity: increaseOpacityBox2Div1 }}
-                className="flex justify-between items-center w-full p-2"
-              >
-                <div className="text-[3.4vw]">Some content</div>
-                <div className="text-[3.4vw]">some content</div>
-              </motion.div> */}
               <motion.div
                 style={
                   {
@@ -1069,14 +1149,17 @@ export const Herosection = () => {
                 className="my-[5%] flex flex-col justify-center items-center"
               >
                 <h3 className=" text-center  font-[400] text-3xl AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-white">
-                  Private Therarapy
+                  Groupe Therarapy
                 </h3>
                 <div className="w-[95%] mx-auto">
                   <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-base font-[300] text-left  font-[Montserrat] text-white">
-                    Our Individual Therapy services are designed to provide a
-                    safe, confidential space where you can explore your
-                    thoughts, emotions, and behaviors.
+                    Group therapy provides a supportive environment where you
+                    can share experiences, learn from others, and gain strength
+                    through mutual understanding.
                   </p>
+                  {/* It fosters a sense of
+                    community and accountability, helping participants stay
+                    motivated on their journey to recovery. */}
                 </div>
                 <button className="bg-white text-[#370051] text-base mt-2 px-5 py-2 rounded-full flex justify-center items-center gap-1">
                   More Details{" "}
@@ -1096,7 +1179,7 @@ export const Herosection = () => {
               className="h-[15%] w-full bg-blue-950"
             >
               <img
-                src="/counseling.webp"
+                src="/couplesTherapy.webp"
                 className="w-full h-full object-cover object-top"
                 alt="personImg"
               />
@@ -1117,14 +1200,17 @@ export const Herosection = () => {
                 className="my-[5%] flex flex-col justify-center items-center"
               >
                 <h3 className=" text-center  font-[400] text-3xl AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-white">
-                  Private Therarapy
+                  Couples Therapy
                 </h3>
                 <div className="w-[95%] mx-auto">
                   <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-base font-[300] text-left  font-[Montserrat] text-white">
-                    Our Individual Therapy services are designed to provide a
-                    safe, confidential space where you can explore your
-                    thoughts, emotions, and behaviors.
+                    Our couples therapy helps partners improve communication,
+                    rebuild trust, and navigate challenges together in a
+                    supportive setting by addressing underlying issues.
                   </p>
+                  {/* It
+                    empowers couples to strengthen their relationship and foster
+                    a deeper connection during the recovery process. */}
                 </div>
                 <button className="bg-white text-[#370051] text-base mt-2 px-5 py-2 rounded-full flex justify-center items-center gap-1">
                   More Details{" "}
