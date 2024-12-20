@@ -11,19 +11,45 @@ import React, { useEffect, useRef, useState } from "react";
 import SplitType from "split-type";
 import { gsap } from "gsap/dist/gsap";
 import { Navbar } from "../common/Navbar/Navbar";
-// import zIndex from "@mui/material/styles/zIndex";
+
 import { ArrowUpRight, X } from "lucide-react";
 
 import { Link } from "react-router-dom";
 import XIcon from "@mui/icons-material/X";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
-// import zIndex from "@mui/material/styles/zIndex";
+
+// animation variants for offcanvas menu..
+const variants = {
+  initial: {
+    width: "0%",
+    x: "150%",
+    zIndex: 0,
+  },
+  enter: {
+    width: "100%",
+    x: ["150%", "0%"],
+    zIndex: 999,
+    right: 0,
+    transition: {
+      duration: 1,
+      ease: "linear",
+    },
+  },
+  leave: {
+    // width: ["100%", "0%"],
+    x: ["0%", "-150%"],
+    zIndex: 999,
+    left: 0,
+    transition: {
+      duration: 1,
+      ease: "linear",
+    },
+  },
+};
 
 export const Herosection = () => {
   const mainWrapperRef = useRef(null);
-  // const [scope, animate] = useAnimate();
-  const journeyTextRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: mainWrapperRef,
   });
@@ -33,93 +59,7 @@ export const Herosection = () => {
     y: 0,
   });
   const [isHovered, setIsHovered] = useState(false);
-
-  /* This `useEffect` hook is responsible for creating a GSAP timeline animation that involves various
-  elements on the Hero section of your React component. Here's a breakdown of what it does: */
-  useEffect(() => {
-    const gsapTimeLine = gsap.timeline();
-    const sliptConsul =
-      journeyTextRef.current &&
-      new SplitType(journeyTextRef.current, {
-        types: "chars",
-      });
-    // const sliptTancy =
-    //   tancyRef.current && new SplitType(tancyRef.current, { types: "chars" });
-
-    if (sliptConsul?.chars) {
-      gsapTimeLine
-        // .fromTo(
-        //   journeyTextRef.current,
-        //   {
-        //     opacity: 0,
-        //     y: "-100%",
-        //     ease: "power2.out",
-        //   },
-        //   {
-        //     opacity: 1,
-        //     y: "0%",
-        //     ease: "power2.out",
-        //     duration: 0.45,
-        //     delay: 0.3,
-        //     scrub: 2,
-        //   }
-        // )
-        // @ts-ignore
-        .from(sliptConsul?.chars, {
-          duration: 0.8,
-          opacity: 0,
-          scale: 3.5,
-          stagger: 0.45,
-          ease: "power2.out",
-          scrub: 2,
-        });
-      // @ts-ignore
-      // .from(sliptTancy?.chars, {
-      //   duration: 0.8,
-      //   opacity: 0,
-      //   scale: 3.5,
-      //   stagger: 0.45,
-      //   ease: "power2.out",
-      //   scrub: 2,
-      // })
-      // .fromTo(
-      //   videoWrapperRef.current,
-      //   {
-      //     opacity: 0,
-      //     x: "100%",
-      //     ease: "power2.out",
-      //   },
-      //   {
-      //     opacity: 1,
-      //     x: "0%",
-      //     ease: "power2.out",
-      //     duration: 0.8,
-      //     scrub: 2,
-      //   }
-      // )
-      // .fromTo(
-      //   paraRef.current,
-      //   {
-      //     opacity: 0,
-      //     y: "50%",
-      //     ease: "power2.out",
-      //   },
-      //   {
-      //     duration: 0.8,
-      //     opacity: 1,
-      //     y: "0%",
-      //     ease: "power2.out",
-      //   }
-      // );
-    }
-
-    return () => {
-      gsapTimeLine?.reverse();
-    };
-  }, []);
-
-  // const [currentWindowWidth, setCurrentWindowWidth] = useState(0);
-  // const [currentWindowHeight, setCurrentWindowHeight] = useState(0);
+  const [currentMenuState, setCurrentMenuState] = useState(variants.initial);
   const [isDesktop, setIsDesktop] = useState({
     orientation: false,
   });
@@ -151,7 +91,7 @@ export const Herosection = () => {
   const scrollOnXAxis = useTransform(
     scrollYProgress,
     [0, 1],
-    ["0vw", `${!isDesktop.orientation ? "-220vw" : "-320vw"}`]
+    ["0vw", `${!isDesktop.orientation ? "-220vw" : "-400vw"}`]
   );
 
   const increaseWidthOnScroll1 = useTransform(
@@ -217,54 +157,34 @@ export const Herosection = () => {
   );
 
   // onScroll view top Menu bar start
-  const menuOpacity = useTransform(scrollYProgress, [0, 0.05], [0, 1]);
+  const menuOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.05],
+    [`${!isDesktop.orientation ? 0 : 1}`, 1]
+  );
   const displayTranistion = useTransform(
     scrollYProgress,
     [0.2, 0.23],
-    ["none", "flex"]
+    [`${!isDesktop.orientation ? "none" : "flex"}`, "flex"]
   );
-  const scaleUpMenuBtn = useTransform(scrollYProgress, [0, 0.05], [0.8, 1]);
+  const scaleUpMenuBtn = useTransform(
+    scrollYProgress,
+    [0, 0.05],
+    [`${!isDesktop.orientation ? 0.8 : 1}`, 1]
+  );
   const menuTextTransition = useTransform(
     scrollYProgress,
     [0.2, 0.23],
-    ["105%", "0%"]
+    [`${!isDesktop.orientation ? "105%" : "0%"}`, "0%"]
   );
   const menuTextDisplayTransition = useTransform(
     scrollYProgress,
     [0.2, 0.23],
-    ["none", "flex"]
+    [`${!isDesktop.orientation ? "none" : "flex"}`, "flex"]
   );
   // onScroll view top Menu bar start end
 
   // animation for offcanvas menu start...
-  const variants = {
-    initial: {
-      width: "0%",
-      x: "150%",
-      zIndex: 0,
-    },
-    enter: {
-      width: "100%",
-      x: ["150%", "0%"],
-      zIndex: 999,
-      right: 0,
-      transition: {
-        duration: 1,
-        ease: "linear",
-      },
-    },
-    leave: {
-      // width: ["100%", "0%"],
-      x: ["0%", "-150%"],
-      zIndex: 999,
-      left: 0,
-      transition: {
-        duration: 1,
-        ease: "linear",
-      },
-    },
-  };
-  const [currentMenuState, setCurrentMenuState] = useState(variants.initial);
 
   const handleMenuAnimationIn = async () => {
     setCurrentMenuState(variants.enter);
@@ -373,7 +293,7 @@ export const Herosection = () => {
           animate={currentMenuState}
           exit={currentMenuState}
           //ref={scope}
-          className="bg-[#100018] fixed w-full h-full z-0 text-white top-0 right-0 overflow-hidden"
+          className="bg-[#100018] fixed w-[90%] h-[100dvh] z-0 text-white top-0 right-0 overflow-hidden"
         >
           <div className="flex justify-between items-center w-[95%] mx-auto py-3">
             <div className="h-auto w-14">
@@ -401,11 +321,12 @@ export const Herosection = () => {
               </motion.p>
             </motion.button>
           </div>
-          <div className="h-[50%] flex justify-center">
+
+          <div className="2xl:h-[60%] xl:h-[60%] lg:h-[60%] md:portrait:h-[60%] h-[70%] flex justify-center border-b border-[#ccc]/30 py-4 2xl:py-0 xl:py-0 lg:py-0 md:portrait:py-0">
             <div className="w-[95%] mx-auto flex flex-col 2xl:flex-row xl:flex-row lg:flex-row md:landscape:flex-row md:portrait:flex-col justify-between">
-              <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:landscape:w-1/2 md:portrait:w-full w-full flex justify-center items-center">
-                <div className="w-[80%] mx-auto">
-                  <ul className="flex flex-col gap-5 justify-center  items-start">
+              <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:landscape:w-1/2 md:portrait:w-full w-full flex justify-center items-center border-r border-[#ccc]/30">
+                <div className="w-[100%] mx-auto">
+                  <ul className="flex flex-col gap-5 justify-center  items-start w-full">
                     {[
                       {
                         path: "/service",
@@ -436,11 +357,12 @@ export const Herosection = () => {
                           delay: 1.5,
                           ease: backInOut,
                         }}
+                        className="border-b border-[#ccc]/10 last:border-b-0 w-full py-1 px-3 hover:border-[#ccc]/40 cursor-pointer transition-all duration-300 ease-linear"
                       >
                         <Link
                           key={id}
                           to={cur.path}
-                          className="AllianceFont text-white 2xl:text-[2.1vw] xl:text-[2.1vw] lg:text-[2.1vw] md:portrait:text-[2.3vw] md:landscape:text-[2.1vw] text-[4vw] font-[500]"
+                          className="AllianceFont text-white 2xl:text-[2.1vw] xl:text-[2.1vw] lg:text-[2.1vw] md:portrait:text-[2.3vw] md:landscape:text-[2.1vw] text-[5vw] font-[500] w-full flex"
                         >
                           {cur.title}
                         </Link>
@@ -449,7 +371,7 @@ export const Herosection = () => {
                   </ul>
                 </div>
               </div>
-              <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:landscape:w-1/2 md:portrait:w-full w-[80%] mx-auto flex justify-between">
+              <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:landscape:w-1/2 md:portrait:w-full w-full mx-auto flex justify-between px-5">
                 <div className="flex flex-col justify-center gap-5">
                   <motion.div
                     initial={{ opacity: 0, y: "20%" }}
@@ -530,17 +452,17 @@ export const Herosection = () => {
             </div>
           </div>
 
-          <div className="flex justify-between w-[95%] mx-auto h-[45%]">
-            <div className="w-[40%] bg-teal-00 hidden 2xl:flex xl:flex lg:flex md:portrait:flex md:landscape:flex ">
+          <div className="flex justify-between w-[95%] mx-auto 2xl:h-[30%] xl:h-[30%] lg:h-[30%] md:portrait:h-[30%] h-[20%]">
+            {/* <div className="w-[40%] bg-teal-00 hidden 2xl:flex xl:flex lg:flex md:portrait:flex md:landscape:flex ">
               graphic div
-            </div>
+            </div> */}
             <motion.div
               initial={{ opacity: 0, y: "20%" }}
               whileInView={{ opacity: 1, y: "0%" }}
               transition={{ duration: 0.8, delay: 1.5, ease: backInOut }}
-              className="2xl:w-[60%] bg-red-00 xl:w-[60%] lg:w-[60%] md:portrait:w-full md:landscape:w-[60%] w-full flex justify-center items-center"
+              className="2xl:w-[100%] bg-red-00 xl:w-[100%] lg:w-[100%] md:portrait:w-full md:landscape:w-[100%] w-full flex justify-center items-center"
             >
-              <div className="w-[90%] mx-auto">
+              <div className="w-[60%] mx-auto">
                 <img src="/RecovIPLogoDark.svg" alt="logo" />
               </div>
             </motion.div>
@@ -549,9 +471,9 @@ export const Herosection = () => {
 
         <div
           ref={mainWrapperRef}
-          className="2xl:h-[300dvh] xl:h-[300dvh] lg:h-[300dvh] md:portrait:h-[300dvh] md:landscape:h-[300dvh] h-[600dvh] relative mx-auto"
+          className="2xl:h-[300dvh] xl:h-[300dvh] lg:h-[300dvh] lg:landscape:h-[300dvh] md:portrait:h-[300dvh] md:landscape:h-[600dvh] h-[600dvh] relative mx-auto"
         >
-          <div className="top-0 sticky h-[100dvh] w-full overflow-hidden 2xl:flex xl:flex lg:flex md:portrait:flex md:landscape:flex hidden">
+          <div className="top-0 sticky h-[100dvh] w-full overflow-hidden 2xl:flex xl:flex lg:flex lg:landscape:flex md:portrait:flex md:landscape:hidden hidden">
             <motion.div
               style={{
                 x: scrollOnXAxis,
@@ -692,9 +614,14 @@ export const Herosection = () => {
                           scale: isHovered ? 1.2 : 1,
                         }}
                         transition={{ duration: 0.3, ease: "linear" }}
-                        className="absolute h-[4vw] w-[4vw] rounded-full border-none outline-none bg-[#100018]  flex justify-center items-center z-50 top-0 left-0"
+                        className="absolute h-[3vw] w-[3vw] rounded-full border-none outline-none bg-[#100018]/20  flex justify-center items-center z-50 top-0 left-0"
                       >
-                        <ArrowUpRight />
+                        <ArrowUpRight
+                          style={{
+                            color: "gold",
+                          }}
+                          size={15}
+                        />
                       </motion.div>
                     )}
                 </motion.div>
@@ -780,9 +707,14 @@ export const Herosection = () => {
                           scale: isHovered ? 1.2 : 1,
                         }}
                         transition={{ duration: 0.3, ease: "linear" }}
-                        className="absolute h-[4vw] w-[4vw] rounded-full border-none outline-none bg-[#100018]  flex justify-center items-center z-50 top-0 left-0 text-white"
+                        className="absolute h-[3vw] w-[3vw] rounded-full border-none outline-none bg-[#100018]/20  flex justify-center items-center z-50 top-0 left-0 text-white"
                       >
-                        <ArrowUpRight />
+                        <ArrowUpRight
+                          style={{
+                            color: "gold",
+                          }}
+                          size={15}
+                        />
                       </motion.div>
                     )}
                 </motion.div>
@@ -884,9 +816,14 @@ export const Herosection = () => {
                           scale: isHovered ? 1.2 : 1,
                         }}
                         transition={{ duration: 0.3, ease: "linear" }}
-                        className="absolute h-[4vw] w-[4vw] rounded-full border-none outline-none bg-[#100018]  flex justify-center items-center z-50 top-0 left-0 text-white"
+                        className="absolute h-[3vw] w-[3vw] rounded-full border-none outline-none bg-[#100018]/20  flex justify-center items-center z-50 top-0 left-0 text-white"
                       >
-                        <ArrowUpRight />
+                        <ArrowUpRight
+                          style={{
+                            color: "gold",
+                          }}
+                          size={15}
+                        />
                       </motion.div>
                     )}
                 </motion.div>
@@ -942,8 +879,8 @@ export const Herosection = () => {
 
           {/* mobile start */}
           {/* box one start */}
-          <div className="top-0 sticky h-[80dvh] w-full overflow-x-hidden 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex">
-            <motion.div className=" bg-[#fbf2ff] text-black  h-full 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden  w-full flex-shrink-0 flex flex-col justify-center items-center realtive">
+          <div className="top-0 sticky h-[80dvh] md:landscape:h-[100dvh] mobile-landscape:h-[100dvh] w-full overflow-x-hidden 2xl:hidden xl:hidden lg:hidden lg:landscape:hidden md:portrait:hidden md:landscape:flex flex">
+            <motion.div className=" bg-[#fbf2ff] text-black  h-full 2xl:hidden xl:hidden lg:hidden lg:landscape:hidden md:portrait:hidden md:landscape:flex  w-full flex-shrink-0 flex flex-col justify-center items-center realtive">
               <Navbar />
               <div className="h-[60%] w-full flex justify-center items-center">
                 <div className=" h-full flex-1 flex justify-center items-center">
@@ -971,19 +908,11 @@ export const Herosection = () => {
                 <div className="flex flex-col justify-center items-center gap-5  w-[95%] h-auto ">
                   <div className="w-full flex justify-center items-center">
                     <img
-                      className=" w-[20rem]"
+                      className="w-[20rem]"
                       src="/RecovIpLightLogo.svg"
                       alt="logo"
                     />
                   </div>
-                  {/* <div className="w-full">
-                    <p className="text-[3.5vw] text-[#2e0e4f] font-[300] text-left font-[Montserrat]">
-                      Recovery Is Possible provides a supportive and nurturing
-                      environment where you can explore your challenges, develop
-                      coping strategies, and embark on a journey of healing and
-                      personal growth.
-                    </p>
-                  </div> */}
                 </div>
 
                 <div className=" mx-auto  h-[50%]  w-[95%] "></div>
@@ -1006,12 +935,12 @@ export const Herosection = () => {
           {/* box one end */}
 
           {/* box two start */}
-          <div className="h-screen customBGLogo  sticky w-full top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex flex-col justify-center items-center text-white">
+          <div className="h-screen customBGLogo  sticky w-full top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:flex-row mobile-landscape:flex-row lg:landscape:hidden flex flex-col justify-center items-center text-white">
             <motion.div
               style={{
                 height: increaseHeightOnScroll1,
               }}
-              className="h-[50%] w-full bg-blue-500 relative"
+              className="h-[50%] w-full md:landscape:h-full relative"
             >
               <img
                 src="/About-sectionBG.webp"
@@ -1034,12 +963,8 @@ export const Herosection = () => {
               style={{
                 height: increaseHeightOnScroll1,
               }}
-              className="h-[50%] w-full flex flex-col justify-start items-center gap-5"
+              className="h-[50%] md:landscape:h-full w-full flex flex-col justify-start items-center gap-5"
             >
-              {/* <div className="flex justify-between items-center w-full p-2">
-                <div className="text-[3.4vw]">Some content</div>
-                <div className="text-[3.4vw]">some content</div>
-              </div> */}
               <motion.div
                 style={{
                   opacity: increaseOpacityBox1Div2,
@@ -1059,7 +984,7 @@ export const Herosection = () => {
           {/* box two end */}
 
           {/* box three start */}
-          <div className="h-screen costomBgLogo sticky w-full top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex flex-col justify-center items-center text-[8vw]">
+          <div className="h-screen costomBgLogo sticky w-full top-0 2xl:hidden xl:hidden lg:hidden lg:landscape:hidden md:portrait:hidden md:landscape:flex-row mobile-landscape:flex-row flex flex-col justify-center items-center text-[8vw]">
             <motion.div
               style={{
                 height: increaseHeightOnScroll2,
@@ -1115,50 +1040,103 @@ export const Herosection = () => {
           </div>
           {/* box three end */}
 
-          <div className="h-screen bg-[#370051] sticky w-full top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex flex-col justify-center items-center text-white text-[8vw]">
+          <div className="h-screen bg-[#370051] sticky w-full top-0 2xl:hidden xl:hidden lg:hidden lg:landscape:hidden md:portrait:hidden md:landscape:flex-row mobile-landscape:flex-row flex flex-col justify-center items-center text-white ">
             <motion.div
               style={{
                 height: increaseHeightOnScroll3,
               }}
-              className="h-[10%] w-full bg-green-200"
+              className="h-[15%] w-full bg-blue-950"
             >
               <img
-                src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg"
-                className="w-full h-full object-cover"
+                src="/counseling.webp"
+                className="w-full h-full object-cover object-top"
                 alt="personImg"
               />
             </motion.div>
+
             <motion.div
               style={{
                 height: increaseHeightOnScroll3,
               }}
-              className="h-[10%] w-full flex flex-col justify-start items-center gap-5"
+              className="h-[15%] w-full flex flex-col justify-start items-center gap-5"
             >
               <motion.div
-                style={{
-                  opacity: increaseOpacityBox3Div1,
-                }}
-                className="flex justify-between items-center w-full p-2"
+                style={
+                  {
+                    // opacity: increaseOpacityBox2Div2,
+                  }
+                }
+                className="my-[5%] flex flex-col justify-center items-center"
               >
-                <div className="text-[3.4vw]">Some content</div>
-                <div className="text-[3.4vw]">some content</div>
-              </motion.div>
-              <motion.div
-                style={{
-                  opacity: increaseOpacityBox3Div2,
-                }}
-                className="text-[8vw]"
-              >
-                Service 2
+                <h3 className=" text-center  font-[400] text-3xl AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-white">
+                  Private Therarapy
+                </h3>
+                <div className="w-[95%] mx-auto">
+                  <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-base font-[300] text-left  font-[Montserrat] text-white">
+                    Our Individual Therapy services are designed to provide a
+                    safe, confidential space where you can explore your
+                    thoughts, emotions, and behaviors.
+                  </p>
+                </div>
+                <button className="bg-white text-[#370051] text-base mt-2 px-5 py-2 rounded-full flex justify-center items-center gap-1">
+                  More Details{" "}
+                  <span>
+                    <ArrowUpRight />
+                  </span>
+                </button>
               </motion.div>
             </motion.div>
           </div>
 
-          <div className="h-screen bg-blue-500 sticky w-full top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex justify-center items-center text-white text-[8vw]">
-            Service 3
+          <div className="h-screen bg-blue-500 sticky w-full top-0 2xl:hidden xl:hidden lg:hidden lg:landscape:hidden md:portrait:hidden md:landscape:flex-row mobile-landscape:flex-row flex flex-col justify-center items-center text-white text-[8vw]">
+            <motion.div
+              style={{
+                height: increaseHeightOnScroll3,
+              }}
+              className="h-[15%] w-full bg-blue-950"
+            >
+              <img
+                src="/counseling.webp"
+                className="w-full h-full object-cover object-top"
+                alt="personImg"
+              />
+            </motion.div>
+
+            <motion.div
+              style={{
+                height: increaseHeightOnScroll3,
+              }}
+              className="h-[15%] w-full flex flex-col justify-start items-center gap-5"
+            >
+              <motion.div
+                style={
+                  {
+                    // opacity: increaseOpacityBox2Div2,
+                  }
+                }
+                className="my-[5%] flex flex-col justify-center items-center"
+              >
+                <h3 className=" text-center  font-[400] text-3xl AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-white">
+                  Private Therarapy
+                </h3>
+                <div className="w-[95%] mx-auto">
+                  <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-base font-[300] text-left  font-[Montserrat] text-white">
+                    Our Individual Therapy services are designed to provide a
+                    safe, confidential space where you can explore your
+                    thoughts, emotions, and behaviors.
+                  </p>
+                </div>
+                <button className="bg-white text-[#370051] text-base mt-2 px-5 py-2 rounded-full flex justify-center items-center gap-1">
+                  More Details{" "}
+                  <span>
+                    <ArrowUpRight />
+                  </span>
+                </button>
+              </motion.div>
+            </motion.div>
           </div>
 
-          <div className="h-screen bg-orange-500 sticky w-full top-0 2xl:hidden xl:hidden lg:hidden md:portrait:hidden md:landscape:hidden flex justify-center items-center text-white text-[8vw]">
+          <div className="h-screen bg-orange-500 sticky w-full top-0 2xl:hidden xl:hidden lg:hidden lg:landscape:hidden md:portrait:hidden md:landscape:flex flex justify-center items-center text-white text-[8vw]">
             Why choose us
           </div>
 
@@ -1186,7 +1164,6 @@ export const Herosection = () => {
             />
           </div>
         </motion.div>
-        {/* <Navbar /> */}
       </div>
     </AnimatePresence>
   );

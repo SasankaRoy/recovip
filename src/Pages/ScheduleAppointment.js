@@ -203,19 +203,90 @@ const ScheduleAppointment = () => {
       case 3:
         return (
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold text-gray-800">
+            <div className="flex justify-between items-center w-full gap-5">
+              {/* <h3 className="AllianceFont font-[400] 2xl:text-[1.3vw] xl:text-[1.3vw] lg:text-[1.3vw] md:landscape:text-[1.3vw] md:portrait:text-[2.5vw] text-[4vw] text-[#2e0e4f]">
+                Choose Session
+              </h3> */}
+              {/* <div className="w-1/2">
+               
+                <input
+                  type="text"
+                  name="address"
+                  value={formData.address}
+                  onChange={handleChange}
+                  className="w-full AllianceFont font-[400] 2xl:text-[1.3vw] xl:text-[1.3vw] lg:text-[1.3vw] md:landscape:text-[1.3vw] md:portrait:text-[2.5vw] text-[4vw] text-[#2e0e4f] placeholder:text-[#2e0e4f]  py-2 px-3 outline-none border-b-2 border-[#C2C2C2] bg-transparent"
+                  placeholder="Enter street address"
+                  required
+                />
+              </div> */}
+              <div className="w-1/2">
+                
+                <input
+                  type="text"
+                  name="city"
+                  value={formData.city}
+                  onChange={handleChange}
+                  className="w-full AllianceFont font-[400] 2xl:text-[1.3vw] xl:text-[1.3vw] lg:text-[1.3vw] md:landscape:text-[1.3vw] md:portrait:text-[2.5vw] text-[4vw] text-[#2e0e4f] placeholder:text-[#2e0e4f]  py-2 px-3 outline-none border-b-2 border-[#C2C2C2] bg-transparent"
+                  placeholder="Enter city"
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              {/* <label className="block text-sm font-medium text-gray-700">
+                State
+              </label> */}
+              <input
+                type="text"
+                name="state"
+                value={formData.state}
+                onChange={handleChange}
+                className="w-full AllianceFont font-[400] 2xl:text-[1.3vw] xl:text-[1.3vw] lg:text-[1.3vw] md:landscape:text-[1.3vw] md:portrait:text-[2.5vw] text-[4vw] text-[#2e0e4f] placeholder:text-[#2e0e4f]  py-2 px-3 outline-none border-b-2 border-[#C2C2C2] bg-transparent"
+                placeholder="Enter state"
+                required
+              />
+            </div>
+            <div>
+              {/* <label className="block text-sm font-medium text-gray-700">
+                Zip Code
+              </label> */}
+              <input
+                type="text"
+                name="zipCode"
+                value={formData.zipCode}
+                onChange={handleChange}
+                className="w-full AllianceFont font-[400] 2xl:text-[1.3vw] xl:text-[1.3vw] lg:text-[1.3vw] md:landscape:text-[1.3vw] md:portrait:text-[2.5vw] text-[4vw] text-[#2e0e4f] placeholder:text-[#2e0e4f]  py-2 px-3 outline-none border-b-2 border-[#C2C2C2] bg-transparent"
+                placeholder="Enter zip code"
+                required
+              />
+            </div>
+          </div>
+        );
+      case 4:
+        return (
+          <div className="space-y-4">
+            {/* <h2 className="text-xl  font-semibold text-gray-800">
               Confirm Your Details
-            </h2>
+            </h2> */}
             <div className="bg-gray-100 p-4 rounded-md">
               <p className="AllianceFont font-[400] text-[1.5vw]">
-                <strong className="font-[Montserrat] text-[1vw]">Name : </strong> {formData.firstName} {formData.lastName}
+                <strong className="font-[Montserrat] text-[1vw]">
+                  Name :{" "}
+                </strong>{" "}
+                {formData.firstName} {formData.lastName}
               </p>
               <p className="AllianceFont font-[400] text-[1.5vw]">
-                <strong className="font-[Montserrat] text-[1vw]">Contact : </strong> {formData.email} | {formData.phone}
+                <strong className="font-[Montserrat] text-[1vw]">
+                  Contact :{" "}
+                </strong>{" "}
+                {formData.email} | {formData.phone}
               </p>
               <p className="AllianceFont font-[400] text-[1.5vw]">
-                <strong className="font-[Montserrat] text-[1vw]">Address : </strong> {formData.address}, {formData.city},{" "}
-                {formData.state} {formData.zipCode}
+                <strong className="font-[Montserrat] text-[1vw]">
+                  Address :{" "}
+                </strong>{" "}
+                {formData.address}, {formData.city}, {formData.state}{" "}
+                {formData.zipCode}
               </p>
             </div>
           </div>
@@ -229,46 +300,48 @@ const ScheduleAppointment = () => {
     <>
       <div className="min-h-screen flex justify-center items-center">
         <div className="w-[95%] h-full  flex justify-center items-center">
-          <div className="w-[90%]">
-            <div className="flex flex-col 2xl:flex-row xl:flex-row lg:flex-row md:portrait:flex-col md:landscape:flex-row justify-between items-center gap-3 ">
-              <div className="2xl:w-[70%] xl:w-[70%] lg:w-[70%] md:landscape:w-[70%] md:portrait:w-full w-full ">
+          <div className="w-[90%] bg-yellow-00">
+            <div className="flex flex-col 2xl:flex-row xl:flex-row lg:flex-row md:portrait:flex-col md:landscape:flex-row justify-between items-centers gap-3">
+              <div className="2xl:w-[70%] xl:w-[70%] lg:w-[50%] md:landscape:w-[50%] md:portrait:w-full w-full">
                 <motion.h1
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.8, ease: "circInOut", delay: 0.2 }}
-                  className="AllianceFont font-[Quattrocento font-[500] text-[#4d0072] 2xl:text-[9vw] xl:text-[9vw] lg:text-[9vw] md:portrait:text-[14vw] md:landscape:text-[9vw] text-[18vw]  leading-[normal]"
+                  className="AllianceFont font-[Quattrocento font-[500] text-[#4d0072] 2xl:text-[8vw] xl:text-[9vw] lg:text-[6vw] md:portrait:text-[14vw] md:landscape:text-[6vw] text-[18vw]  leading-[5vw]"
                 >
-                  Let&apos;s get in touch
+                  {/* Let&apos;s get in touch */}
+                  Don&apos;t wait for a better moment
                 </motion.h1>
               </div>
-              <div className="2xl:w-[30%] xl:w-[30%] lg:w-[30%] md:portrait:w-full md:landscape:w-[30%] w-full hidden 2xl:flex xl:flex lg:flex md:portrait:flex md:landscape:flex ">
+              <div className="2xl:w-[30%] xl:w-[30%] lg:w-[30%] md:portrait:w-full md:landscape:w-[30%] w-full hidden 2xl:flex xl:flex lg:flex md:portrait:flex md:landscape:flex">
                 <motion.p
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.8, ease: "circInOut", delay: 0.4 }}
-                  className="font-[Montserrat] 2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[2.2vw] md:landscape:text-[.9vw] text-[3.5vw] font-[300] text-[#2e0e4f]"
+                  // className="font-[Montserrat] 2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[2.2vw] md:landscape:text-[.9vw] text-[3.5vw] font-[300] text-[#2e0e4f]"
+                  className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-[#2e0e4f] font-[300] text-left  font-[Montserrat]"
                 >
-                  Taking the first step toward support can feel daunting, but
-                  you don’t have to do it alone. Whether you’re ready to begin
-                  your journey or have questions about our services, we’re here
-                  to listen and guide you.
+                  You’re not just carving out time for a session – you're
+                  prioritizing your mental wellness and setting the foundation
+                  for positive change. Take a moment today to schedule your
+                  appointment, your future self will thank you.
                 </motion.p>
               </div>
             </div>
 
-            <div className="flex flex-col 2xl:flex-row xl:flex-row lg:flex-row md:portrait:flex-col md:landscape:flex-row justify-between items-center my-[1%] gap-3 2xl:gap-0 xl:gap-0 lg:gap-0 md:landscape:gap-0 md:portrait:gap-3">
+            <div className="flex flex-col 2xl:flex-row xl:flex-row lg:flex-row md:portrait:flex-col md:landscape:flex-row justify-between items-centers my-[1%] gap-3 2xl:gap-0 xl:gap-0 lg:gap-0 md:landscape:gap-0 md:portrait:gap-3">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8, ease: "circInOut", delay: 0.6 }}
-                className="2xl:w-[25%] xl:w-[25%] lg:w-[25%] md:landscape:w-[25%] md:portrait:w-full w-full my-[3%] 2xl:my-0 xl:my-0 lg:my-0 md:portrait:my-[3%] md:landscape:my-0 "
+                className="2xl:w-[25%] xl:w-[25%] lg:w-[25%] md:landscape:w-[25%] md:portrait:w-full w-full my-[3%] 2xl:my-0 xl:my-0 lg:my-0 md:portrait:my-[3%] md:landscape:my-0  py-4"
               >
                 <div className="hidden 2xl:flex xl:flex lg:flex md:portrait:flex md:landscape:flex flex-col">
                   <h4 className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:portrait:text-[2.5vw] md:landscape:text-[1.5vw] text-[4vw]  tracking-wider font-[400] text-[#4d0072]">
-                    let's start the
+                    your well-being
                   </h4>
                   <h4 className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:portrait:text-[2.5vw] md:landscape:text-[1.5vw] text-[4vw] tracking-wider font-[400] text-[#4d0072]">
-                    conversation!
+                    deserves now.
                   </h4>
                 </div>
 
@@ -287,14 +360,14 @@ const ScheduleAppointment = () => {
                   </Link>
                   <div className="flex 2xl:flex-col xl:flex-col lg:flex-col md:portrait:flex-row md:landscape:flex-col flex-row justify-start items-start">
                     <Link
-                      className="text-[#4d0072] 2xl:text-[1.1vw] xl:text-[1.1vw] lg:text-[1.1vw] md:landscape:text-[1.1vw] md:portrait:text-[2.3vw] text-[2.8vw]  font-[700]"
+                      className="text-[#4d0072] 2xl:text-[1.1vw] xl:text-[1.1vw] lg:text-[1.1vw] md:landscape:text-[1.1vw] md:portrait:text-[2.3vw] text-[2.8vw] AllianceFont font-[400]"
                       href="https://maps.app.goo.gl/C1uULXRQ95gTG7bP8"
                       target="_blank"
                     >
                       Tennessee
                     </Link>
                     <Link
-                      className="text-[#4d0072] 2xl:text-[1.1vw] xl:text-[1.1vw] lg:text-[1.1vw] md:landscape:text-[1.1vw] md:portrait:text-[2.3vw] text-[2.8vw]  font-[700]"
+                      className="text-[#4d0072] 2xl:text-[1.1vw] xl:text-[1.1vw] lg:text-[1.1vw] md:landscape:text-[1.1vw] md:portrait:text-[2.3vw] text-[2.8vw] AllianceFont font-[400]"
                       href="https://maps.app.goo.gl/C1uULXRQ95gTG7bP8"
                       target="_blank"
                     >
@@ -372,10 +445,10 @@ const ScheduleAppointment = () => {
                   className="w-full mx-auto  rounded-lg p-6"
                 >
                   <div className="flex justify-between mb-6">
-                    {steps.map((step) => (
+                    {/* {steps.map((step) => (
                       <div
                         key={step.id}
-                        className={`w-full text-center mx-2 py-2 rounded-full AllianceFont font-[400] ${
+                        className={`w-full text-center mx-2 py-2 rounded-full AllianceFont 2xl:text-[1.3vw] xl:text-[1.3vw] lg:text-[1.3vw] md:landscape:text-[1.3vw] md:portrait:text-[2.5vw] text-[4vw] font-[400] ${
                           currentStep === step.id
                             ? "bg-[#2e0e4f] text-white"
                             : currentStep > step.id
@@ -385,17 +458,19 @@ const ScheduleAppointment = () => {
                       >
                         {step.title}
                       </div>
-                    ))}
+                    ))} */}
                   </div>
 
-                  <div className="mb-6">
-                    <h2 className="text-[2vw]  mb-4 text-[#2e0e4f] AllianceFont font-[400]">
-                      {steps[currentStep - 1].title}
-                    </h2>
-                    {renderStepContent()}
+                  <div className="mb-6 flex flex-col justify-start items-start">
+                    <div className="bg-[#2e0e4f] text-white px-4 mb-4 py-1 flex justify-center items-center rounded-3xl">
+                      <h2 className="2xl:text-[1.3vw] xl:text-[1.3vw] lg:text-[1.3vw] md:landscape:text-[1.3vw] md:portrait:text-[2.5vw] text-[4vw]  text-white AllianceFont font-[400]">
+                        {steps[currentStep - 1].title}
+                      </h2>
+                    </div>
+                    <div className="w-full">{renderStepContent()}</div>
                   </div>
 
-                  <div className="flex justify-between">
+                  <div className="flex justify-between items-center">
                     {currentStep > 1 && (
                       <button
                         type="button"
@@ -404,6 +479,12 @@ const ScheduleAppointment = () => {
                       >
                         <ChevronLeft className="mr-2" /> Previous
                       </button>
+                    )}
+
+                    {currentStep > 1 && (
+                      <div>
+                        <h2 className="font-[400] AllianceFont text">2/4</h2>
+                      </div>
                     )}
 
                     {currentStep < steps.length ? (
