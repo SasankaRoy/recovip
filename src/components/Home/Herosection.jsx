@@ -99,18 +99,18 @@ export const Herosection = () => {
     [0, 0.25],
     [
       `${!isDesktop.orientation ? "30vw" : "20vw"}`,
-      `${!isDesktop.orientation ? "50vw" : "80vw"}`,
+      `${!isDesktop.orientation ? "55vw" : "80vw"}`,
     ]
   );
   const increaseWidthOnScroll2 = useTransform(
     scrollYProgress,
     [0, 0.5],
-    ["15vw", `${!isDesktop.orientation ? "50vw" : "80vw"}`]
+    ["15vw", `${!isDesktop.orientation ? "55vw" : "80vw"}`]
   );
   const increaseWidthOnScroll3 = useTransform(
     scrollYProgress,
     [0, 0.75],
-    ["5vw", `${!isDesktop.orientation ? "50vw" : "80vw"}`]
+    ["5vw", `${!isDesktop.orientation ? "55vw" : "80vw"}`]
   );
 
   const increaseHeightOnScroll1 = useTransform(
@@ -500,7 +500,7 @@ export const Herosection = () => {
                 viewport={{
                   once: true,
                 }}
-                className=" bg-[#fbf2ff] text-black h-[100vh] 2xl:w-[50vw] xl:w-[50vw] lg:w-[50vw] md:portrait:w-[80vw] w-screen flex-shrink-0 flex flex-col justify-center items-center text-whit  "
+                className=" bg-[#fbf2ff] text-black h-[100vh] 2xl:w-[55vw] xl:w-[55vw] lg:w-[55vw] md:portrait:w-[80vw] w-screen flex-shrink-0 flex flex-col justify-center items-center text-whit  "
               >
                 <div className="h-[50%] w-full flex justify-center items-center relative">
                   <Navbar />
@@ -632,14 +632,7 @@ export const Herosection = () => {
                   }}
                   className="h-[50%] w-full flex flex-col justify-start items-center gap-5"
                 >
-                  {/* <div className="flex justify-between items-center w-full p-2">
-                    <div className="2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[1.8vw]">
-                      Some content
-                    </div>
-                    <div className="2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[1.8vw]">
-                      some content
-                    </div>
-                  </div> */}
+                  
                   <motion.div
                     style={{
                       opacity: increaseOpacityBox1Div2,
@@ -657,6 +650,7 @@ export const Herosection = () => {
                 </motion.div>
               </motion.div>
               {/* box two end */}
+
               {/* box three start */}
               <motion.div
                 initial={{
