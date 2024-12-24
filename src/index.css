@@ -148,3 +148,12 @@ code {
     rgba(247, 246, 242, 1) 100%
   );
 }
+
+.customBgServiceTw {
+  background: rgb(99, 102, 103);
+  background: linear-gradient(
+    360deg,
+    rgba(99, 102, 103, 1) 0%,
+    rgba(150, 146, 145, 1) 100%
+  );
+}

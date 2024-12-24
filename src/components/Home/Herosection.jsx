@@ -64,6 +64,17 @@ export const Herosection = () => {
     orientation: false,
   });
 
+  const [scrollPositionY, setScrollPositionY] = useState(0);
+  // const router = useRouter();
+
+  const handleScrollPosition = () => {
+    setScrollPositionY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScrollPosition);
+  }, []);
+
   useEffect(() => {
     const handleScreenOrientation = () => {
       setIsDesktop({
@@ -254,6 +265,8 @@ export const Herosection = () => {
           style={{
             opacity: menuOpacity,
             display: displayTranistion,
+            backdropFilter: scrollPositionY >= 5 ? "blur(5px)" : "transparent",
+            background:scrollPositionY >= 5 ? "rgba(255,255,255,.85)" : "transparent",
           }}
           className="fixed top-0 left-0 w-full bg-transparent z-50 py-2 flex justify-center items-center"
         >
@@ -778,7 +791,7 @@ export const Herosection = () => {
                 style={{
                   width: increaseWidthOnScroll3,
                 }}
-                className="bg-[#370051] protfolioShadow h-screen w-[5vw] flex-shrink-0 flex flex-col justify-end items-center text-[4vw] text-white capitalize"
+                className="bg-[#370051 bg-[#969291 customBgServiceTw protfolioShadow h-screen w-[5vw] flex-shrink-0 flex flex-col justify-end items-center text-[4vw] text-white capitalize"
               >
                 <motion.div
                   style={{
