@@ -265,8 +265,8 @@ export const Herosection = () => {
           style={{
             opacity: menuOpacity,
             display: displayTranistion,
-            backdropFilter: scrollPositionY >= 5 ? "blur(5px)" : "transparent",
-            background:scrollPositionY >= 5 ? "rgba(255,255,255,.85)" : "transparent",
+            backdropFilter: scrollPositionY >= 5 ? "blur(2px)" : "transparent",
+            background:scrollPositionY >= 5 ? "rgba(255,255,255,.35)" : "transparent",
           }}
           className="fixed top-0 left-0 w-full bg-transparent z-50 py-2 flex justify-center items-center"
         >
@@ -1177,7 +1177,7 @@ export const Herosection = () => {
               style={{
                 height: increaseHeightOnScroll3,
               }}
-              className="h-[15%] w-full bg-blue-950"
+              className="h-[15%] w-full"
             >
               <img
                 src="/couplesTherapy.webp"

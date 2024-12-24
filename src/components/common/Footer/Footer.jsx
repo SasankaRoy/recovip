@@ -181,7 +181,7 @@ export const Footer = () => {
                 {[
                   { title: "home", path: "/" },
                   { title: "about Us", path: "/about" },
-                  { title: "services", path: "/service" },
+                  { title: "privacy policy", path: "/service" },
                   { title: "contact", path: "/contact" },
                 ].map((cur, id) => (
                   <motion.div

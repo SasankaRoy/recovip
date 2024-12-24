@@ -299,8 +299,8 @@ const ScheduleAppointment = () => {
   return (
     <>
       <div className="min-h-screen flex justify-center items-center">
-        <div className="w-[95%] h-full  flex justify-center items-center">
-          <div className="w-[90%] bg-yellow-00">
+        <div className="w-[95%]  border-r-[2rem] border-[#4d0072] rounded-2xl h-full  flex justify-center items-center">
+          <div className="w-[90%]">
             <div className="flex flex-col 2xl:flex-row xl:flex-row lg:flex-row md:portrait:flex-col md:landscape:flex-row justify-between items-centers gap-3">
               <div className="2xl:w-[70%] xl:w-[70%] lg:w-[50%] md:landscape:w-[50%] md:portrait:w-full w-full">
                 <motion.h1
@@ -442,7 +442,7 @@ const ScheduleAppointment = () => {
                 </div> */}
                 <form
                   onSubmit={handleSubmit}
-                  className="w-full mx-auto  rounded-lg p-6"
+                  className="w-full mx-auto  rounded-3xl bg-[#c0a7e1]/10 px-[5rem] py-[2rem] border border-[#100018]/20"
                 >
                   <div className="flex justify-between mb-6">
                     {/* {steps.map((step) => (
@@ -462,7 +462,7 @@ const ScheduleAppointment = () => {
                   </div>
 
                   <div className="mb-6 flex flex-col justify-start items-start">
-                    <div className="bg-[#2e0e4f] text-white px-4 mb-4 py-1 flex justify-center items-center rounded-3xl">
+                    <div className="bg-[#2e0e4f] text-white px-5 mb-4 py-2 flex justify-center items-center rounded-xl">
                       <h2 className="2xl:text-[1.3vw] xl:text-[1.3vw] lg:text-[1.3vw] md:landscape:text-[1.3vw] md:portrait:text-[2.5vw] text-[4vw]  text-white AllianceFont font-[400]">
                         {steps[currentStep - 1].title}
                       </h2>

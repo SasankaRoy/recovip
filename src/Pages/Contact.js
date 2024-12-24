@@ -2,12 +2,14 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Footer } from "../components/common/Footer/Footer";
+import { Navbar } from "../components/common/Navbar/Navbar";
 export const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
+    
       <div className="min-h-screen flex justify-center items-center">
         <div className="w-[95%] h-full  flex justify-center items-center">
           <div className="w-[90%]">
@@ -165,7 +167,7 @@ export const Contact = () => {
                   //       setContactDeltails
                   //     )
                   //   }
-                  className={`text-[#2e0e4f]  flex justify-center items-center gap-1 AllianceFont font-[400] 2xl:text-[1.2vw] xl:text-[1.2vw] lg:text-[1.2vw]  md:landscape:text-[1.2vw] md:portrait:text-[2.2vw] 2xl:w-[8.5vw] xl:w-[8.5vw] lg:w-[8.5vw] md:landscape:w-[8.5vw] md:portrait:w-[14vw] 2xl:h-[8.5vw] xl:h-[8.5vw] lg:h-[8.5vw] md:landscape:h-[8.5vw] md:portrait:h-[14vw] h-[25vw] w-[25vw] border border-[#2e0e4f]  rounded-full relative hoverAnimationContactBTN overflow-hidden z-10 transition-colors duration-200 ease-in-out delay-100 self-start p-3  disabled:opacity-55 disabled:cursor-not-allowed`}
+                  className={`text-[#2e0e4f]  flex justify-center items-center gap-1 AllianceFont font-[400] 2xl:text-[1.2vw] xl:text-[1.2vw] lg:text-[1.2vw]  md:landscape:text-[1.2vw] md:portrait:text-[2.2vw] 2xl:w-[8.5vw] xl:w-[9.5vw] lg:w-[9.5vw] md:landscape:w-[9.5vw] md:portrait:w-[14vw] 2xl:h-[8.5vw] xl:h-[8.5vw] lg:h-[8.5vw] md:landscape:h-[9.5vw] md:portrait:h-[14vw] h-[25vw] w-[25vw] border border-[#2e0e4f]  rounded-full relative hoverAnimationContactBTN overflow-hidden z-10 transition-colors duration-200 ease-in-out delay-100 self-start p-5  disabled:opacity-55 disabled:cursor-not-allowed`}
                   //   disabled={isLoading}
                 >
                   {/* {isLoading ? "Sending..." : "Send Message"} */}
