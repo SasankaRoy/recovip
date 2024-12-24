@@ -87,7 +87,7 @@ export const Testimonials = () => {
             </div>
           </div>
           <div className="w-full flex 2xl:flex-row xl:flex-row lg:flex-row md:portrait:flex-col md:landscape:flex-row flex-col justify-center items-center">
-            <div className="relative border border-[#FFF] testimonialShadow rounded-md costomBgLogos bg-[#f8eaff]/95 bg-[#ffffff33 w-[95%] flex 2xl:flex-row xl:flex-row lg:flex-row md:portrait:flex-col md:landscape:flex-row flex-col  justify-center items-centers gap-3 px-7 py-7">
+            <div className="relative border border-[#FFF] testimonialShadow rounded-md costomBgLogos bg-[#f8eaff]/95 bg-[#ffffff33 w-[95%] flex 2xl:flex-row xl:flex-row lg:flex-row md:portrait:flex-col md:landscape:flex-col lg:landscape:flex-row mobile-landscape:flex-col flex-col  justify-center items-centers gap-3 px-7 py-7">
               <div className="absolute -top-12 left-5 z-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -103,11 +103,11 @@ export const Testimonials = () => {
                   />
                 </svg>
               </div>
-              <div className="flex justify-start items-start gap-4 flex-col  2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:portrait:w-full md:landscape:w-1/2 w-full">
-                <h4 className="AllianceFont customLine__heights font-[700] 2xl:text-[4.5vw] xl:text-[4.5vw] lg:text-[4.5vw] md:portrait:text-[8vw] md:landscape:text-[4.5vw] text-[7.3vw] leading-[normal] text-[#4d0072]">
+              <div className="flex justify-start items-start gap-4 flex-col  2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:portrait:w-full lg:landscape:w-1/2  md:landscape:w-full w-full">
+                <h4 className="AllianceFont customLine__heights font-[700] 2xl:text-[4.5vw] xl:text-[4.5vw] lg:text-[4.5vw] lg:landscape:text-[4.5vw] md:portrait:text-[8vw] md:landscape:text-[5.5vw] text-[7.3vw] mobile-landscape:text-[6vw] leading-[normal] text-[#4d0072]">
                   What our clients say about us?
                 </h4>
-                <p className="font-[Montserrat] font-[300] 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[2vw] lg:landscape:text-[1vw] md:landscape:text-[1.5vw] text-[3.5vw] text-[#2e0e4f]">
+                <p className="font-[Montserrat] font-[300] 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw]  md:portrait:text-[2vw] lg:landscape:text-[1.3vw] md:landscape:text-[1.9vw] text-[3.5vw] mobile-landscape:text-[2.6vw] text-[#2e0e4f]">
                   Our customer testimonials are more than just kind
                   words—they’re a testament to our commitment to excellence.
                   When our clients share their experiences, they provide
@@ -116,7 +116,7 @@ export const Testimonials = () => {
                   your inspiration.
                 </p>
               </div>
-              <div className=" 2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:portrait:w-full md:landscape:w-1/2 w-full flex flex-col justify-center items-center gap-3 overflow-hidden bg-gren-600">
+              <div className=" 2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:portrait:w-full lg:landscape:w-1/2 md:landscape:w-full w-full flex flex-col justify-center items-center gap-3 overflow-hidden">
                 <div className="w-full flex justify-start gap-2 ">
                   {testimonialData.map((cur, id) => (
                     <div
@@ -127,7 +127,7 @@ export const Testimonials = () => {
                       className={`testimonialCardBC rounded-md 2xl:min-w-[55%] xl:min-w-[55%] lg:min-w-[55%] lg:landscape:min-w-[55%] md:portrait:min-w-[55%] md:landscape:min-w-[80%] min-w-[90%] py-3 px-3 flex justify-start items-center flex-col gap-5 transition-transform duration-200 ease-in-out`}
                     >
                       <div className="px-1 py-2 flex justify-start items-center gap-3 w-full  mx-auto borderGradient">
-                        <div className="2xl:h-[3.5vw] 2xl:w-[3.5vw] xl:h-[3.5vw] xl:w-[3.5vw] lg:h-[3.5vw] lg:w-[3.5vw] lg:landscape:h-[3.5vw] lg:landscape:w-[3.5vw] md:portrait:h-[5vw] md:portrait:w-[5vw] md:landscape:h-[6vw] md:landscape:w-[6vw] w-[14vw] h-[14vw] flex-shrink-0 rounded-full overflow-hidden">
+                        <div className="2xl:h-[3.5vw] 2xl:w-[3.5vw] xl:h-[3.5vw] xl:w-[3.5vw] lg:h-[3.5vw] lg:w-[3.5vw] lg:landscape:h-[3.5vw] lg:landscape:w-[3.5vw] md:portrait:h-[5vw] md:portrait:w-[5vw] md:landscape:h-[6vw] md:landscape:w-[6vw] w-[14vw] h-[14vw] mobile-landscape:h-[10vw] mobile-landscape:w-[10vw] flex-shrink-0 rounded-full overflow-hidden">
                           <img
                             src={cur.image}
                             alt="personImg1"
@@ -135,15 +135,15 @@ export const Testimonials = () => {
                           />
                         </div>
                         <div>
-                          <h4 className=" 2xl:text-[1.15vw] xl:text-[1.15vw] lg:text-[1.15vw] lg:landscape:text-[1.15vw] md:portrait:text-[2.5vw] md:landscape:text-[2.5vw] text-[5vw] font-[700] AllianceFont customLine__heights text-[#4d0072]">
+                          <h4 className=" 2xl:text-[1.15vw] xl:text-[1.15vw] lg:text-[1.15vw] lg:landscape:text-[1.5vw] md:portrait:text-[2.5vw] md:landscape:text-[2.5vw] text-[5vw] mobile-landscape:text-[3vw] font-[700] AllianceFont customLine__heights text-[#4d0072]">
                             {cur.name}
                           </h4>
-                          <p className=" 2xl:text-[.8vw] xl:text-[.8vw] lg:text-[.8vw] md:portrait:text-[1.8vw] md:landscape:text-[1.5vw] lg:landscape:text-[.8vw] text-[3vw] font-[300] font-[Montserrat] text-[#2e0e4f]">
+                          <p className=" 2xl:text-[.8vw] xl:text-[.8vw] lg:text-[.8vw] md:portrait:text-[1.8vw] md:landscape:text-[1.5vw] lg:landscape:text-[1vw] text-[3vw] mobile-landscape:text-[2vw] font-[300] font-[Montserrat] text-[#2e0e4f]">
                             {cur.position}
                           </p>
                         </div>
                       </div>
-                      <p className="font-[Montserrat] font-[400] 2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.9vw] md:landscape:text-[1.3vw] lg:landscape:text-[.9vw] text-[3.5vw]  text-[#2e0e4f] line-clamp-[9]">
+                      <p className="font-[Montserrat] font-[300] 2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.9vw] md:landscape:text-[2vw] lg:landscape:text-[1.1vw] text-[3.5vw] mobile-landscape:text-[2.3vw]  text-[#2e0e4f] line-clamp-[9]">
                         {cur.description}
                       </p>
                     </div>

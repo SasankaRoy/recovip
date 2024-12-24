@@ -9,7 +9,7 @@ export const Blog = () => {
         <div className="w-full h-full  flex justify-center items-center ">
           <div className="w-[90%] h-full flex flex-col justify-center items-center gap-7 2xl:gap-14">
             <motion.div
-              initial={{ y: "100%", opacity: 0 }}
+              initial={{ y: "30%", opacity: 0 }}
               whileInView={{ y: "0%", opacity: 1 }}
               transition={{ duration: 0.6, ease: "circInOut" }}
               className="flex justify-between items-center w-full"
@@ -34,17 +34,17 @@ export const Blog = () => {
                 >
                   <div className="relative h-80 2xl:h-96">
                     <img
-                      className="object-cover w-full h-full"                       
+                      className="object-cover w-full h-full"
                       src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2020/10/Couple_Therapy_1296x728-header-1296x729.jpg?w=1155&h=2268"
                       alt="blog-image"
                     />
                   </div>
                   <div className="w-[90%] mx-auto my-2 2xl:my-6">
-                    <h4 className="AllianceFont text-lg 2xl:text-2xl font-[700] text-[#4d0072]">
+                    <h4 className="AllianceFont md:landscape:text-[4vw] mobile-landscape:text-[4vw] lg:landscape:text-[1.7vw] md:portrait:text-[4.5vw] 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] font-[700] text-[#4d0072]">
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry
                     </h4>
-                    <p className="font-[Montserrat] font-[300] 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[2vw] md:landscape:text-[2vw] lg:landscape:text-[1vw] text-[3.5vw] my-1 line-clamp-3">
+                    <p className="font-[Montserrat] font-[300] 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[2vw] md:landscape:text-[2.2vw] lg:landscape:text-[1.1vw] mobile-landscape:text-[2vw] text-[3.5vw] my-1 line-clamp-3">
                       Lorem Ipsum is that it has a more-or-less normal
                       distribution of letters, as opposed to using 'Content
                       here, content here', making it look like readable English
@@ -163,10 +163,10 @@ export const Blog = () => {
                       September 1, 2024
                     </h4>
                   </div>
-                  <h3 className="AllianceFont lg:text-base 2xl:text-2xl font-[700] my-5 text-[#4d0072]">
+                  <h3 className="AllianceFont md:landscape:text-[4vw] mobile-landscape:text-[4vw] lg:landscape:text-[1.7vw] md:portrait:text-[4.5vw] 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] font-[700] my-5 text-[#4d0072]">
                     Lorem Ipsum is simply dummy text of the printing
                   </h3>
-                  <p className="font-[Montserrat] text-sm 2xl:text-base lg:text-sm xl:text-sm 2xl:font-[400] xl:font-[300] my-1 2xl:my-3 line-clamp-1">
+                  <p className="font-[Montserrat] 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[2vw] md:landscape:text-[2.2vw] lg:landscape:text-[1.1vw] mobile-landscape:text-[2vw] text-[3.5vw]  font-[300] my-1 2xl:my-3 line-clamp-1">
                     Lorem Ipsum is that it has a more-or-less normal
                     distribution of letters
                   </p>
@@ -237,10 +237,10 @@ export const Blog = () => {
                       September 1, 2024
                     </h4>
                   </div>
-                  <h3 className="AllianceFont lg:text-base 2xl:text-2xl font-[700] my-5 text-[#4d0072]">
+                  <h3 className="AllianceFont md:landscape:text-[4vw] mobile-landscape:text-[4vw] lg:landscape:text-[1.7vw] md:portrait:text-[4.5vw] 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] font-[700] my-5 text-[#4d0072]">
                     Lorem Ipsum is simply dummy text of the printing
                   </h3>
-                  <p className="font-[Montserrat] text-sm 2xl:text-base lg:text-sm xl:text-sm 2xl:font-[400] xl:font-[300] my-1 2xl:my-3 line-clamp-1">
+                  <p className="font-[Montserrat] 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[2vw] md:landscape:text-[2.2vw] lg:landscape:text-[1.1vw] mobile-landscape:text-[2vw] text-[3.5vw]  font-[300] my-1 2xl:my-3 line-clamp-1">
                     Lorem Ipsum is that it has a more-or-less normal
                     distribution of letters
                   </p>
@@ -311,10 +311,10 @@ export const Blog = () => {
                       September 1, 2024
                     </h4>
                   </div>
-                  <h3 className="AllianceFont lg:text-base 2xl:text-2xl font-[700] my-5 text-[#4d0072]">
+                  <h3 className="AllianceFont md:landscape:text-[4vw] mobile-landscape:text-[4vw] lg:landscape:text-[1.7vw] md:portrait:text-[4.5vw] 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.7vw] font-[700] my-5 text-[#4d0072]">
                     Lorem Ipsum is simply dummy text of the printing
                   </h3>
-                  <p className="font-[Montserrat] text-sm 2xl:text-base lg:text-sm xl:text-sm 2xl:font-[400] xl:font-[300] my-1 2xl:my-3 line-clamp-1">
+                  <p className="font-[Montserrat] 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[2vw] md:landscape:text-[2.2vw] lg:landscape:text-[1.1vw] mobile-landscape:text-[2vw] text-[3.5vw]  font-[300] my-1 2xl:my-3 line-clamp-1">
                     Lorem Ipsum is that it has a more-or-less normal
                     distribution of letters
                   </p>
@@ -346,6 +346,7 @@ export const Blog = () => {
                     </span>
                   </button>
                 </div>
+
                 {/* ))} */}
               </motion.div>
             </div>
