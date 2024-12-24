@@ -258,13 +258,18 @@ export const Herosection = () => {
           className="fixed top-0 left-0 w-full bg-transparent z-50 py-2 flex justify-center items-center"
         >
           <div className="flex justify-between items-center w-[95%]">
-            <div className="h-auto w-14">
+            <motion.div
+              style={{
+                opacity: menuOpacity,
+              }}
+              className="h-auto w-40"
+            >
               <img
-                src="FavIconDark.svg"
+                src="RecovIpLightLogo.svg"
                 alt="logo"
                 className="object-contain"
               />
-            </div>
+            </motion.div>
             <motion.button
               style={{
                 opacity: menuOpacity,
@@ -296,9 +301,9 @@ export const Herosection = () => {
           className="bg-[#100018] fixed w-[90%] h-[100dvh] z-0 text-white top-0 right-0 overflow-hidden md:landscape:overflow-y-auto transition-all duration-300 ease-linear mobile-landscape:overflow-y-auto"
         >
           <div className="flex justify-between items-center w-[95%] mx-auto py-3">
-            <div className="h-auto w-14">
+            <div className="h-auto w-40">
               <img
-                src="FavIconDark.svg"
+                src="RecovIPLogoDark.svg"
                 alt="logo"
                 className="object-contain"
               />
@@ -362,7 +367,7 @@ export const Herosection = () => {
                         <Link
                           key={id}
                           to={cur.path}
-                          className="AllianceFont text-white 2xl:text-[2.1vw] xl:text-[2.1vw] lg:text-[2.1vw] lg:landscape:text-[3.5vw]  md:portrait:text-[4vw] md:landscape:text-[2.5vw] text-[6vw] mobile-landscape:text-[3vw] font-[500] w-full flex"
+                          className="AllianceFont text-white 2xl:text-[2.1vw] xl:text-[2.1vw] lg:text-[2.1vw] lg:landscape:text-[2.8vw]  md:portrait:text-[4vw] md:landscape:text-[2.5vw] text-[6vw] mobile-landscape:text-[3vw] font-[500] w-full flex"
                         >
                           {cur.title}
                         </Link>
@@ -408,7 +413,7 @@ export const Herosection = () => {
                     transition={{ duration: 0.8, delay: 1.5, ease: backInOut }}
                   >
                     <Link
-                      className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[2.5vw] md:portrait:text-[4vw] text-[6vw] mobile-landscape:text-[3vw]  lg:landscape:text-[3vw] font-[400] text-white"
+                      className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[2.5vw] md:portrait:text-[4vw] text-[6vw] mobile-landscape:text-[3vw]  lg:landscape:text-[2.8vw] font-[400] text-white"
                       href="tel:+1(931)-266-6101"
                     >
                       +1(931)-266-6424
@@ -420,7 +425,7 @@ export const Herosection = () => {
                     transition={{ duration: 0.8, delay: 1.5, ease: backInOut }}
                   >
                     <Link
-                      className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[2.5vw] md:portrait:text-[4vw] text-[6vw] mobile-landscape:text-[3vw] lg:landscape:text-[3vw] font-[400] text-white "
+                      className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[2.5vw] md:portrait:text-[4vw] text-[6vw] mobile-landscape:text-[3vw] lg:landscape:text-[2.8vw] font-[400] text-white "
                       href="mailto:hello@kaltechconsultancy.tech"
                     >
                       info@recovip.com
@@ -433,14 +438,14 @@ export const Herosection = () => {
                     className="flex 2xl:flex-col xl:flex-col lg:flex-col md:portrait:flex-row md:landscape:flex-col flex-row justify-start items-start"
                   >
                     <Link
-                      className="text-white 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[2.5vw] md:portrait:text-[4vw] text-[6vw] mobile-landscape:text-[3vw] lg:landscape:text-[3vw] font-[400]"
+                      className="text-white 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[2.5vw] md:portrait:text-[4vw] text-[6vw] mobile-landscape:text-[3vw] lg:landscape:text-[2.8vw] font-[400]"
                       href="https://maps.app.goo.gl/C1uULXRQ95gTG7bP8"
                       target="_blank"
                     >
                       Tennessee
                     </Link>
                     <Link
-                      className="text-white 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[2.5vw] md:portrait:text-[4vw] text-[6vw] mobile-landscape:text-[3vw] lg:landscape:text-[3vw] font-[400]"
+                      className="text-white 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[2.5vw] md:portrait:text-[4vw] text-[6vw] mobile-landscape:text-[3vw] lg:landscape:text-[2.8vw] font-[400]"
                       href="https://maps.app.goo.gl/C1uULXRQ95gTG7bP8"
                       target="_blank"
                     >
