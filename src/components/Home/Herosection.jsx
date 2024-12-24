@@ -293,7 +293,7 @@ export const Herosection = () => {
           animate={currentMenuState}
           exit={currentMenuState}
           //ref={scope}
-          className="bg-[#100018] fixed w-[90%] h-[100dvh] z-0 text-white top-0 right-0 overflow-hidden"
+          className="bg-[#100018] fixed w-[90%] h-[100dvh] z-0 text-white top-0 right-0 overflow-hidden md:landscape:overflow-y-auto transition-all duration-300 ease-linear mobile-landscape:overflow-y-auto"
         >
           <div className="flex justify-between items-center w-[95%] mx-auto py-3">
             <div className="h-auto w-14">
@@ -323,10 +323,10 @@ export const Herosection = () => {
           </div>
 
           <div className="2xl:h-[60%] xl:h-[60%] lg:h-[60%] md:portrait:h-[60%] h-[70%] flex justify-center border-b border-[#ccc]/30 py-4 2xl:py-0 xl:py-0 lg:py-0 md:portrait:py-0">
-            <div className="w-[95%] mx-auto flex flex-col 2xl:flex-row xl:flex-row lg:flex-row md:landscape:flex-row md:portrait:flex-col justify-between">
+            <div className="w-[95%] mx-auto flex lg:landscape:flex-row md:landscape:flex-row md:portrait:flex-col xl:flex-row lg:flex-row 2xl:flex-row flex-col mobile-landscape:flex-row justify-between">
               <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:landscape:w-1/2 md:portrait:w-full w-full flex justify-center items-center border-r border-[#ccc]/30">
                 <div className="w-[100%] mx-auto">
-                  <ul className="flex flex-col gap-5 justify-center  items-start w-full">
+                  <ul className="flex flex-col 2xl:gap-5 xl:gap-5 lg:gap-5 mobile-landscape:gap-2 md:portrait:gap-5 gap-3 justify-center  items-start w-full">
                     {[
                       {
                         path: "/service",
@@ -362,7 +362,7 @@ export const Herosection = () => {
                         <Link
                           key={id}
                           to={cur.path}
-                          className="AllianceFont text-white 2xl:text-[2.1vw] xl:text-[2.1vw] lg:text-[2.1vw] md:portrait:text-[2.3vw] md:landscape:text-[2.1vw] text-[5vw] font-[500] w-full flex"
+                          className="AllianceFont text-white 2xl:text-[2.1vw] xl:text-[2.1vw] lg:text-[2.1vw] lg:landscape:text-[3.5vw]  md:portrait:text-[4vw] md:landscape:text-[2.5vw] text-[6vw] mobile-landscape:text-[3vw] font-[500] w-full flex"
                         >
                           {cur.title}
                         </Link>
@@ -408,7 +408,7 @@ export const Herosection = () => {
                     transition={{ duration: 0.8, delay: 1.5, ease: backInOut }}
                   >
                     <Link
-                      className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[1.5vw] md:portrait:text-[2.3vw] text-[3.5vw]  font-[700] text-white"
+                      className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[2.5vw] md:portrait:text-[4vw] text-[6vw] mobile-landscape:text-[3vw]  lg:landscape:text-[3vw] font-[400] text-white"
                       href="tel:+1(931)-266-6101"
                     >
                       +1(931)-266-6424
@@ -420,7 +420,7 @@ export const Herosection = () => {
                     transition={{ duration: 0.8, delay: 1.5, ease: backInOut }}
                   >
                     <Link
-                      className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[1.5vw] md:portrait:text-[2.3vw] text-[3.5vw]  font-[700] text-white "
+                      className="AllianceFont 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[2.5vw] md:portrait:text-[4vw] text-[6vw] mobile-landscape:text-[3vw] lg:landscape:text-[3vw] font-[400] text-white "
                       href="mailto:hello@kaltechconsultancy.tech"
                     >
                       info@recovip.com
@@ -433,14 +433,14 @@ export const Herosection = () => {
                     className="flex 2xl:flex-col xl:flex-col lg:flex-col md:portrait:flex-row md:landscape:flex-col flex-row justify-start items-start"
                   >
                     <Link
-                      className="text-white 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[1.5vw] md:portrait:text-[2.3vw] text-[3.5vw]  font-[700]"
+                      className="text-white 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[2.5vw] md:portrait:text-[4vw] text-[6vw] mobile-landscape:text-[3vw] lg:landscape:text-[3vw] font-[400]"
                       href="https://maps.app.goo.gl/C1uULXRQ95gTG7bP8"
                       target="_blank"
                     >
                       Tennessee
                     </Link>
                     <Link
-                      className="text-white 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[1.5vw] md:portrait:text-[2.3vw] text-[3.5vw]  font-[700]"
+                      className="text-white 2xl:text-[1.5vw] xl:text-[1.5vw] lg:text-[1.5vw] md:landscape:text-[2.5vw] md:portrait:text-[4vw] text-[6vw] mobile-landscape:text-[3vw] lg:landscape:text-[3vw] font-[400]"
                       href="https://maps.app.goo.gl/C1uULXRQ95gTG7bP8"
                       target="_blank"
                     >
@@ -453,14 +453,11 @@ export const Herosection = () => {
           </div>
 
           <div className="flex justify-between w-[95%] mx-auto 2xl:h-[30%] xl:h-[30%] lg:h-[30%] md:portrait:h-[30%] h-[20%]">
-            {/* <div className="w-[40%] bg-teal-00 hidden 2xl:flex xl:flex lg:flex md:portrait:flex md:landscape:flex ">
-              graphic div
-            </div> */}
             <motion.div
               initial={{ opacity: 0, y: "20%" }}
               whileInView={{ opacity: 1, y: "0%" }}
               transition={{ duration: 0.8, delay: 1.5, ease: backInOut }}
-              className="2xl:w-[100%] bg-red-00 xl:w-[100%] lg:w-[100%] md:portrait:w-full md:landscape:w-[100%] w-full flex justify-center items-center"
+              className="2xl:w-[100%] xl:w-[100%] lg:w-[100%] md:portrait:w-full md:landscape:w-[70%] mx-auto mobile-landscape:w-[70%] mobile-landscape:py-3 md:landscape:py-3 lg:landscape:w-[80%] w-full flex justify-center items-center"
             >
               <div className="w-[60%] mx-auto">
                 <img src="/RecovIPLogoDark.svg" alt="logo" />
@@ -632,7 +629,6 @@ export const Herosection = () => {
                   }}
                   className="h-[50%] w-full flex flex-col justify-start items-center gap-5"
                 >
-                  
                   <motion.div
                     style={{
                       opacity: increaseOpacityBox1Div2,
@@ -722,14 +718,7 @@ export const Herosection = () => {
                   <motion.div
                     style={{ opacity: increaseOpacityBox2Div1 }}
                     className="flex justify-between items-center w-full p-2"
-                  >
-                    {/* <div className="2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[1.8vw]">
-                      Some content
-                    </div>
-                    <div className="2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:portrait:text-[1.8vw]">
-                      some content
-                    </div> */}
-                  </motion.div>
+                  ></motion.div>
                   <motion.div
                     style={{
                       opacity: increaseOpacityBox2Div2,
@@ -868,7 +857,7 @@ export const Herosection = () => {
                 style={{
                   width: increaseWidthOnScroll3,
                 }}
-                className="bg-neutral-800 protfolioShadow h-screen w-[5vw] flex-shrink-0 flex justify-center items-center text-[5vw] text-white capitalize flex-col"
+                className="customBgServiceT protfolioShadow h-screen w-[5vw] flex-shrink-0 flex justify-center items-center text-[5vw] text-white capitalize flex-col"
               >
                 <motion.div
                   style={{
@@ -922,7 +911,7 @@ export const Herosection = () => {
                       opacity: increaseOpacityBox2Div2,
                     }}
                   >
-                    <h3 className=" text-center 2xl:text-[3vw] xl:text-[3vw] tracking-wider lg:text-[3vw] md:portrait:text-[5.5vw] font-[400] AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-white">
+                    <h3 className=" text-center 2xl:text-[3vw] xl:text-[3vw] tracking-wider lg:text-[3vw] md:portrait:text-[5.5vw] font-[400] AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-[#370051]">
                       Couples Therapy
                     </h3>
                   </motion.div>
@@ -937,7 +926,7 @@ export const Herosection = () => {
                       }}
                       className="w-[90%] mx-auto pl-4 mt-[5%]"
                     >
-                      <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-[#] font-[300] text-left  font-[Montserrat] text-white">
+                      <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-[#] font-[300] text-left  font-[Montserrat] text-[#100018]">
                         Our Individual Therapy services are designed to provide
                         a safe, confidential space where you can explore your
                         thoughts, emotions, and behaviors.
@@ -960,7 +949,7 @@ export const Herosection = () => {
 
           {/* mobile start */}
           {/* box one start */}
-          <div className="top-0 sticky h-[80dvh] md:landscape:h-[100dvh] mobile-landscape:h-[100dvh] w-full overflow-x-hidden 2xl:hidden xl:hidden lg:hidden lg:landscape:hidden md:portrait:hidden md:landscape:flex flex">
+          <div className="top-0 sticky h-[90dvh] md:landscape:h-[100dvh] mobile-landscape:h-[100dvh] w-full overflow-x-hidden 2xl:hidden xl:hidden lg:hidden lg:landscape:hidden md:portrait:hidden md:landscape:flex flex">
             <motion.div className=" bg-[#fbf2ff] text-black  h-full 2xl:hidden xl:hidden lg:hidden lg:landscape:hidden md:portrait:hidden md:landscape:flex  w-full flex-shrink-0 flex flex-col justify-center items-center realtive">
               <Navbar />
               <div className="h-[60%] w-full flex justify-center items-center">
@@ -1165,7 +1154,7 @@ export const Herosection = () => {
             </motion.div>
           </div>
 
-          <div className="h-screen bg-blue-500 sticky w-full top-0 2xl:hidden xl:hidden lg:hidden lg:landscape:hidden md:portrait:hidden md:landscape:flex-row mobile-landscape:flex-row flex flex-col justify-center items-center text-white text-[8vw]">
+          <div className="h-screen customBgServiceT sticky w-full top-0 2xl:hidden xl:hidden lg:hidden lg:landscape:hidden md:portrait:hidden md:landscape:flex-row mobile-landscape:flex-row flex flex-col justify-center items-center text-white text-[8vw]">
             <motion.div
               style={{
                 height: increaseHeightOnScroll3,
@@ -1193,11 +1182,11 @@ export const Herosection = () => {
                 }
                 className="my-[5%] flex flex-col justify-center items-center"
               >
-                <h3 className=" text-center  font-[400] text-3xl AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-white">
+                <h3 className=" text-center  font-[400] text-3xl AllianceFont customLine__heights 2xl:leading-[3.5vw] xl:leading-[3vw] lg:leading-[3vw] md:portrait:leading-[6vw] text-[#370051]">
                   Couples Therapy
                 </h3>
                 <div className="w-[95%] mx-auto">
-                  <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-base font-[300] text-left  font-[Montserrat] text-white">
+                  <p className="2xl:text-[.9vw] xl:text-[.9vw] lg:text-[.9vw] md:portrait:text-[1.5vw] text-base font-[300] text-left  font-[Montserrat] text-[#100018]">
                     Our couples therapy helps partners improve communication,
                     rebuild trust, and navigate challenges together in a
                     supportive setting by addressing underlying issues.

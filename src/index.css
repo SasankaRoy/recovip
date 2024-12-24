@@ -128,7 +128,7 @@ code {
 
 .customMenu__shadow {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border: .5px solid gold;
+  border: 0.5px solid gold;
 }
 .testimonialCardBC {
   background: linear-gradient(159deg, #fff 2.59%, #e5e5e5 94.93%);
@@ -138,4 +138,12 @@ code {
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(90deg, #000 0.01%, rgba(0, 0, 0, 0) 100%);
   border-image-slice: 1;
+}
+.customBgServiceT {
+  background: rgb(206, 204, 184);
+  background: linear-gradient(
+    177deg,
+    rgba(206, 204, 184, 1) 0%,
+    rgba(247, 246, 242, 1) 100%
+  );
 }
