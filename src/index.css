@@ -157,3 +157,109 @@ code {
     rgba(150, 146, 145, 1) 100%
   );
 }
+
+
+
+
+.homeFooterBTNShadow {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 2px 50px 15px rgb(228 19 246 / 0.2),
+    -2px -2px 50px 15px rgb(228 19 246 / 0.2);
+  /* box-shadow: 2px 2px 50px 15px inherit,
+    -2px -2px 50px 15px inherit; */
+  animation: changeBG 15s linear infinite;
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+#rotatingDiv {
+  background: conic-gradient(
+    from var(--angle) at 50% 50%,
+    transparent 63%,
+    rgb(255, 0, 140) 90%
+  );
+  animation: 3.5s spin linear infinite, colorChange 15s linear infinite;
+  transition: background 0.3s ease-in-out;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes changeBG {
+  0% {
+    background: rgb(228, 19, 246);
+    box-shadow: 2px 2px 40px 10px rgba(228, 19, 246, 0.2),
+      -2px -2px 40px 10px rgba(228, 19, 246, 0.2);
+  }
+  25% {
+    background: rgb(92, 19, 246);
+    box-shadow: 2px 2px 50px 15px rgba(92, 19, 246, 0.2),
+      -2px -2px 50px 15px rgba(92, 19, 246, 0.2);
+  }
+  50% {
+    background: rgb(19, 178, 246);
+    box-shadow: 2px 2px 50px 15px rgba(19, 178, 246, 0.2),
+      -2px -2px 50px 15px rgba(19, 178, 246, 0.2);
+  }
+  75% {
+    background: rgb(27, 255, 132);
+    box-shadow: 2px 2px 50px 15px rgba(27, 255, 132, 0.2),
+      -2px -2px 50px 15px rgba(27, 255, 132, 0.2);
+  }
+  100% {
+    background: rgb(214, 255, 51);
+    box-shadow: 2px 2px 50px 15px rgba(214, 255, 51, 0.2),
+      -2px -2px 50px 15px rgba(214, 255, 51, 0.2);
+  }
+}
+@keyframes colorChange {
+  0% {
+    border-top-color: #800080;
+    /* background: conic-gradient(from var(--angle) at 50% 50%, rgba(18, 18, 18, 1) 63%, #5C13F6 100%); */
+    background: conic-gradient(
+      from var(--angle) at 50% 50%,
+      transparent 63%,
+      rgb(241, 88, 255) 90%
+    );
+  }
+  25% {
+    border-top-color: #c91ac9;
+    background: conic-gradient(
+      from var(--angle) at 50% 50%,
+      transparent 50%,
+      rgb(125, 67, 248) 74%
+    );
+  }
+  50% {
+    border-top-color: #0000ff;
+    background: conic-gradient(
+      from var(--angle) at 50% 50%,
+      transparent 50%,
+      rgb(77, 193, 243) 74%
+    );
+  }
+  75% {
+    border-top-color: #d1d153;
+    background: conic-gradient(
+      from var(--angle) at 50% 50%,
+      transparent 50%,
+      rgb(104, 250, 172) 74%
+    );
+  }
+  100% {
+    border-top-color: #800080;
+    background: conic-gradient(
+      from var(--angle) at 50% 50%,
+      transparent 50%,
+      rgb(224, 248, 127) 74%
+    );
+  }
+}

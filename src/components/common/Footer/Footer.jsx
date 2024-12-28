@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useAnimate, useInView } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import XIcon from "@mui/icons-material/X";
 import { gsap } from "gsap/dist/gsap";
 import SplitType from "split-type";
+import { ArrowUpRight } from "lucide-react";
 export const Footer = () => {
   const textRef = useRef(null);
   const isInView = useInView(textRef);
+  const [scope, animate] = useAnimate();
 
   const handleInViewAnimation = () => {
     const gsapTimeLine = gsap.timeline();
@@ -34,6 +36,101 @@ export const Footer = () => {
   useEffect(() => {
     handleInViewAnimation();
   }, [isInView]);
+
+  const handleAnimation = async () => {
+    // rotateAndColorChange();
+    await animate(
+      "#BTNAnimate #innerText",
+      { y: "-350%" },
+      { duration: 0.8, ease: "circInOut" }
+    );
+    // await animate(
+    //   "#BTNAnimate #innerText-2",
+    //   { transform: ["translateY(112px)", "translateY(-40px)"] },
+    //   { duration: 0.8, ease: "circInOut" }
+    // );
+    await animate(
+      "#BTNAnimate #innerText-2",
+      { transform: ["translateY(-35px)", "translateY(-200px)"] },
+      { duration: 0.9, ease: "circInOut", delay: 0.3 }
+    );
+    await animate(
+      "#BTNAnimate #innerText-3",
+      {
+        transform: ["translateY(112px)", "translateY(-70px)"],
+        display: ["none", "flex"],
+      },
+      { duration: 0.9, ease: "circInOut" }
+    );
+    animate(
+      "#BTNAnimate #innerText-3",
+      {
+        color: "black",
+      },
+      { duration: 1.2, ease: "circInOut", delay: 0.3 }
+    );
+    animate(
+      "#BTNAnimate #BTNbg",
+      {
+        transform: [
+          "translateX(-240px) translateY(208px)",
+          "translateX(0px) translateY(0px)",
+        ],
+        display: ["none", "flex"],
+      },
+      { duration: 0.3, ease: "backInOut", delay: 0, stiffness: 1, velocity: 10 }
+    );
+  };
+  const handleAnimationOut = async () => {
+    animate(
+      "#BTNAnimate #BTNbg",
+      {
+        transform: [
+          "translateX(0px) translateY(0px)",
+          "translateX(-240px) translateY(208px)",
+        ],
+        display: ["flex", "none"],
+      },
+      {
+        duration: 0.3,
+        ease: "backInOut",
+        delay: 0.1,
+        stiffness: 1,
+        velocity: 10,
+      }
+    );
+    await animate(
+      "#BTNAnimate #innerText-3",
+      {
+        color: "white",
+      },
+      { duration: 0.9, ease: "circInOut", delay: 0 }
+    );
+
+    await animate(
+      "#BTNAnimate #innerText-3",
+      {
+        transform: ["translateY(-60px)", "translateY(112px)"],
+        display: ["flex", "none"],
+      },
+      { duration: 0.9, ease: "circInOut", delay: 0.1 }
+    );
+    // await animate(
+    //   "#BTNAnimate #innerText-2",
+    //   { transform: ["translateY(-200px)", "translateY(-40px)"] },
+    //   { duration: 0.9, ease: "circInOut", delay: 0.1 }
+    // );
+    await animate(
+      "#BTNAnimate #innerText-2",
+      { transform: ["translateY(-40px)", "translateY(112px)"] },
+      { duration: 0.9, ease: "circInOut", delay: 0.1 }
+    );
+    animate(
+      "#BTNAnimate #innerText",
+      { y: "0%" },
+      { duration: 0.9, ease: "circInOut" }
+    );
+  };
 
   return (
     <>
@@ -111,15 +208,15 @@ export const Footer = () => {
               <div className="w-full ">
                 <div className="w-full flex justify-center items-center ">
                   <div
-                    //   ref={scope}
-                    //   onMouseEnter={handleAnimation}
-                    //   onMouseLeave={handleAnimationOut}
+                    ref={scope}
+                    onMouseEnter={handleAnimation}
+                    onMouseLeave={handleAnimationOut}
                     // h-[200px] w-[200px] lg:h-[180px] lg:w-[180px]  2xl:w-[200px]  2xl:h-[200px] xl:w-[200px] xl:h-[200px]
                     className="flex  justify-center items-center bg-[#E413F6] backdrop-blur-md 2xl:w-[13vw] 2xl:h-[13vw] xl:w-[13vw] xl:h-[13vw] lg:w-[13vw] lg:h-[13vw] md:portrait:h-[18vw] md:portrait:w-[18vw] md:landscape:h-[13vw] md:landscape:w-[13vw] h-[30vw] w-[30vw] rounded-full homeFooterBTNShadow transition-all duration-500 ease-linear"
                   >
                     <div
                       id="rotatingDiv"
-                      className="absolute top-0 right-0 bg-[f161fe] w-[100%] h-[100%] transition-all duration-500 ease-linear"
+                      className="absolute top-0 right-0  w-[100%] h-[100%] transition-all duration-500 ease-linear"
                     />
                     <p href="/contact">
                       <button
@@ -151,7 +248,7 @@ export const Footer = () => {
                             className="-translate-x-60 translate-y-52"
                           >
                             <span className="relative h-7 w-7">
-                              <img fill src="" alt="" />
+                              <ArrowUpRight strokeWidth="1px" size={50} />
                             </span>
                           </span>
                         </span>
